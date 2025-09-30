@@ -1,0 +1,1257 @@
+---
+title: ImcArbn_MDD
+linkTitle: ImcArbn_MDD
+weight: 3
+---
+
+<p><strong>Module Design Document</strong></p>
+<p><strong>For</strong></p>
+<p><strong>Imc Arbitration</strong></p>
+<p><strong>Jan 17, 2017</strong></p>
+<p><strong>Prepared For:</strong></p>
+<p><strong>Software Engineering</strong></p>
+<p><strong>Nexteer Automotive,</strong></p>
+<p><strong>Saginaw, MI, USA</strong></p>
+<p><strong>Prepared By:</strong></p>
+<p><strong>Software Group,</strong></p>
+<p><strong>Nexteer Automotive,</strong></p>
+<p><strong><u>Saginaw, MI, USAChange</u></strong> History</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 31%" />
+<col style="width: 31%" />
+<col style="width: 12%" />
+<col style="width: 17%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Sl. No.</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Author</strong></td>
+<td><strong>Version</strong></td>
+<td><strong>Date</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Initial Version</td>
+<td>Akilan Rathakrishnan</td>
+<td>1.0</td>
+<td>17-Jan-2017</td>
+</tr>
+</tbody>
+</table>
+<p><u>Table of Contents</u></p>
+<p><a href="#imcarbn-high-level-description">1 ImcArbn High-Level Description 7</a></p>
+<p><a href="#design-details-of-software-module">2 Design details of software module 8</a></p>
+<p><a href="#graphical-representation-of-imcarbn">Graphical representation of ImcArbn 8</a></p>
+<p><a href="#data-flow-diagram">2.1.1 Data Flow Diagram 8</a></p>
+<p><a href="#component-level-dfd">2.1.2 Component level DFD 9</a></p>
+<p><a href="#function-level-dfd">2.1.3 Function level DFD 9</a></p>
+<p><a href="#variable-data-dictionary">3 Variable Data Dictionary 10</a></p>
+<p><a href="#user-defined-typedef-definitiondeclaration">3.1 User defined typedef definition/declaration 10</a></p>
+<p><a href="#variable-definition-for-enumerated-types">3.2 Variable definition for enumerated types 12</a></p>
+<p><a href="#constant-data-dictionary">4 Constant Data Dictionary 13</a></p>
+<p><a href="#program-fixed-constants">Program (fixed) Constants 13</a></p>
+<p><a href="#embedded-constants">4.1.1 Embedded Constants 13</a></p>
+<p><a href="#global">4.1.1.2 Global 13</a></p>
+<p><a href="#module-specific-lookup-tables-constants">4.1.2 Module specific Lookup Tables Constants 13</a></p>
+<p><a href="#software-module-implementation">5 Software Module Implementation 14</a></p>
+<p><a href="#sub-module-functions">5.1 Sub-Module Functions 14</a></p>
+<p><a href="#init-imcarbninit1">5.1.1 Init: ImcArbnInit1 14</a></p>
+<p><a href="#design-rationale">5.1.1.1 Design Rationale 14</a></p>
+<p><a href="#design-rationale-1">5.1.1.2 Design Rationale 14</a></p>
+<p><a href="#periodic-functions">5.1.2 PERIODIC FUNCTIONS 14</a></p>
+<p><a href="#per-imcarbnper1">5.1.3 Per: ImcArbnPer1 14</a></p>
+<p><a href="#design-rationale-2">5.1.3.1 Design Rationale 14</a></p>
+<p><a href="#per-imcarbnper2">5.1.4 Per: ImcArbnPer2 14</a></p>
+<p><a href="#design-rationale-3">5.1.4.1 Design Rationale 14</a></p>
+<p><a href="#per-imcarbnper3">5.1.5 Per: ImcArbnPer3 14</a></p>
+<p><a href="#design-rationale-4">5.1.5.1 Design Rationale 14</a></p>
+<p><a href="#per-imcarbnper4">5.1.6 Per: ImcArbnPer4 14</a></p>
+<p><a href="#design-rationale-5">5.1.6.1 Design Rationale 14</a></p>
+<p><a href="#per-imcarbnper5">5.1.7 Per: ImcArbnPer5 14</a></p>
+<p><a href="#design-rationale-6">5.1.7.1 Design Rationale 14</a></p>
+<p><a href="#per-imcarbnper6">5.1.8 Per: ImcArbnPer6 14</a></p>
+<p><a href="#design-rationale-7">5.1.8.1 Design Rationale 14</a></p>
+<p><a href="#interrupt-functions">5.1.9 Interrupt Functions 14</a></p>
+<p><a href="#server-runnable-functions">5.2 Server Runnable Functions 15</a></p>
+<p><a href="#getsigimcdataextdsts_f32">5.2.1 GetSigImcDataExtdSts_f32 15</a></p>
+<p><a href="#design-rationale-8">5.2.1.1 Design Rationale 15</a></p>
+<p><a href="#getsigimcdataextdsts_u32">5.2.2 GetSigImcDataExtdSts_u32 15</a></p>
+<p><a href="#design-rationale-9">5.2.2.1 Design Rationale 15</a></p>
+<p><a href="#getsigimcdataextdsts_u16">5.2.3 GetSigImcDataExtdSts_u16 15</a></p>
+<p><a href="#design-rationale-10">5.2.3.1 Design Rationale 15</a></p>
+<p><a href="#getsigimcdataextdsts_s16">5.2.4 GetSigImcDataExtdSts_s16 15</a></p>
+<p><a href="#design-rationale-11">5.2.4.1 Design Rationale 15</a></p>
+<p><a href="#getsigimcdataextdsts_u08">5.2.5 GetSigImcDataExtdSts_u08 15</a></p>
+<p><a href="#design-rationale-12">5.2.5.1 Design Rationale 15</a></p>
+<p><a href="#getsigimcdataextdsts_s08">5.2.6 GetSigImcDataExtdSts_s08 15</a></p>
+<p><a href="#design-rationale-13">5.2.6.1 Design Rationale 15</a></p>
+<p><a href="#getsigimcdataextdsts_logl">5.2.7 GetSigImcDataExtdSts_logl 15</a></p>
+<p><a href="#design-rationale-14">5.2.7.1 Design Rationale 15</a></p>
+<p><a href="#getsigimcdata_f32">5.2.8 GetSigImcData_f32 15</a></p>
+<p><a href="#design-rationale-15">5.2.8.1 Design Rationale 15</a></p>
+<p><a href="#getsigimcdata_u32">5.2.9 GetSigImcData_u32 15</a></p>
+<p><a href="#design-rationale-16">5.2.9.1 Design Rationale 15</a></p>
+<p><a href="#getsigimcdata_s32">5.2.10 GetSigImcData_s32 15</a></p>
+<p><a href="#design-rationale-17">5.2.10.1 Design Rationale 15</a></p>
+<p><a href="#getsigimcdata_u16">5.2.11 GetSigImcData_u16 16</a></p>
+<p><a href="#design-rationale-18">5.2.11.1 Design Rationale 16</a></p>
+<p><a href="#getsigimcdata_s16">5.2.12 GetSigImcData_s16 16</a></p>
+<p><a href="#design-rationale-19">5.2.12.1 Design Rationale 16</a></p>
+<p><a href="#getsigimcdata_u08">5.2.13 GetSigImcData_u08 16</a></p>
+<p><a href="#design-rationale-20">5.2.13.1 Design Rationale 16</a></p>
+<p><a href="#getsigimcdata_s08">5.2.14 GetSigImcData_s08 16</a></p>
+<p><a href="#design-rationale-21">5.2.14.1 Design Rationale 16</a></p>
+<p><a href="#getsigimcdata_logl">5.2.15 GetSigImcData_logl 16</a></p>
+<p><a href="#design-rationale-22">5.2.15.1 Design Rationale 16</a></p>
+<p><a href="#gettxrategroup">5.2.16 GetTxRateGroup 16</a></p>
+<p><a href="#design-rationale-23">5.2.16.1 Design Rationale 16</a></p>
+<p><a href="#gettxsiggroup">5.2.17 GetTxSigGroup 16</a></p>
+<p><a href="#design-rationale-24">5.2.17.1 Design Rationale 16</a></p>
+<p><a href="#setrxsiggroup">5.2.18 SetRxSigGroup 16</a></p>
+<p><a href="#design-rationale-25">5.2.18.1 Design Rationale 16</a></p>
+<p><a href="#module-internal-local-functions">5.3 Module Internal (Local) Functions 16</a></p>
+<p><a href="#local-function-1">5.3.1 Local Function #1 16</a></p>
+<p><a href="#description">5.3.1.1 Description 17</a></p>
+<p><a href="#local-function-2">5.3.2 Local Function #2 17</a></p>
+<p><a href="#description-1">5.3.2.1 Description 17</a></p>
+<p><a href="#local-function-3">5.3.3 Local Function #3 17</a></p>
+<p><a href="#description-2">5.3.3.1 Description 17</a></p>
+<p><a href="#local-function-4">5.3.4 Local Function #4 17</a></p>
+<p><a href="#description-3">5.3.4.1 Description 17</a></p>
+<p><a href="#local-function-5">5.3.5 Local Function #5 17</a></p>
+<p><a href="#description-4">5.3.5.1 Description 18</a></p>
+<p><a href="#local-function-6">5.3.6 Local Function #6 18</a></p>
+<p><a href="#description-5">5.3.6.1 Description 18</a></p>
+<p><a href="#local-function-7">5.3.7 Local Function #7 18</a></p>
+<p><a href="#description-6">5.3.7.1 Description 18</a></p>
+<p><a href="#local-function-8">5.3.8 Local Function #8 18</a></p>
+<p><a href="#description-7">5.3.8.1 Description 18</a></p>
+<p><a href="#local-function-9">5.3.9 Local Function #9 19</a></p>
+<p><a href="#description-8">5.3.9.1 Description 19</a></p>
+<p><a href="#local-function-10">5.3.10 Local Function #10 19</a></p>
+<p><a href="#description-9">5.3.10.1 Description 19</a></p>
+<p><a href="#local-function-11">5.3.11 Local Function #11 19</a></p>
+<p><a href="#description-10">5.3.11.1 Description 19</a></p>
+<p><a href="#local-function-12">5.3.12 Local Function #12 19</a></p>
+<p><a href="#description-11">5.3.12.1 Description 20</a></p>
+<p><a href="#local-function-13">5.3.13 Local Function #13 20</a></p>
+<p><a href="#description-12">5.3.13.1 Description 20</a></p>
+<p><a href="#local-function-14">5.3.14 Local Function #14 20</a></p>
+<p><a href="#description-13">5.3.14.1 Description 20</a></p>
+<p><a href="#local-function-15">5.3.15 Local Function #15 20</a></p>
+<p><a href="#description-14">5.3.15.1 Description 20</a></p>
+<p><a href="#local-function-16">5.3.16 Local Function #16 20</a></p>
+<p><a href="#description-15">5.3.16.1 Description 20</a></p>
+<p><a href="#transition-functions">5.3.17 Transition Functions 20</a></p>
+<p><a href="#global-functionmacro-definitions">5.3.18 Global Function/Macro Definitions 21</a></p>
+<p><a href="#known-limitations-with-design">6 Known Limitations with Design 22</a></p>
+<p><a href="#unit-test-consideration">7 UNIT TEST CONSIDERATION 23</a></p>
+<p><a href="#abbreviations-and-acronyms">Appendix A Abbreviations and Acronyms 24</a></p>
+<p><a href="#glossary">Appendix B Glossary 25</a></p>
+<p><a href="#references">Appendix C References 26</a></p>
+<h1 id="imcarbn-high-level-description">ImcArbn High-Level Description</h1>
+<p>The Inter-Micro Communication (IMC) Arbitration prepares data for transmission to a complimentary ECU through two redundant communication paths. On the receive side, the Arbitration reads data from the primary source and determines the data validity. A validity fault on primary source prompts the IMC Arbitration component to evaluate the same signal from the secondary source. Faulty signals from the primary source will be replaced with signals from the secondary source, as long as they are valid. If both data sources are invalid the IMC Arbitration outputs the signal status based on never received, missing and invalid conditions.</p>
+<h1 id="design-details-of-software-module">Design details of software module</h1>
+<p><em>See FDD.</em></p>
+<h2 id="graphical-representation-of-imcarbn">Graphical representation of ImcArbn</h2>
+<p><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/static/media/image1.png" style="width:4.125in;height:7.25in" /></p>
+<h3 id="data-flow-diagram">Data Flow Diagram</h3>
+<p>See FDD.</p>
+<h3 id="component-level-dfd">Component level DFD</h3>
+<p>See FDD.</p>
+<h3 id="function-level-dfd">Function level DFD</h3>
+<p>See FDD.</p>
+<h1 id="variable-data-dictionary">Variable Data Dictionary</h1>
+<h2 id="user-defined-typedef-definitiondeclaration">User defined typedef definition/declaration </h2>
+<p><em>&lt;This section documents any user types uniquely used for the module.&gt;</em></p>
+<p><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/static/media/image2.wmf" style="width:6.89028in;height:9.05417in" /></p>
+<h2 id="variable-definition-for-enumerated-types">Variable definition for enumerated types</h2>
+<table>
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 40%" />
+<col style="width: 14%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Enum Name</td>
+<td>Element Name</td>
+<td>Value</td>
+</tr>
+<tr class="even">
+<td>See AR350A_ImcArbn_DataDict.m file</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="constant-data-dictionary">Constant Data Dictionary</h1>
+<h2 id="program-fixed-constants">Program (fixed) Constants</h2>
+<h3 id="embedded-constants">Embedded Constants</h3>
+<h4 id="local-constants">Local Constants</h4>
+<table>
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 17%" />
+<col style="width: 19%" />
+<col style="width: 37%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Constant Name</td>
+<td>Resolution</td>
+<td>Units</td>
+<td>Value</td>
+</tr>
+<tr class="even">
+<td>See AR350A_ImcArbn_DataDict.m file</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="global">Global</h2>
+<p>&lt;This section lists the global constants used by the module. For details on global constants, refer to the Data Dictionary for the application&gt;</p>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Constant Name</td>
+</tr>
+<tr class="even">
+<td>See AR350A_ImcArbn_DataDict.m file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="module-specific-lookup-tables-constants">Module specific Lookup Tables Constants</h2>
+<p><em>&lt;(This is for lookup tables (arrays) with fixed values, same name as other tables)</em>&gt;</p>
+<table>
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 19%" />
+<col style="width: 17%" />
+<col style="width: 23%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Constant Name</td>
+<td>type</td>
+<td>Value</td>
+<td>Software Segment</td>
+</tr>
+<tr class="even">
+<td>SIGGROUPCONFIG_REC</td>
+<td>SigGroupRec1</td>
+<td>Configurable</td>
+<td>ImcArbn_CONST</td>
+</tr>
+<tr class="odd">
+<td>&lt;SIGGROUPNAME&gt;_REC</td>
+<td>SigPrmRec1</td>
+<td>Configurable</td>
+<td>ImcArbn_CONST</td>
+</tr>
+<tr class="even">
+<td>RATEGROUPOFFS_CNT_U08</td>
+<td>Uint8</td>
+<td>Configurable</td>
+<td>ImcArbn_CONST</td>
+</tr>
+<tr class="odd">
+<td>NRSIGGROUPINRATEGROUP_CNT_U08</td>
+<td>Uint8</td>
+<td>Configurable</td>
+<td>ImcArbn_CONST</td>
+</tr>
+<tr class="even">
+<td>MISSSIGGROUPTIOUT_CNT_U08</td>
+<td>Uint8</td>
+<td>Configurable</td>
+<td>ImcArbn_CONST</td>
+</tr>
+</tbody>
+</table>
+<p>Note: &lt;SIGGROUPNAME&gt;_REC – Placeholder &lt;SIGGROUPNAME&gt; will be replaced based on respective Signal Group names from the configuration. Also note, this component will have as many number of &lt;SIGGROUPNAME&gt;_REC constants as number of Signal Groups.</p>
+<h1 id="software-module-implementation">Software Module Implementation</h1>
+<h2 id="sub-module-functions">Sub-Module Functions</h2>
+<p>None</p>
+<h2 id="init-imcarbninit1">Init: ImcArbnInit1 </h2>
+<h2 id="design-rationale">Design Rationale</h2>
+<p><em>Design follows implementation in FDD.</em></p>
+<h2 id="design-rationale-1">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="periodic-functions">PERIODIC FUNCTIONS </h2>
+<h2 id="per-imcarbnper1">Per: ImcArbnPer1</h2>
+<h2 id="design-rationale-2">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="per-imcarbnper2">Per: ImcArbnPer2</h2>
+<h2 id="design-rationale-3">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="per-imcarbnper3">Per: ImcArbnPer3</h2>
+<h2 id="design-rationale-4">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="per-imcarbnper4">Per: ImcArbnPer4</h2>
+<h2 id="design-rationale-5">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="per-imcarbnper5">Per: ImcArbnPer5</h2>
+<h2 id="design-rationale-6">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="per-imcarbnper6">Per: ImcArbnPer6</h2>
+<h2 id="design-rationale-7">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="interrupt-functions">Interrupt Functions</h2>
+<p><em>None</em></p>
+<h2 id="server-runnable-functions">Server Runnable Functions</h2>
+<h2 id="getsigimcdataextdsts_f32">GetSigImcDataExtdSts_f32</h2>
+<h2 id="design-rationale-8">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="getsigimcdataextdsts_u32">GetSigImcDataExtdSts_u32</h2>
+<h2 id="design-rationale-9">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="getsigimcdataextdsts_u16">GetSigImcDataExtdSts_u16</h2>
+<h2 id="design-rationale-10">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="getsigimcdataextdsts_s16">GetSigImcDataExtdSts_s16</h2>
+<h2 id="design-rationale-11">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="getsigimcdataextdsts_u08">GetSigImcDataExtdSts_u08</h2>
+<h2 id="design-rationale-12">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="getsigimcdataextdsts_s08">GetSigImcDataExtdSts_s08</h2>
+<h2 id="design-rationale-13">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="getsigimcdataextdsts_logl">GetSigImcDataExtdSts_logl</h2>
+<h2 id="design-rationale-14">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="getsigimcdata_f32">GetSigImcData_f32</h2>
+<h2 id="design-rationale-15">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="getsigimcdata_u32">GetSigImcData_u32</h2>
+<h2 id="design-rationale-16">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="getsigimcdata_s32">GetSigImcData_s32</h2>
+<h2 id="design-rationale-17">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="getsigimcdata_u16">GetSigImcData_u16</h2>
+<h2 id="design-rationale-18">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="getsigimcdata_s16">GetSigImcData_s16</h2>
+<h2 id="design-rationale-19">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="getsigimcdata_u08">GetSigImcData_u08</h2>
+<h2 id="design-rationale-20">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="getsigimcdata_s08">GetSigImcData_s08</h2>
+<h2 id="design-rationale-21">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="getsigimcdata_logl">GetSigImcData_logl</h2>
+<h2 id="design-rationale-22">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="gettxrategroup">GetTxRateGroup</h2>
+<h2 id="design-rationale-23">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="gettxsiggroup">GetTxSigGroup</h2>
+<h2 id="design-rationale-24">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="setrxsiggroup">SetRxSigGroup</h2>
+<h2 id="design-rationale-25">Design Rationale</h2>
+<p><em>Refer FDD</em></p>
+<h2 id="module-internal-local-functions">Module Internal (Local) Functions</h2>
+<h2 id="local-function-1">Local Function #1</h2>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 42%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>ImcArbnTx</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>RateGroup_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td><strong>Return Value</strong></td>
+<td>void</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description">Description</h2>
+<p>This function implements “ImcArbnTx” function in the FDD.</p>
+<h2 id="local-function-2">Local Function #2</h2>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 42%" />
+<col style="width: 14%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>ImcArbnRx</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>FrmFltCntr_Ary2D_u8</td>
+<td>Ary2D_u8_2_2*</td>
+<td>0x00000001</td>
+<td>0xFFFFFFFF</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>RateGroup_Cnt_T_u08</td>
+<td>uint8</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>IniTiOutChkCmpl_Cnt_T_logl</td>
+<td>Boolean</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><strong>Return Value</strong></td>
+<td>None</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-1">Description</h2>
+<p>This function implements “ImcArbnRx” function in the FDD.</p>
+<h2 id="local-function-3">Local Function #3</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 41%" />
+<col style="width: 16%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>NoDataHndlg</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>RxSigExtdSts1_Cnt_T_enum</td>
+<td>ImcArbnRxExtdSts1</td>
+<td>0</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>RxDataSrc_Cnt_T_enum</td>
+<td>ImcArbnRxDataSrc1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>RateGroup_Cnt_T_u08</td>
+<td>uint8</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>SigGroup_Cnt_T_u08</td>
+<td>uint8</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>PrimSrcNoDataRxd_Cnt_T_logl</td>
+<td>boolean</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>SecdrySrcNoDataRxd_Cnt_T_logl</td>
+<td>boolean</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><strong>Return Value</strong></td>
+<td>None</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-2">Description</h2>
+<p>This function implements “NoDataHndlg” function in the FDD.</p>
+<h2 id="local-function-4">Local Function #4</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 42%" />
+<col style="width: 13%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>OvrdSigStsDurgStrtUp</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>SigGroup_Cnt_T_u08</td>
+<td>uint8</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>IniTiOutChkCmpl_Cnt_T_logl</td>
+<td>Boolean</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><strong>Return Value</strong></td>
+<td>None</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-3">Description</h2>
+<p>This function implements “OvrdSigStsDurgStrtUp” function in the FDD.</p>
+<h2 id="local-function-5">Local Function #5</h2>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 41%" />
+<col style="width: 16%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>EvlSigGroupNeverRxdMissSts</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>RateGroup_Cnt_T_u08</td>
+<td>uint8</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>SigGroup_Cnt_T_u08</td>
+<td>uint8</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr class="even">
+<td><strong>Return Value</strong></td>
+<td>RxSigExtdSts1_Cnt_T_enum</td>
+<td>ImcArbnRxExtdSts1</td>
+<td>0</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-4">Description</h2>
+<p>This function implements “OvrdSigStsDurgStrtUp” function in the FDD.</p>
+<h2 id="local-function-6">Local Function #6</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 38%" />
+<col style="width: 20%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>RxFrmVldChk</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>DataBuf_Cnt_T_u08</td>
+<td>uint8*</td>
+<td>0x00000001</td>
+<td>0xFFFFFFFF</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>FrmFltCntr_Cnt_T_u08</td>
+<td>Ary1D_u8_2*</td>
+<td>0x00000001</td>
+<td>0xFFFFFFFF</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>SigGroupDataSrc_Cnt_T_enum</td>
+<td>ImcArbnRxDataSrc1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>RateGroup_Cnt_T_u08</td>
+<td>uint8</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>SigGroup_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>PrimSrcOnlySigGroup_Cnt_T_logl</td>
+<td>Boolean</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>IniTiOutChkCmpl_Cnt_T_logl</td>
+<td>Boolean</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td><strong>Return Value</strong></td>
+<td>FrmSts_Cnt_T_enum</td>
+<td>ImcArbnRxRollgCntrSts1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-5">Description</h2>
+<p>This function implements “RxFrmVldChk” function in the FDD.</p>
+<h2 id="local-function-7">Local Function #7</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 38%" />
+<col style="width: 20%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>ImcChResyncHndlg</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>SigGroupDataSrc_Cnt_T_enum</td>
+<td>ImcArbnRxDataSrc1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>SigGroup_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>PrsntRollgCntr_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>31</td>
+</tr>
+<tr class="odd">
+<td><strong>Return Value</strong></td>
+<td>Void</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-6">Description</h2>
+<p>This function implements “ImcChResyncHndlg” function in the FDD.</p>
+<h2 id="local-function-8">Local Function #8</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 38%" />
+<col style="width: 20%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>VldtRollgCntr</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>SigGroupDataSrc_Cnt_T_enum</td>
+<td>ImcArbnRxDataSrc1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>RateGroup_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>SigGroup_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>PrsntRollgCntr_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>31</td>
+</tr>
+<tr class="even">
+<td><strong>Return Value</strong></td>
+<td>RollgCntrSts_Cnt_T_enum</td>
+<td>ImcArbnRxRollgCntrSts1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-7">Description</h2>
+<p>This function implements “VldtRollgCntr” function in the FDD.</p>
+<h2 id="local-function-9">Local Function #9</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 38%" />
+<col style="width: 20%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>VldtRollgCntrAlg</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>SigGroupDataSrc_Cnt_T_enum</td>
+<td>ImcArbnRxDataSrc1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>RateGroup_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>SigGroup_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>PrsntRollgCntr_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>31</td>
+</tr>
+<tr class="even">
+<td><strong>Return Value</strong></td>
+<td>RollgCntrSts_Cnt_T_enum</td>
+<td>ImcArbnRxRollgCntrSts1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-8">Description</h2>
+<p>This function implements “VldtRollgCntrAlg” function in the FDD.</p>
+<h2 id="local-function-10">Local Function #10</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 38%" />
+<col style="width: 20%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>RollgCntrSeqChk</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>PrsntRollgCntr_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>31</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>AntcptdRollCntr_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>31</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>UpprDriftLim_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>LwrDriftLim_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr class="even">
+<td><strong>Return Value</strong></td>
+<td>RollgCntrVld_Cnt_T_logl</td>
+<td>boolean</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-9">Description</h2>
+<p>This function implements “RollgCntrSeqChk” function in the FDD.</p>
+<h2 id="local-function-11">Local Function #11</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 38%" />
+<col style="width: 20%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>CreatSigGroupData</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>SigGroup_T_rec</td>
+<td>SigGroupRec1 const*</td>
+<td>0x00000001</td>
+<td>0xFFFFFFFF</td>
+</tr>
+<tr class="odd">
+<td><strong>Return Value</strong></td>
+<td>RetData_Uls_T_u32</td>
+<td>uint32</td>
+<td>0</td>
+<td>4294967295</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-10">Description</h2>
+<p>This function implements “CreatSigGroupData” function in the FDD.</p>
+<h2 id="local-function-12">Local Function #12</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 38%" />
+<col style="width: 20%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>DecodSigGroupData</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>SigGroup_T_rec</td>
+<td>SigGroupRec1 const*</td>
+<td>0x00000001</td>
+<td>0xFFFFFFFF</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>SigGroupRxData_Uls_T_u32</td>
+<td>uint32</td>
+<td>0</td>
+<td>4294967295</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>RxSigExtdSts1_Cnt_T_enum</td>
+<td>ImcArbnRxExtdSts1</td>
+<td>0</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>RxDataSrc_Cnt_T_enum</td>
+<td>ImcArbnRxDataSrc1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td><strong>Return Value</strong></td>
+<td>void</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-11">Description</h2>
+<p>This function implements “DecodSigGroupData” function in the FDD.</p>
+<h2 id="local-function-13">Local Function #13</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 38%" />
+<col style="width: 20%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>GetBitMask</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>NrOfBits_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>31</td>
+</tr>
+<tr class="odd">
+<td><strong>Return Value</strong></td>
+<td>BitMask_Cnt_T_u32</td>
+<td>uint32</td>
+<td>0</td>
+<td>4294967295</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-12">Description</h2>
+<p>This function implements “GetBitMask” function in the FDD.</p>
+<h2 id="local-function-14">Local Function #14</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 38%" />
+<col style="width: 20%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>GetImcSigSts</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>RxSigExtdSts1_Cnt_T_enum</td>
+<td>ImcArbnRxExtdSts1</td>
+<td>0</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td><strong>Return Value</strong></td>
+<td>RetSts_Cnt_T_enum</td>
+<td>ImcArbnRxSts1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-13">Description</h2>
+<p>This function implements “GetImcSigSts” function in the FDD.</p>
+<h2 id="local-function-15">Local Function #15</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 38%" />
+<col style="width: 20%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>GetImcFltParamByte</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>void</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Return Value</strong></td>
+<td>FltBitMask_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-14">Description</h2>
+<p>This function implements “GetImcFltParamByte” function in the FDD.</p>
+<h2 id="local-function-16">Local Function #16</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 38%" />
+<col style="width: 20%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>NoDataRxd</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>StrtByte_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>EndByte_Cnt_T_u08</td>
+<td>Uint8</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr class="even">
+<td><strong>Return Value</strong></td>
+<td>RetVal_Cnt_T_logl</td>
+<td>boolean</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description-15">Description</h2>
+<p>This function implements “NoDataRxd” function in the FDD.</p>
+<h2 id="transition-functions">Transition Functions</h2>
+<p>None.</p>
+<h2 id="global-functionmacro-definitions">Global Function/Macro Definitions</h2>
+<p>Refer FDD</p>
+<h1 id="known-limitations-with-design">Known Limitations with Design</h1>
+<blockquote>
+<p>None</p>
+</blockquote>
+<h1 id="unit-test-consideration">UNIT TEST CONSIDERATION</h1>
+<ol type="1">
+<li><p>Number of Signals / Signal Groups / Rate Groups that can be supported by Imc Tx/Rx is configurable. Even though underlying data type of configuration information might have wider range, only values that are generated out of configuration will be supported by the component. If complete range need to be supported, then make configuration, and generate the cfg files accordingly. Also, none of the configuration values shall be hand-modified to cover legal range of underlying parameter.</p></li>
+</ol>
+<p class="heading" id="abbreviations-and-acronyms">Abbreviations and Acronyms</p>
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Abbreviation or Acronym</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DFD</td>
+<td>Design functional diagram</td>
+</tr>
+<tr class="even">
+<td>MDD</td>
+<td>Module design Document</td>
+</tr>
+<tr class="odd">
+<td>FDD</td>
+<td>Functional Design Document</td>
+</tr>
+</tbody>
+</table>
+<p class="heading" id="glossary">Glossary</p>
+<p><strong>Note</strong>: Terms and definitions from the source “Nexteer Automotive” take precedence over all other definitions of the same term. Terms and definitions from the source “Nexteer Automotive” are formulated from multiple sources, including the following:</p>
+<ul>
+<li><p>ISO 9000</p></li>
+<li><p>ISO/IEC 12207</p></li>
+<li><p>ISO/IEC 15504</p></li>
+<li><p>Automotive SPICE® Process Reference Model (PRM)</p></li>
+<li><p>Automotive SPICE® Process Assessment Model (PAM)</p></li>
+<li><p>ISO/IEC 15288</p></li>
+<li><p>ISO 26262</p></li>
+<li><p>IEEE Standards</p></li>
+<li><p>SWEBOK</p></li>
+<li><p>PMBOK</p></li>
+<li><p>Existing Nexteer Automotive documentation</p></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 53%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Term</strong></th>
+<th><strong>Definition</strong></th>
+<th><strong>Source</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MDD</td>
+<td>Module Design Document</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DFD</td>
+<td>Data Flow Diagram</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="heading" id="references">References</p>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 69%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Ref. #</strong></th>
+<th><strong>Title</strong></th>
+<th><strong>Version</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>AUTOSAR Specification of Memory Mapping (Link:<a href="http://www.autosar.org/download/R4.0/AUTOSAR_SWS_MemoryMapping.pdf">AUTOSAR_SWS_MemoryMapping.pdf</a>)</td>
+<td>v1.3.0 R4.0 Rev 2</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>MDD Guideline</td>
+<td>EA4 01.00.00</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><a href="http://misagweb01.nexteer.com/eRoomReq/Files/erooms8/NextGeneration/0_fc55f/Software%20Naming%20Conventions%2003x(In%20Work).doc">Software Naming Conventions.doc</a></td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><a href="http://eroom1.nexteer.com/eRoomReq/Files/erooms8/NextGeneration/0_1a67a9/Software%20Design%20and%20Coding%20Standards.doc">Software Design and Coding Standards.doc</a></td>
+<td>2.1</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>FDD: AR350A_ImcArbn_Design</td>
+<td>See Synergy subproject version</td>
+</tr>
+</tbody>
+</table>

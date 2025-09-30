@@ -1,0 +1,902 @@
+---
+title: IssueReport_CBD1400346s
+linkTitle: IssueReport_CBD1400346s
+weight: 33
+---
+
+<!DOCTYPE html><html>
+<head>
+<title></title>
+<style type="text/css">
+<!--
+.xflip {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: fliph;
+}
+.yflip {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: flipv;
+}
+.xyflip {
+    -moz-transform: scaleX(-1) scaleY(-1);
+    -webkit-transform: scaleX(-1) scaleY(-1);
+    -o-transform: scaleX(-1) scaleY(-1);
+    transform: scaleX(-1) scaleY(-1);
+    filter: fliph + flipv;
+}
+-->
+</style>
+</head>
+<body>
+<a name=1></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-1_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>License Number</b><br/>
+<b>Customer</b><br/>
+CBD1400346<br/>
+Nexteer Automotive Corporation<br/>Package: GMLAN 3.1 - CANbedded License for GM;&#160;<br/>MultiChannel<br/>Micro: R7F701311<br/>Compiler: GHS 2015.1.7<br/>
+<b>Maintenance Expiry Date</b><br/>
+2014-08-01<br/>
+<b>SIP Delivery Date</b><br/>
+<b>SIP Version</b><br/>
+2016-04-29<br/>
+01.01.35<br/>
+<b>SLP</b><br/>
+<b>Delivery Number</b><br/>
+GMLAN 3.1<br/>
+D01<br/>
+<b>Report Creation Date</b><br/>
+2016-05-06<br/>
+<b>Contact</b><br/>
+In case of questions or the need for an update of the basic software delivery, please contact&#160;<br/><a href="mailto:GMSupport@us.vector.com">GMSupport@us.vector.com</a>&#160;or your Vector contact person.<br/>
+<b>Table of Contents<br/>1.</b><br/>
+<a href="IssueReport_CBD1400346s.html#2"><b>Introduction</b></a><br/>
+<a href="IssueReport_CBD1400346s.html#2"><b>1.1 Resolving Issues</b></a><br/>
+<a href="IssueReport_CBD1400346s.html#2"><b>1.2 Issue Classification</b></a><br/>
+<b>2.</b><br/>
+<a href="IssueReport_CBD1400346s.html#3"><b>New Issues</b></a><br/>
+<a href="IssueReport_CBD1400346s.html#3"><b>2.1 Runtime Issues without Workaround:</b></a>&#160;<b>0</b><br/>
+<a href="IssueReport_CBD1400346s.html#3"><b>2.2 Runtime Issues with Workaround:</b></a>&#160;<b>6</b><br/>
+<a href="IssueReport_CBD1400346s.html#10"><b>2.3 Apparent Issues:</b></a>&#160;<b>8</b><br/>
+<a href="IssueReport_CBD1400346s.html#18"><b>2.4 Not Released Functionality:</b></a>&#160;<b>0</b><br/>
+<a href="IssueReport_CBD1400346s.html#19"><b>2.5 Compiler Warnings:</b></a>&#160;<b>24</b><br/>
+<b>3.</b><br/>
+<a href="IssueReport_CBD1400346s.html#45"><b>New Issues for Information:</b></a>&#160;<b>0</b><br/>
+<b>4.</b><br/>
+<a href="IssueReport_CBD1400346s.html#46"><b>Report Legend</b></a><br/>
+<b>5.</b><br/>
+<a href="IssueReport_CBD1400346s.html#47"><b>Quality Management Contact</b></a><br/>
+1<br/>
+<hr/>
+<a name=2></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-2_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>1. Introduction</b><br/>
+<b>1.1 Resolving Issues</b><br/>
+Reported issues are not necessarily fixed automatically by the next update delivery. If some of the&#160;<br/>reported&#160;issues shall be fixed, please contact Vector to establish an agreement about issues that&#160;<br/>shall&#160;be fixed in upcoming deliveries. Please note that Vector may fix additional issues without&#160;<br/>explicit&#160;request.<br/>
+<b>1.2 Issue Classification</b><br/>
+This Issue Report provides issues that have been detected since the last report. The issues have&#160;<br/>been&#160;classified to facilitate the assessment of their impact:<br/>
+The chapter 'New Issues' lists issues that have been detected since the last report and which could&#160;<br/>not&#160;be excluded based on the use-case defined in the questionnaire. The issues are classified as&#160;<br/>follows:<br/>
+•<br/>
+<b>Runtime Issues without Workaround:</b>&#160;Runtime issues without a workaround require an&#160;<br/>update&#160;of the basic software delivery in case the issue affects the ECU overall functionality.&#160;<br/>The&#160;effect of an issue to the ECU functionality has to be analyzed by the customer as the basic&#160;<br/>software&#160;usage and its configuration is not known by Vector. The risk of change has also to be&#160;<br/>taken&#160;into account.<br/>
+•<br/>
+<b>Runtime Issues with Workaround:</b>&#160;It is not recommended to update a delivery due to a&#160;<br/>runtime&#160;issue with a documented workaround. The effect of an issue to the ECU functionality&#160;<br/>has&#160;to be analyzed by the customer as the basic software usage and its configuration is not&#160;<br/>known&#160;by Vector. The risk of change has also to be taken into account.<br/>
+•<br/>
+<b>Apparent Issues:</b>&#160;Apparent issues are detected immediately when using the basic software.&#160;<br/>If&#160;an issue does not show up while working with the basic software the ECU project is not&#160;<br/>affected&#160;by the issue. Apparent issues may or may not have workarounds.<br/>
+•<br/>
+<b>Not Released Functionality:</b>&#160;Not released functionalities are modules and features that have&#160;<br/>not&#160;yet passed a complete development cycle (they are e.g. not or only partly tested). For&#160;<br/>serial&#160;production projects the integrator has to ensure that all BETA features are disabled as&#160;<br/>indicated.&#160;If a ESCAN affects a complete BSW module, the module must not be used for serial&#160;<br/>production.<br/>
+•<br/>
+<b>Compiler Warnings:</b>&#160;As a service we report the known compiler warnings. The occurrence of&#160;<br/>a&#160;compiler warning may depend on the used configuration and compiler settings.<br/>
+The chapter 'New Issues for Information' lists issues that are not relevant for the use case that&#160;<br/>has&#160;been documented in the questionnaire provided to Vector. The issues may, however, be&#160;<br/>relevant&#160;for other use cases. Additionally, issues that have been accepted or are tolerated by the&#160;<br/>OEM&#160;(as defined in the questionnaire) are reported here.<br/>
+2<br/>
+<hr/>
+<a name=3></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-3_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>2. New Issues</b><br/>
+<b>2.1 Runtime Issues without Workaround<br/></b>The lists contain issues that have been detected since the last report and which could not be&#160;<br/>excluded&#160;based on the use-cases defined in the questionnaire (see chapter ‘New Issues for&#160;<br/>Information’).<br/>
+<b>2.2 Runtime Issues with Workaround</b><br/>
+It is not recommended to update a delivery due to a runtime issue with a documented&#160;<br/>workaround.&#160;The effect of an issue to the ECU functionality has to be analyzed by the customer as&#160;<br/>the&#160;basic software usage and its configuration is not known by Vector. Thereby the risk of change&#160;<br/>has&#160;also to be taken into account.&#160;<br/>
+<b>Index</b><br/>
+<a href="IssueReport_CBD1400346s.html#4">ESCAN00027894</a><br/>
+Memory is overwritten when initializing the CANBedded Stack<br/>Nm_Gmlan_Gm@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#5">ESCAN00045854</a><br/>
+An incorrect timeout is issued for Flow Control and Consecutive Frame timing&#160;<br/>supervision.<br/>Tp_Iso15765@GenTool_Geny<br/>
+<a href="IssueReport_CBD1400346s.html#6">ESCAN00068912</a><br/>
+Positive response to service $A5 03 not suppressed<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#7">ESCAN00073999</a><br/>
+Signal handler names have wrong names after deletion of some signals of a&#160;<br/>DID<br/>Diag_CanDesc__coreBase@GenTool_Geny_CANdesc<br/>
+<a href="IssueReport_CBD1400346s.html#8">ESCAN00078197</a><br/>
+Missing first response for service 0xA9 0x81 request<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#9">ESCAN00081145</a><br/>
+Validity Bits for Oem GM (Consistency Checks)<br/>GenTool_GenyObjectHierarchyCan@GenTool_Geny<br/>
+3<br/>
+<hr/>
+<a name=4></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-4_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00027894</b><br/>
+<b>Memory is overwritten when initializing the&#160;<br/>CANBedded&#160;Stack</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Nm_Gmlan_Gm@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+3.30.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>Memory is overwritten when initializing the CANBedded Stack.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The issue occurs always and immediately if CclInitPowerOn or IlInitPowerOn is called with the&#160;<br/>configuration&#160;mentioned below.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Any configuration, where the number of Nm Channels differs from the number of Can Channels.<br/>
+Hint: The generated define in kCanNumberOfChannels in can_cfg.h differs from&#160;<br/>kNmNumberOfChannels&#160;generated to nm_cfg.h<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>Do not call IlInitPowerOn in the application. Instead, call IlInit for each channel which uses the&#160;<br/>Interaction&#160;Layer.<br/>
+Note for GM ECUs: If the Interaction Layer is not used on the first channel in GENy (channel index&#160;<br/>0),&#160;the application must additionally call CanInitPowerOn before IlInit.<br/>
+Example:<br/>The ECU has three CAN channels, where the Interaction Layer is only used on the first two.<br/>
+IlInit(0); /* Initialize the IL on CAN channel 0 */<br/>IlInit(1); /* Initialize the IL on CAN channel 1 */<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.&#160;<br/>
+4<br/>
+<hr/>
+<a name=5></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-5_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00045854</b><br/>
+<b>An incorrect timeout is issued for Flow Control and&#160;<br/>Consecutive&#160;Frame timing supervision.</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Tp_Iso15765@GenTool_Geny<br/>
+<i><b>First affected version:</b></i><br/>
+2.00.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>An incorrect timeout is issued for Flow Control (TX) and Consecutive Frame (RX) timing&#160;<br/>supervision&#160;in case of large timeouts.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>During runtime at transmission and/or reception of multi frames.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>This can only appear if channel specific timing is activated (#if defined&#160;<br/>TP_CHANNEL_SPECIFIC_TIMING)<br/>AND&#160;<br/>the configured timeout values are greater than 255 &#34;ticks&#34;.<br/>Please note that the number of &#34;ticks&#34; is calculated by dividing the configured timeout value by&#160;<br/>the&#160;configured periodic cycle time of the TP.<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>Use smaller timeouts or increase the call-cycle of the TP task functions.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.&#160;<br/>
+5<br/>
+<hr/>
+<a name=6></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-6_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00068912</b><br/>
+<b>Positive response to service $A5 03 not suppressed</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+6.12.01<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The positive response to service $A5 03 is not suppressed.&#160;<br/>AND possibly<br/>The following compiler warning occurs:<br/>&#160;static void DescOemEnableProgrammingMode(DescMsgContext *pMsgContext)<br/>&#160;^<br/>&#34;desc.c&#34;, Warning[Pe177]:&#160;<br/>&#160;function &#34;DescOemEnableProgrammingMode&#34; was declared but never referenced<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>At runtime/compile time.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Configurations created in an older delivery affected by ESCAN00061312:<br/>&#34;Not possible to support negative responses while suppressing positive response for service $A5&#160;<br/>03&#34;<br/>AND<br/>The 'Reload all description files' button on the 'Diag_CanDesc_Kwp' page in GENy has NOT been&#160;<br/>pressed&#160;at least once since moving from the older delivery.<br/>
+&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>Press the 'Reload all description files' button on the 'Diag_CanDesc_Kwp' page in GENy and then&#160;<br/>save&#160;the configuration. This process only needs to be done once.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.&#160;<br/>
+6<br/>
+<hr/>
+<a name=7></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-7_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00073999</b><br/>
+<b>Signal handler names have wrong names after&#160;<br/>deletion&#160;of some signals of a DID</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@GenTool_Geny_CANdesc<br/>
+<i><b>First affected version:</b></i><br/>
+6.00.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>After reloading a modified CDD file, where signals of a DID were deleted, the signal handlers of&#160;<br/>the&#160;DID have the names of the deleted signals.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>After deleting some signals within a signal list of a DID in CANdela Studio and reloading the&#160;<br/>modified&#160;CDD file<br/>within GENy.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Signal handlers are used<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>Empty the field &#34;CANdela document name&#34; and click &#34;Reload all description files&#34;. The&#160;<br/>configuration&#160;is now empty and no old names are stored. Afterwards import the CDD file again.<br/>
+OR<br/>
+For the affected signals change the Signal Handler Type to &#34;Direct Access&#34; and back to &#34;Signal&#160;<br/>Handler&#34;&#160;again<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+7<br/>
+<hr/>
+<a name=8></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-8_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00078197</b><br/>
+<b>Missing first response for service 0xA9 0x81 request</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+6.06.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+6.21.00<br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>For a service 0xA9 0x81 request the first response with the first DTC is not sent on the bus.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>Always during run-time in the following scenario:<br/>- A scheduled DPID is currently read out (could take multiple task calls)<br/>- During the reading the service 0xA9 0x81 is requested<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Service 0xAA is configured<br/>AND<br/>Service 0xA9 0x81 is configured<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>Create a user config file with the following content and add it in GENy to the component CANdesc:<br/>
+#ifdef DESC_UUDTNET_DISABLE_MULTI_CLIENT<br/># undef DESC_UUDTNET_DISABLE_MULTI_CLIENT<br/># define DESC_UUDTNET_ENABLE_MULTI_CLIENT<br/>#endif<br/>
+Afterwards generate CANdesc again.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.&#160;<br/>
+8<br/>
+<hr/>
+<a name=9></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-9_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00081145</b><br/>
+<b>Validity Bits for Oem GM (Consistency Checks)</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+GenTool_GenyObjectHierarchyCan@GenTool_Geny<br/>
+<i><b>First affected version:</b></i><br/>
+1.09.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>GENy in combination with the Il_Vector_Gm does not generate.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>Always and immediately if the configuration has been created with an inconsistent dbc file.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Any configuration with validity bits, where<br/>a validity bit is part of a rx message<br/>AND<br/>a signal using a validity bit is mapped to the current ECU<br/>AND<br/>the validity bit itself is NOT mapped to the current ECU.<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>Change your dbc file and map the validity bit signal to the ECU. Update the configuration in GENy&#160;<br/>or&#160;create a new the configuration with the updated dbc file.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+9<br/>
+<hr/>
+<a name=10></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-10_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>2.3 Apparent Issues</b><br/>
+Apparent issues are detected immediately when using the basic software. If an issue does not&#160;<br/>show&#160;up while working with the basic software the ECU project is not affected by the issue.&#160;<br/>Apparent&#160;issues may or may not have workarounds.&#160;<br/>
+<b>Index</b><br/>
+<a href="IssueReport_CBD1400346s.html#11">ESCAN00049589</a><br/>
+Compile error: direct signal access feature in CANdesc does not consider far&#160;<br/>memory&#160;pointers<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#12">ESCAN00055957</a><br/>
+appdesc.c missing line feed (LF) after carraige return (CR) on some lines<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#13">ESCAN00069876</a><br/>
+Incorrect Description for Calibration Attribute nmMaxApplShutDownDenyCnt<br/>CBD_TechRef_GmlanCalibration@Doc_TechRef<br/>
+<a href="IssueReport_CBD1400346s.html#14">ESCAN00070445</a><br/>
+The P2 timings can be changed in the tool GUI but the new values have no&#160;<br/>effect&#160;on CANdesc code generation<br/>Diag_CanDesc__coreBase@GenTool_Geny_CANdesc<br/>
+<a href="IssueReport_CBD1400346s.html#15">ESCAN00071069</a><br/>
+The description of service 0x12 is out-dated<br/>Diag_CanDesc_Oem@Doc_TechRef_Kwp_Gm<br/>
+<a href="IssueReport_CBD1400346s.html#16">ESCAN00076919</a><br/>
+&#34;unknown exception occurred&#34; occurs during DBC update<br/>Il_Vector@GenTool_Geny<br/>
+<a href="IssueReport_CBD1400346s.html#17">ESCAN00079945</a><br/>
+Os cat2 interrupts for Autosar OS are not supported in CANbedded&#160;<br/>configurations<br/>DrvCan__HllIdxCrx@Doc_TechRef<br/>
+<a href="IssueReport_CBD1400346s.html#18">ESCAN00083461</a><br/>
+Description missing, that Block Size and STmin always reset when a&#160;<br/>connection&#160;is terminated<br/>Tp_Iso15765@Doc_TechRef<br/>
+10<br/>
+<hr/>
+<a name=11></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-11_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00049589</b><br/>
+<b>Compile error: direct signal access feature in&#160;<br/>CANdesc&#160;does not consider far memory pointers</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+1.00.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>Compile error for mismatching pointer type assignment.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>At compile time.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>- CANdesc<br/>AND<br/>- Direct signal access to RAM/ROM objects is used.<br/>AND<br/>- FAR memory<br/>
+Some services such as the UDS ones 0x22/0x2A and 0x2E, can be processed on signal level. If&#160;<br/>they&#160;are processed on signal level it is possible to choose &#34;Direct Access&#34; as Signal&#160;<br/>Handler Type. In this case, CANdesc reads or writes the value of signal direct of/to a variable.&#160;<br/>(The&#160;name of the variable is configured in the cdd file or GENy.) If this variable<br/>is located in FAR memory a Compiler/Linker warning or error will occur.&#160;<br/>
+&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>Avoid direct signal access to such objects and implement the main-handler within the application&#160;<br/>code.&#160;(Choose &#34;Signal Handler&#34; for the Signal Handler Type and copy the<br/>data that is located in the FAR memory in the application callback for this signal.)<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.&#160;<br/>
+11<br/>
+<hr/>
+<a name=12></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-12_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00055957</b><br/>
+<b>appdesc.c missing line feed (LF) after carraige&#160;<br/>return&#160;(CR) on some lines</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+5.07.26<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The appdesc.c file is missing the line feed (LF) character at the end of certain lines. It should&#160;<br/>follow&#160;the carraige return (CR) character. This will cause compilers and debuggers to display the&#160;<br/>incorrect&#160;line of source code. Additionally, some IDEs will complain that the line feed character is&#160;<br/>missing.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>At generation time.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>All configurations.<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.&#160;<br/>
+12<br/>
+<hr/>
+<a name=13></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-13_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00069876</b><br/>
+<b>Incorrect Description for Calibration Attribute&#160;<br/>nmMaxApplShutDownDenyCnt</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+CBD_TechRef_GmlanCalibration@Doc_TechRef<br/>
+<i><b>First affected version:</b></i><br/>
+2.01.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The description in chapter 6.7 for calibration attribute nmMaxApplShutDownDenyCnt suggests&#160;<br/>that&#160;this attribute can be modified in the GENy GUI, but the selection doesn't exist. The&#160;<br/>documentation&#160;will be updated to remove this suggestion.<br/>
+nmMaxApplShutDownDenyCnt can be modified in the generated handler calibrations file gmlcal.c.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>Always<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>All<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.&#160;<br/>
+13<br/>
+<hr/>
+<a name=14></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-14_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00070445</b><br/>
+<b>The P2 timings can be changed in the tool GUI but&#160;<br/>the&#160;new values have no effect on CANdesc code&#160;<br/>generation</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@GenTool_Geny_CANdesc<br/>
+<i><b>First affected version:</b></i><br/>
+6.00.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The user is able to modify the default P2 timings in the GENtool GUI, but the new values are not&#160;<br/>used&#160;during the CANdesc code generation. As a result the default P2 timings are only applicable.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>At CANdesc configuration resp. code generation time.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Any KWP2000 configuration that shall use P2 timings other than the default ones.<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>The P2/P2* timings are set automatically according to the GM specification to the values of 75 ms/<br/>5000&#160;ms. Usually, there should be no need to change the P2/P2* timings in GENy to a different&#160;<br/>value.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.&#160;<br/>
+14<br/>
+<hr/>
+<a name=15></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-15_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00071069</b><br/>
+<b>The description of service 0x12 is out-dated</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc_Oem@Doc_TechRef_Kwp_Gm<br/>
+<i><b>First affected version:</b></i><br/>
+3.00.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The description of service 0x12 doesn't consider the changes made with CANdesc 6.<br/>Only one application callback on SID level is generated instead of two, for each sub-function.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>Always.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Any.<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>6.2 Service ReadFailureRecordData ($12)<br/>CANdesc generates only one function callback (main-handler) for all service $12 requests and&#160;<br/>does&#160;not offer any special support for this service. Therefore all dispatching and validation steps&#160;<br/>(e.g.&#160;dispatching on sub-function level, check the request length or validate the PID parameter if&#160;<br/>applicable),&#160;as well as the assembly of the response message (including the sub-function byte)&#160;<br/>have&#160;to be performed by the application.<br/>
+6.2.1 Service ReadFailureRecordIdentifiers ($12 $01)<br/>Depending on the report type requested (PID or DPID) the application must place one of the&#160;<br/>following&#160;values into the first data byte of the response message:<br/>
+&#160;0x00 - for report by PID<br/>&#160;0x01 - for report by DPID<br/>
+&#160;<br/>&#160;Note<br/>The ECU can support either reports by PID or DPID, but not both.<br/>&#160;<br/>6.2.2 Service ReadFailureRecordParameters ($12 $02)<br/>CANdesc does not automatically include the PID parameter in the response message for service&#160;<br/>$12&#160;$02. The application must perform this task.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.&#160;<br/>
+15<br/>
+<hr/>
+<a name=16></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-16_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00076919</b><br/>
+<b>&#34;unknown exception occurred&#34; occurs during DBC&#160;<br/>update</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Il_Vector@GenTool_Geny<br/>
+<i><b>First affected version:</b></i><br/>
+1.05.02<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The following error message is displayed:<br/>
+“[Error] an unknown exception occurred when updating VObjectConsumer: &lt;unnamed&gt;”<br/>
+Additionally, it is not possible to reload the GENy configuration after saving and closing it. Upon&#160;<br/>reloading,&#160;the following error message is displayed:<br/>
+&#34;[Error] Unknown exception during ECU load&#34;<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>When performing the 'Upgrade Database' action in GENy (the &#34;X-&gt;Z&#34; button on the toolbar).<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>When an Rx message in the original DBC file is changed to a Tx message in the new DBC file<br/>Note: This can happen when one identity of a multiple identity module receives its own message&#160;<br/>from&#160;another identity<br/>AND<br/>This message is configured to use a common buffer in GENy<br/>(both conditions must be true for the issue to occur)<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>Perform the following steps in GENy:<br/>
+1. On the Tx or Rx Messages page, for the affected message, click in the &#34;Common Buffer&#34; field&#160;<br/>and&#160;delete all the text in this box<br/>2. On the Tx or Rx Messages page, change the affected message buffer type from &#34;Common&#160;<br/>Buffer&#34;&#160;to &#34;Own Buffer&#34;<br/>3. Perform the DBC update as usual<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.&#160;<br/>
+16<br/>
+<hr/>
+<a name=17></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-17_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00079945</b><br/>
+<b>Os cat2 interrupts for Autosar OS are not supported&#160;<br/>in&#160;CANbedded configurations</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+DrvCan__HllIdxCrx@Doc_TechRef<br/>
+<i><b>First affected version:</b></i><br/>
+3.00.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>It is not possible to select OS cat 2 interrupts for the CAN driver in GENy.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>This happens during configuration in GENy.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>in CANbedded configurations where OS Type is set to &#34;Autosar&#34; and the CAN interrupt has to be&#160;<br/>set&#160;to OS cat 2.<br/>&#160;<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>The OS Type &#34;OSEK&#34; can be used instead. The application has to provide the file &#34;osek.h&#34; which&#160;<br/>has&#160;to include &#34;os.h&#34;.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.&#160;<br/>
+17<br/>
+<hr/>
+<a name=18></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-18_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00083461</b><br/>
+<b>Description missing, that Block Size and STmin&#160;<br/>always&#160;reset when a connection is terminated</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Tp_Iso15765@Doc_TechRef<br/>
+<i><b>First affected version:</b></i><br/>
+2.00.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>When using the APIs TpRxSetBS and TpRxSetSTmin, the values are not persisted after the end of&#160;<br/>a&#160;connection. This means that after the connection is terminated, also the APIs TpRxGetBS and&#160;<br/>TpRxGetSTmin&#160;don't return the value which have been set before.<br/>The APIs need to be called again before the next connection (e.g. from the context of&#160;<br/>ApplTpGetBuffer).<br/>
+Although this behavior is intended, it is not described in the TechRef.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>Whenever using the APIs to dynamically change the flow control parameter&#160;<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>TP_USE_EXTENDED_API_BS == kTpOn<br/>or<br/>TP_USE_EXTENDED_API_STMIN == kTpOn<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>If FC parameters shall be persisted after a connection is terminated, the application must call&#160;<br/>TpSetBS /&#160;TpRxSetSTmin at the beginning of each connection, ideally from the context of the&#160;<br/>ApplTpGetBuffer&#160;call-out.<br/>
+If the value of the parameters read back by TpGetBS / TpGetSTmin shall be the same as set&#160;<br/>before&#160;by the according APIs, even if the connection is terminated, it must be persisted in the&#160;<br/>application.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.&#160;<br/>
+<b>2.4 Not Released Functionality</b><br/>
+Not released functionalities are modules and features that have not yet passed a complete&#160;<br/>development&#160;cycle (they are e.g. not or only partly tested). For serial production projects the&#160;<br/>integrator&#160;has to ensure that all BETA features are disabled as indicated. If a ESCAN affects a&#160;<br/>complete&#160;BSW module, the module must not be used for serial production.<br/>
+No issue to be reported.<br/>
+18<br/>
+<hr/>
+<a name=19></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-19_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>2.5 Compiler Warnings&#160;</b><br/>
+As a service we also provide the known compiler warnings. The occurrence of a compiler warning&#160;<br/>may&#160;depend on the used basic software configuration and compiler settings.<br/>
+<b>Index</b><br/>
+<a href="IssueReport_CBD1400346s.html#21">ESCAN00027183</a><br/>
+Compiler warning: condition is always true<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#22">ESCAN00027751</a><br/>
+Compiler warning for cast to smaller type for &#34;failedByteMask&#34;<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#23">ESCAN00029697</a><br/>
+Compiler warning for useless assignment on API DescPmClientCheckPid<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#24">ESCAN00031035</a><br/>
+Compiler Warning: variable &#34;timer&#34; in &#34;DescRdpiDeletePid&#34; is possibly&#160;<br/>uninitialized<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#25">ESCAN00047283</a><br/>
+IL flags are declared without the &#34;volatile&#34; keyword.<br/>Il_Vector@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#26">ESCAN00058378</a><br/>
+Compiler warning: narrowing or signed-to-unsigned type conversion found<br/>Diag_CanDescGgdaExt_Gm@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#27">ESCAN00059701</a><br/>
+Compiler warning: condition is always true&#34; in the IlTxTimerTask,&#160;<br/>IlTxStateTask&#160;and IlTxRepetitionsAreActive<br/>Il_Vector@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#28">ESCAN00079828</a><br/>
+Compiler warning: CANdesc Variable &#34;reason&#34; Set But Never Used<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#29">ESCAN00081827</a><br/>
+Compiler warning: Truncating assignment in DescUsdtNetIsoTpCopyToCan<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#30">ESCAN00081836</a><br/>
+Compiler warning: Truncating assignment in DescConfirmation<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#31">ESCAN00081850</a><br/>
+Compiler warning: Truncating assignment in DescICNGetResponseData<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#32">ESCAN00081852</a><br/>
+Compiler warning: Truncating assignment in&#160;<br/>DescUudtNetCANTxReserveResource<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#33">ESCAN00081853</a><br/>
+Compiler warning: Truncating assignment in DescPidDispatcher<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#34">ESCAN00081861</a><br/>
+Compiler warning: Truncating assignment in DescContextStateTask<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#35">ESCAN00081862</a><br/>
+Compiler warning: Truncating assignment in DescUpdateScheduler<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#36">ESCAN00081863</a><br/>
+Compiler warning: Truncating assignment<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#37">ESCAN00081864</a><br/>
+Compiler warning: Truncating assignment in DescGetDynDpidHandle<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#38">ESCAN00081869</a><br/>
+Compiler warning: Truncating assignment in&#160;<br/>DescDefDynDpidAppendPidDefinition<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#39">ESCAN00083566</a><br/>
+Compiler warning: variable g_descSchedulerTimer set but never used<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#40">ESCAN00083588</a><br/>
+Compiler warning: variable g_descRdpiStateCtrl is set but never used<br/>Diag_CanDesc__coreBase@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#41">ESCAN00085287</a><br/>
+Canbedded only: Compiler warning: Variable 'canPendingTemp' was set but&#160;<br/>never&#160;used<br/>DrvCan_Sh2RscanLl@Implementation<br/>
+<a href="IssueReport_CBD1400346s.html#42">ESCAN00086295</a><br/>
+Compiler warning: Infinite loop possibility<br/>Diag_CanDesc__coreBase@Implementation<br/>
+19<br/>
+<hr/>
+<a name=20></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-20_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>Index</b><br/>
+<a href="IssueReport_CBD1400346s.html#43">ESCAN00088724</a><br/>
+Compiler warning: dummy function has no prototype<br/>Tp_Iso15765@GenTool_Geny<br/>
+<a href="IssueReport_CBD1400346s.html#44">ESCAN00089512</a><br/>
+Compiler warning: braces around scalar initializer [enabled by default]<br/>Diag_CanDesc__coreBase@Implementation<br/>
+20<br/>
+<hr/>
+<a name=21></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-21_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00027183</b><br/>
+<b>Compiler warning: condition is always true</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+5.00.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The compiler produces the warning &#34;variable ondition is always true&#34; when compiling desc.c.&#160;<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>At compile time<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Tasking compiler is used<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>This does not affect the behavior of the compiled code, and can be safely ignored.<br/>
+21<br/>
+<hr/>
+<a name=22></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-22_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00027751</b><br/>
+<b>Compiler warning for cast to smaller type for&#160;<br/>&#34;failedByteMask&#34;</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+3.01.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>Compiler warning message for the assignment:<br/>
+*failedByteMask = (vuint8)(0x02 &lt;&lt; *failedByteMask);<br/>
+But there is no real danger of losing information by casting down to a smaller type since the code&#160;<br/>generator&#160;does not allow more than 7 (seven) sub-service bytes in the request message. So&#160;<br/>skipping&#160;the SID (bit 0) does not lead to losing the MSB and the value of the failedByteMask&#160;<br/>cannot&#160;be greater than six.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>At compile time.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>-CANdesc/CANdescBasic<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>Ignore the warning<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>This ESCAN will not be resolved, since the fix might require more resources on the ECU. The code&#160;<br/>generator&#160;assures that there will be no overflow on the shift operation.<br/>
+22<br/>
+<hr/>
+<a name=23></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-23_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00029697</b><br/>
+<b>Compiler warning for useless assignment on API&#160;<br/>DescPmClientCheckPid</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+4.02.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The compiler generates a warning message for useless assignment (a = a;) .<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>At compile time.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>- CANdesc<br/>_AND_<br/>- Service 0x22 is supported with multiple DIDs in single request.<br/>_AND_<br/>- Service 0x2C is not supported.<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>Ignore this warning since it is only because of an useless assignment.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue will not be corrected, since the solution will require more ROM resources.<br/>
+23<br/>
+<hr/>
+<a name=24></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-24_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00031035</b><br/>
+<b>Compiler Warning: variable &#34;timer&#34; in&#160;<br/>&#34;DescRdpiDeletePid&#34;&#160;is possibly uninitialized</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+5.00.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The compiler produces the warning &#34;variable 'timer' is possibly uninitialized&#34; when compiling&#160;<br/>desc.c.&#160;<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>At compile time<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>If service 0xAA supported and at least one periodic transmission mode is supported (i.e. not only&#160;<br/>&#34;send&#160;one response&#34; is supported).<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>This warning is incorrect and can be safely ignored.<br/>
+24<br/>
+<hr/>
+<a name=25></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-25_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00047283</b><br/>
+<b>IL flags are declared without the &#34;volatile&#34; keyword.</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Il_Vector@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+3.10.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>IL flags (Indication, FirstValue, Confirmation, Timeout) are declared without the &#34;volatile&#34;&#160;<br/>keyword.&#160;Read and Write access to IL flags has no effect due to a Read-Modify-Write problematic.<br/>
+e.g.<br/>FlagA and FlagB are in the same byte and set on interrupt level<br/>
+this sequence is executed on task level:<br/>disable int;&#160;<br/>clear FlagA; /*1*/<br/>enable int;<br/>... /*3*/<br/>disable int;<br/>clear FlagB; /*2*/<br/>enable int;<br/>
+The compiler might optimize this sequence and the flag read and write ALWAYS fails:<br/>
+read the byte at 1), modify the local copy and write the byte at 2)<br/>if the byte is written on interrupt level at 3), the data is lost.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>At runtime (This Problem has been found by a review and has never been detected in a ECU)<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>- This issue highly depends on the used compiler and compiler options.<br/>- Preemptive IL flag access is used (e.g. interrupt system)<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>Review the optimization configuration of your compiler.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+25<br/>
+<hr/>
+<a name=26></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-26_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00058378</b><br/>
+<b>Compiler warning: narrowing or signed-to-unsigned&#160;<br/>type&#160;conversion found</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDescGgdaExt_Gm@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+2.00.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The following compiler warning occurs:<br/>
+warning (dcc:1643): narrowing or signed-to-unsigned type conversion found: unsigned int to&#160;<br/>unsigned&#160;short<br/>
+This warning occurs for the following code in GgdaRdiRxTask:<br/>
+&#160;/* send the DTC number and the FTB */<br/>&#160;vuint16 DTCNr = ((vuint16) ggdaContexts[context].uudtPrimBuffer[1] &lt;&lt; 8)<br/>&#160;| (vuint16) ggdaContexts[context].uudtPrimBuffer[2];<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.&#160;<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Configurations which use service $A9.<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>The warning can be safely ignored.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+26<br/>
+<hr/>
+<a name=27></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-27_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00059701</b><br/>
+<b>Compiler warning: condition is always true&#34; in the&#160;<br/>IlTxTimerTask,&#160;IlTxStateTask and&#160;<br/>IlTxRepetitionsAreActive</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Il_Vector@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+2.42.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>Compiler warns for &#34;condition is always true&#34; in the IlTxTimerTask, IlTxStateTask and&#160;<br/>IlTxRepetitionsAreActive&#160;API. This may happen depending on the configuration.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>IlTxTimerTask, IlTxStateTask: Any configuration with exactly one tx message.<br/>IlTxRepetitionsAreActive: Any configuration with exactly one tx message and the API is&#160;<br/>configured.&#160;(IL_ENABLE_SYS_TX_REPETITIONS_ARE_ACTIVE_FCT must be defined)<br/>
+Hint:<br/>-------------------------------------------------------------------<br/>The compiler warning is known and has been analyzed thoroughly for its impact on the code.&#160;<br/>Nevertheless&#160;it will not be fixed due to the rare configuration. The code uses a while loop with a&#160;<br/>counter&#160;and can probably replaced by a for loop, but other compilers or codeanalysers may warn&#160;<br/>about&#160;a useless loop. The code exists for about 15 Years and will not be changed.<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+27<br/>
+<hr/>
+<a name=28></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-28_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00079828</b><br/>
+<b>Compiler warning: CANdesc Variable &#34;reason&#34; Set&#160;<br/>But&#160;Never Used</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+6.16.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>A compiler warning is issued for &#34;desc.c, line ____:warning #550: variable &#34;reason&#34; was set but&#160;<br/>never&#160;used&#34;. This is found in function DescDefDynDpidAppendPidDefinition.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>Always during compilation of the code in case the configuration is as described below.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Service 0x2C is configured<br/>&#160;<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+28<br/>
+<hr/>
+<a name=29></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-29_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00081827</b><br/>
+<b>Compiler warning: Truncating assignment in&#160;<br/>DescUsdtNetIsoTpCopyToCan</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+5.07.24<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The compiler warning &#34;Truncating assignment&#34; is issued in the function&#160;<br/>DescUsdtNetIsoTpCopyToCan:<br/>...<br/>vuint8_least i = infoStruct-&gt;Length;<br/>...<br/>
+No issues will result from this warning, because the value passed from the ISO TP will never&#160;<br/>exceed&#160;255.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>The data type vuint8_least is mapped to vuint8 (unsigned char) (which is mostly done for 8Bit&#160;<br/>Controller)<br/>AND<br/>ISO TP from Vector is used<br/>
+&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+29<br/>
+<hr/>
+<a name=30></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-30_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00081836</b><br/>
+<b>Compiler warning: Truncating assignment in&#160;<br/>DescConfirmation</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+3.01.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The compiler warning &#34;Truncating assignment&#34; is issued in the function DescConfirmation in the&#160;<br/>usage&#160;of the conditional operator:<br/>...<br/>result = (status != kTpSuccess) ? kDescUsdtNetworkAbort:kDescUsdtNetworkOk;<br/>...<br/>
+No issues will result from this warning, because the two possible values used in the conditional&#160;<br/>operator&#160;have the same type as the variable they are assigned to.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>ISO TP from Vector is used<br/>
+&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+30<br/>
+<hr/>
+<a name=31></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-31_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00081850</b><br/>
+<b>Compiler warning: Truncating assignment in&#160;<br/>DescICNGetResponseData</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+3.02.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The compiler warning &#34;Truncating assignment&#34; is issued in the function DescICNGetResponseData&#160;<br/>in&#160;the usage of the conditional operator:<br/>...<br/>&#160;copyLen = ((((vuint16)<br/>(g_descUsdtNetInfoPoolDescICN[DICN_CHANNEL_PARAM_VALUE].dataLength&#160;-&#160;<br/>g_descIcnState[DICN_CHANNEL_PARAM_VALUE].rdIdx)) /&#160;kDescICNTempBufferLen) != 0)?<br/>&#160;kDescICNTempBufferLen:<br/>&#160;(g_descUsdtNetInfoPoolDescICN[DICN_CHANNEL_PARAM_VALUE].dataLength %&#160;<br/>kDescICNTempBufferLen);<br/>...<br/>
+No issues will result from this warning, because the two possible values which can be assigned are&#160;<br/>always&#160;smaller than 8 byte.&#160;<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>ISO TP from Vector is used<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+31<br/>
+<hr/>
+<a name=32></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-32_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00081852</b><br/>
+<b>Compiler warning: Truncating assignment in&#160;<br/>DescUudtNetCANTxReserveResource</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+6.16.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The compiler warning &#34;Truncating assignment&#34; is issued in the function&#160;<br/>DescUudtNetCANTxReserveResource&#160;for the following assignment:<br/>...<br/>&#160;g_descUudtNetResMgrCtxt.size =&#160;<br/>DESC_CHNL_INFO_MSG_BASE_IDX_NXT(CHANNEL_ITER_VALUE)&#160;-&#160;<br/>g_descUudtNetResMgrCtxt.baseIdx;<br/>...<br/>
+No issues will result from this warning, because the two operands for the subtraction are always&#160;<br/>smaller&#160;than 255 and the first operand always greater or equal than the second operand.&#160;<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Service 0x2A is configured<br/>AND<br/>UUDT messages for the periodic responses are configured<br/>AND<br/>UUDT messages on more than one channel are configured<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+32<br/>
+<hr/>
+<a name=33></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-33_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00081853</b><br/>
+<b>Compiler warning: Truncating assignment in&#160;<br/>DescPidDispatcher</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+5.00.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The compiler warning &#34;Truncating assignment&#34; is issued in the function DescPidDispatcher for the&#160;<br/>following&#160;assignment:<br/>...<br/>&#160;iter = g_descMsgContext[DESC_CONTEXT_PARAM_VALUE].reqDataLen;<br/>...<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>data type vuint8_least is mapped to vuint8 (unsigned char)(mostly done for 8 bit controller)<br/>AND<br/>Service 0x22 is used<br/>AND<br/>Multiple PIDs are allowed to be requested in one request<br/>
+&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+33<br/>
+<hr/>
+<a name=34></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-34_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00081861</b><br/>
+<b>Compiler warning: Truncating assignment in&#160;<br/>DescContextStateTask</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+4.00.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The compiler warning &#34;Truncating assignment&#34; is issued in the function DescContextStateTask for&#160;<br/>the&#160;following assignment:<br/>...<br/>g_descInterruptContextCtrl[DESC_CONTEXT_PARAM_VALUE].infoPoolPtr-&gt;resType =&#160;<br/>(g_descNegResCode[DESC_CONTEXT_PARAM_VALUE]&#160;== kDescNrcNone)?<br/>kDescUsdtResponsePositive:kDescUsdtResponseNegative;<br/>...<br/>
+No issues will result from this warning, because the two possible values used in the conditional&#160;<br/>operator&#160;have the same type as the variable they are assigned to.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>In all configurations<br/>
+&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+34<br/>
+<hr/>
+<a name=35></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-35_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00081862</b><br/>
+<b>Compiler warning: Truncating assignment in&#160;<br/>DescUpdateScheduler</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+4.00.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The compiler warning &#34;Truncating assignment&#34; is issued in the function DescUpdateScheduler for&#160;<br/>the&#160;following assignment:<br/>...<br/>i = pMsgContext-&gt;reqDataLen;<br/>...<br/>
+No issue will result from this warning because the reqDataLen parameter is checked against the&#160;<br/>constant&#160;kDescNumOfPeriodicPids and this constant will be limited by the CANdesc generator to&#160;<br/>255.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>data type vuint8_least is mapped to vuint8 (unsigned char)(mostly done for 8 bit controller)<br/>AND<br/>Service 0xAA is used<br/>
+&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+35<br/>
+<hr/>
+<a name=36></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-36_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00081863</b><br/>
+<b>Compiler warning: Truncating assignment</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+4.02.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The compiler warning &#34;Truncating assignment&#34; is issued in...<br/>
+1) ... the function DescReadDpidStop for the assignment<br/>&#160;...<br/>&#160;i = pMsgContext-&gt;reqDataLen;<br/>&#160;...<br/>
+2) ... the function DescReadDpidOnce for the assignment<br/>&#160;...<br/>&#160;i = pMsgContext-&gt;reqDataLen;<br/>&#160;...<br/>
+An issue would only arise for warnings 1) and 2) if one request contains more than 255 DPIDs.&#160;<br/>However,&#160;the range of allowed DPID values is smaller than 240 elements. Therefore, to request&#160;<br/>more&#160;than 255 DPIDs implies that one DPIDs is requested multiple times in the same request,&#160;<br/>which&#160;is not a use case at all.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>data type vuint8_least is mapped to vuint8 (unsigned char)(mostly done for 8 bit controller)<br/>AND<br/>Service 0xAA is used<br/>
+&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+36<br/>
+<hr/>
+<a name=37></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-37_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00081864</b><br/>
+<b>Compiler warning: Truncating assignment in&#160;<br/>DescGetDynDpidHandle</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+4.02.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The compiler warning &#34;Truncating assignment&#34; is issued in the function DescGetDynDpidHandle&#160;<br/>for&#160;the following statement:<br/>
+...<br/>&#160;return (g_descDynDpid2GlobalDpidHandle[iter] != globalDpidHandle)?<br/>&#160;kDescNumDynDefinedDpids:iter;<br/>...<br/>
+No issue will arise from that warning because the value range of DPIDs is by definition smaller&#160;<br/>than&#160;255 .<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Dynamic DPIDs are supported<br/>
+&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+37<br/>
+<hr/>
+<a name=38></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-38_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00081869</b><br/>
+<b>Compiler warning: Truncating assignment in&#160;<br/>DescDefDynDpidAppendPidDefinition</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+4.02.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The compiler warning &#34;Truncating assignment&#34; is issued in the function&#160;<br/>DescDefDynDpidAppendPidDefinition&#160;for the following statement:<br/>
+...<br/>g_descDynDpidTempInfoTable.resDataLength += DescPmGetPidResponseLen(srcPidHandle);<br/>...<br/>
+No issue will arise from that warning because the amount of response data will never exceed 255.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Dynamic DPIDs are supported<br/>
+&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+38<br/>
+<hr/>
+<a name=39></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-39_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00083566</b><br/>
+<b>Compiler warning: variable g_descSchedulerTimer&#160;<br/>set&#160;but never used</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+5.00.02<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>Compiler warns that the variable g_descSchedulerTimer is set but never used.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.&#160;<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Service 0xAA is configured only with the sub-function 0x01 to read a DPID once.<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+39<br/>
+<hr/>
+<a name=40></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-40_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00083588</b><br/>
+<b>Compiler warning: variable g_descRdpiStateCtrl is&#160;<br/>set&#160;but never used</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+5.04.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>Compiler warns that the variable g_descRdpiStateCtrl is set but never used.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.&#160;<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>Service 0xAA is configured only with the sub-function 0x01 to read a DPID once.<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>No workaround available.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+40<br/>
+<hr/>
+<a name=41></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-41_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00085287</b><br/>
+<b>Canbedded only: Compiler warning: Variable&#160;<br/>'canPendingTemp'&#160;was set but never used</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+DrvCan_Sh2RscanLl@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+3.01.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+4.01.00, 3.13.04<br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>The compiler issues a warning like following: Variable 'canPendingTemp' was set but never used.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.&#160;<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>C_ENABLE_CANCEL_IN_HW is defined<br/>and<br/>C_ENABLE_TX_OBSERVE is NOT defined<br/>and<br/>C_ENABLE_CAN_TX_CONF_FCT is NOT defined<br/>and<br/>C_ENABLE_RETRANSMIT is NOT used in the project<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>The compiler warning does not indicate any unsuspected behavior and can be ignored.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+41<br/>
+<hr/>
+<a name=42></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-42_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00086295</b><br/>
+<b>Compiler warning: Infinite loop possibility</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+5.07.24<br/>
+<i><b>Fixed in versions:</b></i><br/>
+6.21.00<br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>Compiler warning due to the possibility of infinite loop when the following code is executed<br/>
+while(i--)<br/>&#160;{<br/>&#160;infoStruct-&gt;pDestination[i] = infoStruct-&gt;pSource[i];<br/>&#160;}<br/>
+There is no possibility of going through an infinite loop in this situation. Ultimately i reaches zero.&#160;<br/>If&#160;i is zero in the first place, while loop will not be executed.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.&#160;<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>all Configurations<br/>
+Hint:<br/>-------------------------------------------------------------------<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>
+42<br/>
+<hr/>
+<a name=43></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-43_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00088724</b><br/>
+<b>Compiler warning: dummy function has no&#160;<br/>prototype</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Tp_Iso15765@GenTool_Geny<br/>
+<i><b>First affected version:</b></i><br/>
+2.00.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>Compiler warns for a function definition without prototype in tp_par.c<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.&#160;<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>TP Class = Static Normal Multip TP<br/>
+AND<br/>
+at least one connection group does not use the same callbacks as the other connection groups<br/>(this also happens automatically if there are unidirectional connection groups)<br/>
+&#160;<br/>Hint:<br/>-------------------------------------------------------------------<br/>The compiler warning is known and has been analyzed thoroughly for its impact on the code.&#160;<br/>Nevertheless&#160;it will not be fixed because there is a workaround<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>1) Provide the missing prototypes with a user config file<br/>
+2) If possible, disable the coding rule checks of the compiler<br/>For Metrowerks, there is separate &#34;Require Function Prototypes&#34; setting to enable / disable the&#160;<br/>check<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.&#160;<br/>
+43<br/>
+<hr/>
+<a name=44></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-44_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>ESCAN00089512</b><br/>
+<b>Compiler warning: braces around scalar initializer&#160;<br/>[enabled&#160;by default]</b><br/>
+<i><b>Component@Subcomponent:</b></i><br/>
+Diag_CanDesc__coreBase@Implementation<br/>
+<i><b>First affected version:</b></i><br/>
+3.02.00<br/>
+<i><b>Fixed in versions:</b></i><br/>
+<i><b>Problem Description:<br/></b></i>What happens (symptoms):<br/>-------------------------------------------------------------------<br/>When the size of the array g_desc19UsedExtDatRecIds is reduced to only one element as follows:<br/>
+V_MEMROM0 static V_MEMROM1 vuint8 V_MEMROM2 g_desc19UsedExtDatRecIds[1] =&#160;<br/>{<br/>{ 0x01 }<br/>};<br/>
+the compiler error: 1510:3: warning: braces around scalar initializer [enabled by default] is&#160;<br/>issued.<br/>
+When does this happen:<br/>-------------------------------------------------------------------<br/>The warning is issued by the compiler during compilation of the code in case the configuration is&#160;<br/>as&#160;described below.&#160;<br/>
+In which configuration does this happen:<br/>-------------------------------------------------------------------<br/>When only one element exists in the array g_desc19UsedExtDatRecIds.&#160;<br/>&#160;<br/><i><b>Resolution Description:<br/></b></i>Workaround:<br/>-------------------------------------------------------------------<br/>Ignore the warning.<br/>
+Resolution:<br/>-------------------------------------------------------------------<br/>The described issue is corrected by modification of all affected work-products.<br/>
+&#160;<br/>
+44<br/>
+<hr/>
+<a name=45></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-45_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>3. New Issues for Information</b><br/>
+Issues which should not have an effect on the usage of the license as the issues are relevant for&#160;<br/>use&#160;cases other than those defined in the questionnaire. The list contains issues that have been&#160;<br/>detected&#160;since the last report.<br/>
+Issues listed in this section are not relevant for the use case that has been documented in the&#160;<br/>questionnaire&#160;provided to Vector. However, the issues may be relevant for other use cases. &#160;Also&#160;<br/>issues&#160;that have been accepted or are tolerated by the OEM (as defined in the questionnaire) are&#160;<br/>reported&#160;here.&#160;<br/>
+No issue to be reported.<br/>
+45<br/>
+<hr/>
+<a name=46></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-46_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-46_2.png"/><br/>
+<b>Issue Report</b><br/>
+<b>4. Report Legend</b><br/>
+46<br/>
+<hr/>
+<a name=47></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_000A_GMLAN3.1MchRH850_Impl/doc/IssueReport_CBD1400346-47_1.png"/><br/>
+<b>Issue Report</b><br/>
+<b>5. Quality Management Contact</b><br/>
+Quality Management&#160;<br/>Productline Embedded Software (PES) &#160;<br/>&#160;<br/>Vector Informatik GmbH &#160;<br/>Ingersheimer Str. 24 &#160;<br/>D-70499 Stuttgart &#160;<br/>&#160;<br/>Phone: +49 711 80670-3700<br/>Fax: +49 711 80670-399 &#160;<br/>eMail: QualityPES@vector.com<br/>
+47<br/>
+<hr/>
+<a name="outline"></a><h1>Document Outline</h1>
+<ul>
+<li><a href="IssueReport_CBD1400346s.html#4">ESCAN00027894 (Memory is overwritten when initializing the CANBedded Stack)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#5">ESCAN00045854 (An incorrect timeout is issued for Flow Control and Consecutive Frame timing supervision.)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#6">ESCAN00068912 (Positive response to service $A5 03 not suppressed)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#7">ESCAN00073999 (Signal handler names have wrong names after deletion of some signals of a DID)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#8">ESCAN00078197 (Missing first response for service 0xA9 0x81 request)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#9">ESCAN00081145 (Validity Bits for Oem GM (Consistency Checks))</a></li>
+<li><a href="IssueReport_CBD1400346s.html#11">ESCAN00049589 (Compile error: direct signal access feature in CANdesc does not consider far memory pointers)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#12">ESCAN00055957 (appdesc.c missing line feed (LF) after carraige return (CR) on some lines)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#13">ESCAN00069876 (Incorrect Description for Calibration Attribute nmMaxApplShutDownDenyCnt)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#14">ESCAN00070445 (The P2 timings can be changed in the tool GUI but the new values have no effect on CANdesc code generation)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#15">ESCAN00071069 (The description of service 0x12 is out-dated)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#16">ESCAN00076919 (&#34;unknown exception occurred&#34; occurs during DBC update)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#17">ESCAN00079945 (Os cat2 interrupts for Autosar OS are not supported in CANbedded configurations)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#18">ESCAN00083461 (Description missing, that Block Size and STmin always reset when a connection is terminated)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#21">ESCAN00027183 (Compiler warning: condition is always true)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#22">ESCAN00027751 (Compiler warning for cast to smaller type for &#34;failedByteMask&#34;)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#23">ESCAN00029697 (Compiler warning for useless assignment on API DescPmClientCheckPid)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#24">ESCAN00031035 (Compiler Warning: variable &#34;timer&#34; in &#34;DescRdpiDeletePid&#34; is possibly uninitialized)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#25">ESCAN00047283 (IL flags are declared without the &#34;volatile&#34; keyword.)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#26">ESCAN00058378 (Compiler warning: narrowing or signed-to-unsigned type conversion found)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#27">ESCAN00059701 (Compiler warning: condition is always true&#34; in the IlTxTimerTask, IlTxStateTask and IlTxRepetitionsAreActive)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#28">ESCAN00079828 (Compiler warning: CANdesc Variable &#34;reason&#34; Set But Never Used)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#29">ESCAN00081827 (Compiler warning: Truncating assignment in DescUsdtNetIsoTpCopyToCan)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#30">ESCAN00081836 (Compiler warning: Truncating assignment in DescConfirmation)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#31">ESCAN00081850 (Compiler warning: Truncating assignment in DescICNGetResponseData)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#32">ESCAN00081852 (Compiler warning: Truncating assignment in DescUudtNetCANTxReserveResource)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#33">ESCAN00081853 (Compiler warning: Truncating assignment in DescPidDispatcher)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#34">ESCAN00081861 (Compiler warning: Truncating assignment in DescContextStateTask)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#35">ESCAN00081862 (Compiler warning: Truncating assignment in DescUpdateScheduler)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#36">ESCAN00081863 (Compiler warning: Truncating assignment)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#37">ESCAN00081864 (Compiler warning: Truncating assignment in DescGetDynDpidHandle)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#38">ESCAN00081869 (Compiler warning: Truncating assignment in DescDefDynDpidAppendPidDefinition)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#39">ESCAN00083566 (Compiler warning: variable g_descSchedulerTimer set but never used)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#40">ESCAN00083588 (Compiler warning: variable g_descRdpiStateCtrl is set but never used)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#41">ESCAN00085287 (Canbedded only: Compiler warning: Variable 'canPendingTemp' was set but never used)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#42">ESCAN00086295 (Compiler warning: Infinite loop possibility)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#43">ESCAN00088724 (Compiler warning: dummy function has no prototype)</a></li>
+<li><a href="IssueReport_CBD1400346s.html#44">ESCAN00089512 (Compiler warning: braces around scalar initializer [enabled by default])</a></li>
+</ul>
+<hr/>
+</body>
+</html>

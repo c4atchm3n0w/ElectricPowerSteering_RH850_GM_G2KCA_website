@@ -1,0 +1,365 @@
+---
+title: TqOscn_MDD
+linkTitle: TqOscn_MDD
+weight: 3
+---
+
+<p><strong>Module Design Document</strong></p>
+<p><strong>For</strong></p>
+<p><strong>TqOscn</strong></p>
+<p><strong>Feb 05, 2016</strong></p>
+<p><strong>Prepared For:</strong></p>
+<p><strong>Software Engineering</strong></p>
+<p><strong>Nexteer Automotive,</strong></p>
+<p><strong>Saginaw, MI, USA</strong></p>
+<p><strong>Prepared By:</strong></p>
+<p><strong>Krishna Kanth Anne,</strong></p>
+<p><strong>Nexteer Automotive,</strong></p>
+<p><strong>Saginaw, MI, USA<br />
+<u>Change History</u></strong></p>
+<table>
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 25%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Description</strong></td>
+<td><strong>Author</strong></td>
+<td><strong>Version</strong></td>
+<td><strong>Date</strong></td>
+</tr>
+<tr class="even">
+<td>Initial Version</td>
+<td>Krishna Kanth Anne</td>
+<td>1.0</td>
+<td>05-Feb-2016</td>
+</tr>
+</tbody>
+</table>
+<p><strong><br />
+</strong></p>
+<p><strong><u>Table of Contents</u></strong></p>
+<p><a href="#introduction">1 Introduction <span>3</span></a></p>
+<p><a href="#purpose">1.1 Purpose <span>3</span></a></p>
+<p><a href="#_Toc424732604">1.2 Scope <span>3</span></a></p>
+<p><a href="#tqoscn-high-level-description">2 &lt;Component Name&gt; &amp; High-Level Description <span>3</span></a></p>
+<p><a href="#design-details-of-software-module">3 Design details of software module <span>3</span></a></p>
+<p><a href="#_Toc424732607">3.1 Graphical representation of &lt;Component Name&gt; <span>3</span></a></p>
+<p><a href="#data-flow-diagram">3.2 Data Flow Diagram <span>3</span></a></p>
+<p><a href="#component-level-dfd">3.2.1 Component level DFD <span>3</span></a></p>
+<p><a href="#function-level-dfd">3.2.2 Function level DFD <span>3</span></a></p>
+<p><a href="#constant-data-dictionary">4 Constant Data Dictionary <span>3</span></a></p>
+<p><a href="#program-fixed-constants">4.1 Program (fixed) Constants <span>3</span></a></p>
+<p><a href="#embedded-constants">4.1.1 Embedded Constants <span>3</span></a></p>
+<p><a href="#software-component-implementation">5 Software Component Implementation <span>3</span></a></p>
+<p><a href="#sub-module-functions">5.1 Sub-Module Functions <span>3</span></a></p>
+<p><a href="#init-tqoscninit1">5.1.1 Init: &lt;ModuleName&gt;Init&lt;n&gt; <span>3</span></a></p>
+<p><a href="#design-rationale">5.1.1.1 Design Rationale <span>3</span></a></p>
+<p><a href="#module-outputs">5.1.1.2 Module Outputs <span>3</span></a></p>
+<p><a href="#none">5.1.2 Per: &lt;ModuleName&gt;_Per&lt;n&gt; <span>3</span></a></p>
+<p><a href="#design-rationale-1">5.1.2.1 Design Rationale <span>3</span></a></p>
+<p><a href="#store-module-inputs-to-local-copies">5.1.2.2 Store Module Inputs to Local copies <span>3</span></a></p>
+<p><a href="#_Toc421011521">5.1.2.3 (Processing of function)……… <span>3</span></a></p>
+<p><a href="#store-local-copy-of-outputs-into-module-outputs">5.1.2.4 Store Local copy of outputs into Module Outputs <span>3</span></a></p>
+<p><a href="#server-runnables">5.2 Server Runables <span>3</span></a></p>
+<p><a href="#_Toc424732625">5.2.1 &lt;Server Runable Name&gt; <span>3</span></a></p>
+<p><a href="#_Toc424732626">5.2.1.1 Design Rationale <span>3</span></a></p>
+<p><a href="#_Toc424732627">5.2.1.2 (Processing of function)……… <span>3</span></a></p>
+<p><a href="#interrupt-functions">5.3 Interrupt Functions <span>3</span></a></p>
+<p><a href="#_Toc424732629">5.3.1 Interrupt Function Name <span>3</span></a></p>
+<p><a href="#_Toc424732630">5.3.1.1 Design Rationale <span>3</span></a></p>
+<p><a href="#_Toc424732631">5.3.1.2 (Processing of the ISR function)….. <span>3</span></a></p>
+<p><a href="#module-internal-local-functions">5.4 Module Internal (Local) Functions <span>3</span></a></p>
+<p><a href="#local-function-1">5.4.1 Local Function #1 <span>3</span></a></p>
+<p><a href="#_Toc424732634">5.4.1.1 Design Rationale <span>3</span></a></p>
+<p><a href="#_Toc424732635">5.4.1.2 Processing <span>3</span></a></p>
+<p><a href="#global-functionmacro-definitions">5.5 GLOBAL Function/Macro Definitions <span>3</span></a></p>
+<p><a href="#_Toc424732637">5.5.1 GLOBAL Function #1 <span>3</span></a></p>
+<p><a href="#_Toc424732638">5.5.1.1 Design Rationale <span>3</span></a></p>
+<p><a href="#_Toc424732639">5.5.1.2 processing <span>3</span></a></p>
+<p><a href="#known-limitations-with-design">6 Known Limitations with Design <span>3</span></a></p>
+<p><a href="#unit-test-consideration">7 UNIT TEST CONSIDERATION <span>3</span></a></p>
+<p><a href="#abbreviations-and-acronyms">Appendix A Abbreviations and Acronyms <span>3</span></a></p>
+<p><a href="#glossary">Appendix B Glossary <span>3</span></a></p>
+<p><a href="#references">Appendix C References <span>3</span></a></p>
+<h1 id="introduction">Introduction</h1>
+<h2 id="purpose">Purpose</h2>
+<h1 id="tqoscn-high-level-description">TqOscn &amp; High-Level Description</h1>
+<p>Please refer FDD.</p>
+<h1 id="design-details-of-software-module">Design details of software module</h1>
+<h2 id="graphical-representation-of-tqoscn">Graphical representation of TqOscn</h2>
+<p><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/static/media/image1.png" style="width:4.31319in;height:5.66111in" /></p>
+<h2 id="data-flow-diagram">Data Flow Diagram</h2>
+<p>Please refer FDD</p>
+<h3 id="component-level-dfd">Component level DFD</h3>
+<p>Please refer FDD</p>
+<h3 id="function-level-dfd">Function level DFD</h3>
+<p>Please refer FDD</p>
+<h1 id="constant-data-dictionary">Constant Data Dictionary</h1>
+<h2 id="program-fixed-constants">Program (fixed) Constants</h2>
+<h3 id="embedded-constants">Embedded Constants</h3>
+<h4 id="local-constants">Local Constants</h4>
+<table>
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 20%" />
+<col style="width: 14%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Constant Name</th>
+<th>Resolution</th>
+<th>Units</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Please refer .m file</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="software-component-implementation">Software Component Implementation</h1>
+<h2 id="sub-module-functions">Sub-Module Functions</h2>
+<h2 id="init-tqoscninit1">Init: TqOscnInit1</h2>
+<h2 id="design-rationale">Design Rationale</h2>
+<p>None</p>
+<h2 id="module-outputs">Module Outputs</h2>
+<h2 id="none">None</h2>
+<h2 id="per-tqoscnper1">Per: TqOscnPer1</h2>
+<h2 id="design-rationale-1">Design Rationale</h2>
+<p>None</p>
+<h2 id="store-module-inputs-to-local-copies">Store Module Inputs to Local copies</h2>
+<p><span id="_Toc421011521" class="anchor"></span>None</p>
+<h2 id="processing-of-function"> (Processing of function)………</h2>
+<blockquote>
+<p>Please refer FDD</p>
+</blockquote>
+<h2 id="store-local-copy-of-outputs-into-module-outputs">Store Local copy of outputs into Module Outputs</h2>
+<p>Please refer FDD</p>
+<h2 id="server-runnables">Server Runnables </h2>
+<p>None</p>
+<h2 id="interrupt-functions">Interrupt Functions</h2>
+<blockquote>
+<p>None</p>
+</blockquote>
+<h2 id="module-internal-local-functions">Module Internal (Local) Functions</h2>
+<h2 id="local-function-1">Local Function #1 </h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 46%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>AmpRateLim</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>LimdAmp_MotNwtMtr_T_f32</td>
+<td>Float32</td>
+<td>0.0F</td>
+<td>1.2F</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>HwOscnRisngRampRate_MotNwtMtrPerSec_T_f32</td>
+<td>Float32</td>
+<td>0.1F</td>
+<td>4400.0F</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>HwOscnFallRampRate_MotNwtMtrPerSec_T_f32</td>
+<td>Float32</td>
+<td>-4400.0F</td>
+<td>-0.1F</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>HwOscnEna_Cnt_T_logl</td>
+<td>Boolean</td>
+<td>FALSE</td>
+<td>TRUE</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>*NonZeroAmpFlg_Cnt_T_logl</td>
+<td>Boolean</td>
+<td>FALSE</td>
+<td>TRUE</td>
+</tr>
+<tr class="odd">
+<td><strong>Return Value</strong></td>
+<td>RateLimdAmp_MotNwtMtr_T_f32</td>
+<td>Float32</td>
+<td>0.0002F</td>
+<td>-8.8F</td>
+</tr>
+</tbody>
+</table>
+<h2 id="local-function-2">Local Function #2</h2>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 46%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Function Name</strong></td>
+<td>ChkFlg</td>
+<td>Type</td>
+<td>Min</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td><strong>Arguments Passed</strong></td>
+<td>PhaAg_MatRad_T_f32</td>
+<td>Float32</td>
+<td>0.125F</td>
+<td>0.628F</td>
+</tr>
+<tr class="odd">
+<td><strong>Return Value</strong></td>
+<td>TqOscnPhaAg_MatRad_T_f32</td>
+<td>Float32</td>
+<td>0.0F</td>
+<td>0.628F</td>
+</tr>
+</tbody>
+</table>
+<h2 id="global-functionmacro-definitions">GLOBAL Function/Macro Definitions</h2>
+<blockquote>
+<p>None</p>
+</blockquote>
+<h1 id="known-limitations-with-design">Known Limitations with Design</h1>
+<blockquote>
+<p>None</p>
+</blockquote>
+<h1 id="unit-test-consideration">UNIT TEST CONSIDERATION</h1>
+<blockquote>
+<p>None.</p>
+</blockquote>
+<p class="heading" id="abbreviations-and-acronyms">Abbreviations and Acronyms</p>
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Abbreviation or Acronym</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="heading" id="glossary">Glossary</p>
+<p><strong>Note</strong>: Terms and definitions from the source “Nexteer Automotive” take precedence over all other definitions of the same term. Terms and definitions from the source “Nexteer Automotive” are formulated from multiple sources, including the following:</p>
+<ul>
+<li><p>ISO 9000</p></li>
+<li><p>ISO/IEC 12207</p></li>
+<li><p>ISO/IEC 15504</p></li>
+<li><p>Automotive SPICE® Process Reference Model (PRM)</p></li>
+<li><p>Automotive SPICE® Process Assessment Model (PAM)</p></li>
+<li><p>ISO/IEC 15288</p></li>
+<li><p>ISO 26262</p></li>
+<li><p>IEEE Standards</p></li>
+<li><p>SWEBOK</p></li>
+<li><p>PMBOK</p></li>
+<li><p>Existing Nexteer Automotive documentation</p></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 53%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Term</strong></th>
+<th><strong>Definition</strong></th>
+<th><strong>Source</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MDD</td>
+<td>Module Design Document</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>DFD</td>
+<td>Data Flow Diagram</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="heading" id="references">References</p>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 69%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Ref. #</strong></th>
+<th><strong>Title</strong></th>
+<th><strong>Version</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>AUTOSAR Specification of Memory Mapping (Link:<a href="http://www.autosar.org/download/R4.0/AUTOSAR_SWS_MemoryMapping.pdf">AUTOSAR_SWS_MemoryMapping.pdf</a>)</td>
+<td>v1.3.0 R4.0 Rev 2</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>MDD Guideline</td>
+<td>EA4 01.00.00</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><a href="http://misagweb01.nexteer.com/eRoomReq/Files/erooms8/NextGeneration/0_fc55f/Software%20Naming%20Conventions%2003x(In%20Work).doc">Software Naming Conventions.doc</a></td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><a href="http://eroom1.nexteer.com/eRoomReq/Files/erooms8/NextGeneration/0_1a67a9/Software%20Design%20and%20Coding%20Standards.doc">Software Design and Coding Standards.doc</a></td>
+<td>2.0</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>FDD: SF043A_ TqOscn_Design</td>
+<td>See Synergy sub project version</td>
+</tr>
+</tbody>
+</table>

@@ -1,0 +1,1499 @@
+---
+title: AUTOSAR_WDG_Tool_UserManuals
+linkTitle: AUTOSAR_WDG_Tool_UserManuals
+weight: 9
+---
+
+<!DOCTYPE html><html>
+<head>
+<title></title>
+<style type="text/css">
+<!--
+.xflip {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: fliph;
+}
+.yflip {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: flipv;
+}
+.xyflip {
+    -moz-transform: scaleX(-1) scaleY(-1);
+    -webkit-transform: scaleX(-1) scaleY(-1);
+    -o-transform: scaleX(-1) scaleY(-1);
+    transform: scaleX(-1) scaleY(-1);
+    filter: fliph + flipv;
+}
+-->
+</style>
+</head>
+<body>
+<a name=1></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-1_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-1_2.jpg"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-1_3.jpg"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-1_4.png"/><br/>
+<b>&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160;</b>&#160;<br/>
+&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+AUTOSAR&#160;MCAL&#160;R4.0.3&#160;<br/>
+User’s&#160;Manual&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+WDG&#160;Driver&#160;Component&#160;Ver.1.0.2&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+Generation&#160;Tool&#160;User’s&#160;Manual&#160;<br/>
+&#160;<br/>&#160;<br/>Target&#160;Device:&#160;<br/>
+RH850/P1x&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+All&#160;information&#160;contained&#160;in&#160;these&#160;materials,&#160;including&#160;products&#160;and&#160;product&#160;specifications,&#160;<br/>represents&#160;information&#160;on&#160;the&#160;product&#160;at&#160;the&#160;time&#160;of&#160;publication&#160;and&#160;is&#160;subject&#160;to&#160;change&#160;by&#160;<br/>Renesas&#160;Electronics&#160;Corp.&#160;without&#160;notice.&#160;Please&#160;review&#160;the&#160;latest&#160;information&#160;published&#160;by&#160;<br/>Renesas&#160;Electronics&#160;Corp.&#160;through&#160;various&#160;means,&#160;including&#160;the&#160;Renesas&#160;Electronics&#160;Corp.&#160;<br/>website<a href="http://www.renesas.com/">&#160;(http://www.renesas.com).&#160;</a><br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+&#160;<br/>&#160;<br/>
+&#160;<br/>
+<a href="http://www.renesas.com/">www.renesas.com&#160;</a><br/>
+<a href="http://www.renesas.com/">Rev</a>.0.01&#160;Apr&#160;2015&#160;<br/>
+<hr/>
+<a name=2></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-2_1.png"/><br/>
+&#160;<br/>
+&#160;<br/>
+<b>2</b>&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=3></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-3_1.png"/><br/>
+<b>&#160; &#160; &#160; &#160; &#160;&#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160;</b>&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>
+Notice&#160;<br/>
+&#160;<br/>
+1.&#160;<br/>
+All&#160;information&#160;included&#160;in&#160;this&#160;document&#160;is&#160;current&#160;as&#160;of&#160;the date this&#160;document&#160;is&#160;issued.&#160;Such&#160;information,&#160;however,&#160;is&#160;subject&#160;to&#160;<br/>
+&#160;<br/>
+change&#160;without&#160;any&#160;prior&#160;notice.&#160;Before purchasing&#160;or&#160;using&#160;any&#160;Renesas&#160;Electronics&#160;products&#160;listed&#160;herein,&#160;please&#160;confirm&#160;the&#160;latest&#160;<br/>
+&#160;<br/>
+product&#160;information&#160;with&#160;a&#160;Renesas&#160;Electronics&#160;sales&#160;office.&#160;Also,&#160;please&#160;pay&#160;regular&#160;and&#160;careful&#160;attention&#160;to&#160;additional&#160;and&#160;different&#160;<br/>
+&#160;<br/>
+information&#160;to be&#160;disclosed&#160;by&#160;Renesas&#160;Electronics&#160;such&#160;as&#160;that&#160;disclosed&#160;through&#160;our&#160;website.&#160;<br/>
+&#160;<br/>&#160;<br/>
+2.&#160;<br/>
+Renesas&#160;Electronics&#160;does&#160;not&#160;assume&#160;any&#160;liability&#160;for&#160;infringement&#160;of&#160;patents,&#160;copyrights,&#160;or&#160;other&#160;intellectual&#160;property&#160;rights&#160;of&#160;third&#160;<br/>
+&#160;<br/>
+parties&#160;by&#160;or&#160;arising&#160;from&#160;the&#160;use&#160;of&#160;Renesas&#160;Electronics&#160;products&#160;or&#160;technical&#160;information&#160;described&#160;in&#160;this&#160;document.&#160;No&#160;license,&#160;<br/>
+&#160;<br/>
+express,&#160;implied&#160;or&#160;otherwise,&#160;is&#160;granted&#160;hereby&#160;under&#160;any&#160;patents,&#160;copyrights&#160;or&#160;other&#160;intellectual&#160;property&#160;rights&#160;of&#160;Renesas&#160;<br/>
+&#160;<br/>
+Electronics&#160;or&#160;others.&#160;<br/>
+&#160;&#160;&#160;3.&#160;<br/>
+You should&#160;not&#160;alter,&#160;modify,&#160;copy,&#160;or&#160;otherwise&#160;misappropriate any&#160;Renesas&#160;Electronics&#160;product,&#160;whether&#160;in&#160;whole&#160;or&#160;in&#160;part.&#160;<br/>
+&#160;<br/>
+4.&#160;<br/>
+Descriptions&#160;of&#160;circuits,&#160;software&#160;and&#160;other&#160;related&#160;information&#160;in this&#160;document&#160;are provided&#160;only&#160;to&#160;illustrate&#160;the&#160;operation&#160;of&#160;<br/>
+&#160;<br/>&#160;<br/>
+semiconductor&#160;products&#160;and&#160;application&#160;examples.&#160;&#160;You&#160;are&#160;fully&#160;responsible&#160;for&#160;the&#160;incorporation&#160;of&#160;these&#160;circuits,&#160;software,&#160;and&#160;<br/>
+&#160;<br/>
+information&#160;in the design of&#160;your&#160;equipment.&#160;&#160;Renesas&#160;Electronics&#160;assumes&#160;no&#160;responsibility&#160;for&#160;any&#160;losses&#160;incurred by&#160;<br/>
+&#160;<br/>
+you&#160;or&#160;third&#160;parties&#160;arising&#160;from&#160;the&#160;use of&#160;these circuits,&#160;software,&#160;or&#160;information.&#160;<br/>
+&#160;<br/>
+5.&#160;<br/>
+When&#160;exporting&#160;the products&#160;or&#160;technology&#160;described&#160;in&#160;this&#160;document,&#160;you&#160;should comply&#160;with&#160;the&#160;applicable&#160;export&#160;control&#160;laws&#160;<br/>
+&#160;<br/>
+and&#160;regulations&#160;and&#160;follow&#160;the&#160;procedures&#160;required&#160;by&#160;such&#160;laws&#160;and&#160;regulations.&#160;&#160;You&#160;should&#160;not&#160;use&#160;Renesas&#160;Electronics&#160;products&#160;<br/>
+&#160;<br/>
+or&#160;the&#160;technology&#160;described in&#160;this&#160;document&#160;for&#160;any&#160;purpose&#160;relating&#160;to&#160;military&#160;applications&#160;or&#160;use&#160;by&#160;the&#160;military,&#160;including&#160;but&#160;<br/>
+&#160;<br/>
+not&#160;limited&#160;to&#160;the development&#160;of&#160;weapons&#160;of&#160;mass&#160;destruction.&#160;&#160;Renesas&#160;Electronics&#160;products&#160;and&#160;technology&#160;may&#160;not&#160;be&#160;used for&#160;or&#160;<br/>
+&#160;<br/>
+incorporated&#160;into any&#160;products&#160;or&#160;systems&#160;whose&#160;manufacture,&#160;use,&#160;or&#160;sale&#160;is&#160;prohibited under&#160;any&#160;applicable&#160;domestic&#160;or&#160;foreign&#160;<br/>
+&#160;<br/>
+laws&#160;or&#160;regulations.&#160;<br/>
+&#160;<br/>
+6.&#160;<br/>
+Renesas&#160;Electronics&#160;has&#160;used reasonable&#160;care&#160;in&#160;preparing&#160;the&#160;information included in&#160;this&#160;document,&#160;but&#160;Renesas&#160;Electronics&#160;does&#160;<br/>
+&#160;<br/>
+not&#160;warrant&#160;that&#160;such&#160;information&#160;is&#160;error&#160;free.&#160;&#160;Renesas&#160;Electronics&#160;assumes&#160;no&#160;liability&#160;whatsoever&#160;for&#160;any&#160;damages&#160;incurred&#160;by&#160;<br/>
+&#160;<br/>&#160;<br/>
+you&#160;resulting&#160;from&#160;errors&#160;in&#160;or&#160;omissions&#160;from&#160;the&#160;information&#160;included&#160;herein.&#160;<br/>
+&#160;<br/>
+7.&#160;<br/>
+Renesas&#160;Electronics&#160;products&#160;are&#160;classified&#160;according&#160;to&#160;the&#160;following&#160;three quality&#160;grades:&#160;&#160;&#34;Standard&#34;,&#160;&#34;High&#160;Quality&#34;,&#160;and&#160;<br/>
+&#160;<br/>
+&#34;Specific&#34;.&#160;&#160;The recommended&#160;applications&#160;for&#160;each&#160;Renesas&#160;Electronics&#160;product&#160;depends&#160;on&#160;the&#160;product's&#160;quality&#160;grade,&#160;as&#160;indicated&#160;<br/>
+&#160;<br/>
+below.&#160;&#160;You&#160;must&#160;check&#160;the quality&#160;grade&#160;of&#160;each&#160;Renesas&#160;Electronics&#160;product&#160;before using&#160;it&#160;in&#160;a&#160;particular&#160;application.&#160;&#160;You&#160;may&#160;<br/>
+&#160;<br/>
+not&#160;use&#160;any&#160;Renesas&#160;Electronics&#160;product&#160;for&#160;any&#160;application&#160;categorized as&#160;&#34;Specific&#34;&#160;without&#160;the&#160;prior&#160;written&#160;consent&#160;of&#160;Renesas&#160;<br/>
+&#160;<br/>
+Electronics.&#160;&#160;Further,&#160;you&#160;may&#160;not&#160;use&#160;any&#160;Renesas&#160;Electronics&#160;product&#160;for&#160;any&#160;application&#160;for&#160;which it&#160;is&#160;not&#160;intended&#160;without&#160;the&#160;<br/>
+&#160;<br/>
+prior&#160;written consent&#160;of&#160;Renesas&#160;Electronics.&#160;&#160;Renesas&#160;Electronics&#160;shall&#160;not&#160;be&#160;in&#160;any&#160;way&#160;liable&#160;for&#160;any&#160;damages&#160;or&#160;losses&#160;incurred&#160;by&#160;<br/>
+&#160;<br/>
+you&#160;or&#160;third&#160;parties&#160;arising&#160;from&#160;the&#160;use of&#160;any&#160;Renesas&#160;Electronics&#160;product&#160;for&#160;an&#160;application&#160;categorized&#160;as&#160;&#34;Specific&#34;&#160;or&#160;for&#160;which&#160;<br/>
+&#160;<br/>
+the&#160;product&#160;is&#160;not&#160;intended&#160;where&#160;you&#160;have failed&#160;to&#160;obtain&#160;the&#160;prior&#160;written&#160;consent&#160;of&#160;Renesas&#160;Electronics.&#160;&#160;The&#160;quality&#160;grade&#160;of&#160;<br/>
+&#160;<br/>
+each&#160;Renesas&#160;Electronics&#160;product&#160;is&#160;&#34;Standard&#34;&#160;unless&#160;otherwise&#160;expressly&#160;specified&#160;in&#160;a&#160;Renesas&#160;Electronics&#160;data&#160;sheets&#160;or&#160;data&#160;<br/>
+&#160;<br/>
+books,&#160;etc.&#160;<br/>
+&#160;<br/>&#160;<br/>
+&#34;Standard&#34;:&#160;<br/>
+Computers;&#160;office&#160;equipment;&#160;communications&#160;equipment;&#160;test&#160;and measurement&#160;equipment;&#160;audio&#160;and&#160;visual&#160;<br/>
+&#160;<br/>
+equipment;&#160;home&#160;electronic&#160;appliances;&#160;machine&#160;tools;&#160;personal&#160;electronic&#160;equipment;&#160;and&#160;industrial&#160;robots.&#160;<br/>
+&#160;<br/>
+&#34;High&#160;Quality&#34;:&#160;Transportation&#160;equipment&#160;(automobiles, trains,&#160;ships,&#160;etc.);&#160;traffic&#160;control&#160;systems;&#160;anti-disaster&#160;systems;&#160;anti-&#160;crime&#160;<br/>
+&#160;<br/>
+systems;&#160;safety&#160;equipment;&#160;and&#160;medical&#160;equipment&#160;not&#160;specifically&#160;designed&#160;for&#160;life&#160;support.&#160;<br/>
+&#160;<br/>
+&#34;Specific&#34;:&#160;<br/>
+Aircraft;&#160;aerospace&#160;equipment;&#160;submersible&#160;repeaters;&#160;nuclear&#160;reactor&#160;control&#160;systems;&#160;medical&#160;equipment&#160;or&#160;<br/>
+&#160;<br/>
+systems&#160;for&#160;life&#160;support&#160;(e.g.&#160;artificial&#160;life&#160;support&#160;devices&#160;or&#160;systems),&#160;surgical&#160;implantations,&#160;or&#160;healthcare&#160;<br/>
+&#160;<br/>
+intervention&#160;(e.g.&#160;excision,&#160;etc.),&#160;and&#160;any&#160;other&#160;applications&#160;or&#160;purposes&#160;that&#160;pose&#160;a&#160;direct&#160;threat&#160;to&#160;human&#160;life.&#160;<br/>
+&#160;<br/>&#160;<br/>
+8.&#160;<br/>
+You should&#160;use the Renesas&#160;Electronics&#160;products&#160;described in&#160;this&#160;document&#160;within&#160;the&#160;range&#160;specified&#160;by&#160;Renesas&#160;Electronics,&#160;<br/>
+&#160;<br/>
+especially&#160;with&#160;respect&#160;to&#160;the&#160;maximum&#160;rating,&#160;operating&#160;supply&#160;voltage&#160;range,&#160;movement&#160;power&#160;voltage&#160;range,&#160;heat&#160;radiation&#160;<br/>
+&#160;<br/>
+characteristics,&#160;installation&#160;and&#160;other&#160;product&#160;characteristics.&#160;Renesas&#160;Electronics&#160;shall&#160;have&#160;no&#160;liability&#160;for&#160;malfunctions&#160;or&#160;damages&#160;<br/>
+&#160;<br/>
+arising out&#160;of&#160;the&#160;use&#160;of&#160;Renesas&#160;Electronics&#160;products&#160;beyond&#160;such&#160;specified&#160;ranges.&#160;<br/>
+&#160;<br/>
+9.&#160;<br/>
+Although&#160;Renesas&#160;Electronics&#160;endeavors&#160;to&#160;improve&#160;the&#160;quality&#160;and&#160;reliability&#160;of&#160;its&#160;products,&#160;semiconductor&#160;products&#160;have specific&#160;<br/>
+&#160;<br/>
+characteristics&#160;such&#160;as&#160;the&#160;occurrence&#160;of&#160;failure&#160;at&#160;a&#160;certain rate and&#160;malfunctions&#160;under&#160;certain&#160;use&#160;conditions.&#160;Further,&#160;Renesas&#160;<br/>
+&#160;<br/>
+Electronics&#160;products&#160;are&#160;not&#160;subject&#160;to radiation&#160;resistance design.&#160;&#160;Please&#160;be&#160;sure to&#160;implement&#160;safety&#160;measures&#160;to&#160;guard&#160;them&#160;against&#160;<br/>
+&#160;<br/>
+the&#160;possibility&#160;of&#160;physical&#160;injury,&#160;and&#160;injury&#160;or&#160;damage&#160;caused&#160;by&#160;fire&#160;in&#160;the&#160;event&#160;of&#160;the&#160;failure&#160;of&#160;a&#160;<br/>
+&#160;<br/>
+Renesas&#160;Electronics&#160;product,&#160;such&#160;as&#160;safety&#160;design for&#160;hardware and&#160;software&#160;including&#160;but&#160;not&#160;limited&#160;to&#160;redundancy,&#160;fire&#160;control&#160;<br/>
+&#160;<br/>
+and&#160;malfunction&#160;prevention,&#160;appropriate&#160;treatment&#160;for&#160;aging&#160;degradation or&#160;any&#160;other&#160;appropriate&#160;measures.&#160;&#160;Because&#160;the&#160;evaluation&#160;<br/>
+&#160;<br/>
+of&#160;microcomputer&#160;software&#160;alone&#160;is&#160;very&#160;difficult,&#160;please&#160;evaluate&#160;the&#160;safety&#160;of&#160;the&#160;final&#160;products&#160;or&#160;system&#160;manufactured&#160;by&#160;you.&#160;<br/>
+&#160;<br/>&#160;<br/>
+10.&#160;<br/>
+Please&#160;contact&#160;a&#160;Renesas&#160;Electronics&#160;sales&#160;office for&#160;details&#160;as&#160;to&#160;environmental&#160;matters&#160;such&#160;as&#160;the&#160;environmental&#160;compatibility&#160;of&#160;<br/>
+&#160;<br/>
+each&#160;Renesas&#160;Electronics&#160;product.&#160;&#160;Please&#160;use&#160;Renesas&#160;Electronics&#160;products&#160;in&#160;compliance with&#160;all&#160;applicable&#160;laws&#160;and&#160;regulations&#160;<br/>
+&#160;<br/>
+that&#160;regulate&#160;the&#160;inclusion&#160;or&#160;use&#160;of&#160;controlled&#160;substances,&#160;including&#160;without&#160;limitation,&#160;the&#160;EU&#160;RoHS&#160;Directive.&#160;&#160;Renesas&#160;Electronics&#160;<br/>
+&#160;<br/>
+assumes&#160;no&#160;liability&#160;for&#160;damages&#160;or&#160;losses&#160;occurring&#160;as&#160;a&#160;result&#160;of&#160;your&#160;noncompliance with&#160;applicable&#160;laws&#160;and&#160;regulations.&#160;<br/>
+&#160;&#160;&#160;11.&#160;&#160;This&#160;document&#160;may&#160;not&#160;be&#160;reproduced&#160;or&#160;duplicated,&#160;in&#160;any&#160;form,&#160;in&#160;whole&#160;or&#160;in&#160;part,&#160;without&#160;prior&#160;written&#160;consent&#160;of&#160;Renesas&#160;<br/>
+&#160;<br/>
+Electronics.&#160;<br/>
+&#160;<br/>&#160;<br/>
+12.&#160;<br/>
+Please&#160;contact&#160;a&#160;Renesas&#160;Electronics&#160;sales&#160;office if&#160;you&#160;have&#160;any&#160;questions&#160;regarding&#160;the&#160;information&#160;contained&#160;in&#160;this&#160;<br/>
+&#160;<br/>
+document&#160;or&#160;Renesas&#160;Electronics&#160;products,&#160;or&#160;if&#160;you&#160;have&#160;any&#160;other&#160;inquiries.&#160;<br/>
+&#160;&#160;&#160;<br/>&#160;<br/>
+(Note&#160;1)&#160;&#160;&#34;Renesas&#160;Electronics&#34;&#160;as&#160;used in&#160;this&#160;document&#160;means&#160;Renesas&#160;Electronics&#160;Corporation&#160;and also&#160;includes&#160;its&#160;majority-&#160;owned&#160;<br/>
+&#160;<br/>
+subsidiaries.&#160;<br/>
+&#160;<br/>
+(Note&#160;2)&#160;&#160;&#34;Renesas&#160;Electronics&#160;product(s)&#34;&#160;means&#160;any&#160;product&#160;developed&#160;or&#160;manufactured&#160;by&#160;or&#160;for&#160;Renesas&#160;Electronics.&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=4></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-4_1.png"/><br/>
+&#160;<br/>
+&#160;<br/>
+<b>4</b>&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=5></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-5_1.png"/><br/>
+<b>&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160;</b>&#160;<br/>
+<b>Abbreviations&#160;and&#160;Acronyms</b>&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>
+<b>Abbreviation / Acronym</b>&#160;<br/>
+<b>Description</b>&#160;<br/>
+API&#160;<br/>
+Application Programming&#160;Interface&#160;<br/>
+AUTOSAR&#160;<br/>
+AUTomotive&#160;Open&#160;System&#160;ARchitecture&#160;<br/>
+BSWMDT&#160;<br/>
+Basic&#160;Software Module Description&#160;Template&#160;<br/>
+DEM&#160;<br/>
+Diagnostic&#160;Event&#160;Manager&#160;<br/>
+ECU&#160;<br/>
+Electronic&#160;Control&#160;Unit&#160;<br/>
+ID/Id&#160;<br/>
+Identifier&#160;<br/>
+MCAL&#160;<br/>
+MicroController&#160;Abstraction&#160;Layer&#160;<br/>
+MCU&#160;<br/>
+MicroController&#160;Unit&#160;<br/>
+WDG/Wdg&#160;<br/>
+Watchdog Driver&#160;<br/>
+WDTA&#160;<br/>
+Window&#160;Watchdog&#160;Timer A&#160;<br/>
+XML&#160;<br/>
+eXtensible&#160;Mark-up&#160;Language&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>
+<b>Definitions</b>&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>
+<b>Terminology</b>&#160;<br/>
+<b>Description</b>&#160;<br/>
+BSWMDT File&#160;<br/>
+This&#160;file&#160;contains&#160;Common Published Information of&#160;WDG&#160;driver.&#160;<br/>
+ECU&#160;Configuration&#160;Description&#160;<br/>
+Input&#160;file&#160;to&#160;WDG&#160;Driver&#160;Generation&#160;Tool.&#160;It&#160;is&#160;generated by&#160;ECU&#160;<br/>
+File&#160;<br/>
+Configuration Editor.&#160;<br/>
+Sl.No.&#160;<br/>
+Serial&#160;Number&#160;<br/>
+Translation&#160;XML&#160;File&#160;<br/>
+This&#160;file contains&#160;the translation&#160;and&#160;device&#160;specific&#160;header&#160;file&#160;path.&#160;<br/>
+&#160;<br/>
+<b>5</b>&#160;<br/>
+<hr/>
+<a name=6></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-6_1.png"/><br/>
+&#160;<br/>
+&#160;<br/>
+<b>6</b>&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=7></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-7_1.png"/><br/>
+<b>&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160;</b>&#160;<br/>
+<b>Table&#160;of&#160;Contents&#160;</b><br/>
+<b>&#160;</b><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#9"><b>Chapter&#160;1</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#9"><b>Introduction&#160;...........................................................................................&#160;9</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#9"><b>1.1</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#9"><b>Document&#160;Overview&#160;..................................................................................................................&#160;9</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#11"><b>Chapter&#160;2</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#11"><b>Reference&#160;.............................................................................................&#160;11</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#11"><b>2.1</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#11"><b>Reference&#160;Documents&#160;.............................................................................................................&#160;11</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#11"><b>2.2</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#11"><b>Trademark Notice&#160;....................................................................................................................&#160;11</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#13"><b>Chapter&#160;3</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#13"><b>WDG&#160;Driver&#160;Generation&#160;Tool Overview&#160;.............................................&#160;13</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#15"><b>Chapter&#160;4</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#15"><b>Input&#160;Files&#160;............................................................................................&#160;15</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#17"><b>Chapter 5</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#17"><b>Output&#160;Files&#160;.........................................................................................&#160;17</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#19"><b>Chapter&#160;6</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#19"><b>Precautions&#160;..........................................................................................&#160;19</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#21"><b>Chapter&#160;7</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#21"><b>User&#160;Configuration&#160;Validation&#160;............................................................&#160;21</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#23"><b>Chapter&#160;8</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#23"><b>Messages&#160;.............................................................................................&#160;23</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#23"><b>8.1</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#23"><b>Error&#160;Messages&#160;........................................................................................................................&#160;23</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#26"><b>8.2</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#26"><b>Warning&#160;Messages&#160;..................................................................................................................&#160;26</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#26"><b>8.3</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#26"><b>Information&#160;Messages&#160;.............................................................................................................&#160;26</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#27"><b>Chapter&#160;9</b>&#160;</a><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#27"><b>Notes&#160;....................................................................................................&#160;27</b>&#160;</a><br/>
+<b>&#160;<br/>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>7</b>&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=8></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-8_1.png"/><br/>
+&#160;<br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>List&#160;of&#160;Figures&#160;</b><br/>
+<b>&#160;</b><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#13">Figure 3-1&#160;&#160;Overview&#160;of&#160;WDG&#160;Driver&#160;Generation Tool&#160;................................................................&#160;13&#160;</a><br/>
+&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>
+<b>List&#160;of&#160;Tables&#160;<br/>&#160;</b><br/>
+<a href="AUTOSAR_WDG_Tool_UserManuals.html#17">Table 5-1&#160;&#160;Output&#160;Files&#160;Description&#160;............................................................................................&#160;17&#160;</a><br/>
+&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+<b>8</b>&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=9></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-9_1.png"/><br/>
+<b>Introduction&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160; &#160;&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160;&#160;&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160;Chapter&#160;1&#160;&#160;</b>&#160;<br/>
+&#160;<br/>
+<b>Chapter&#160;1&#160;</b><br/>
+<b>Introduction&#160;</b><br/>
+&#160;<br/>&#160;<br/>&#160;<br/>
+The&#160;Watchdog Driver&#160;provides&#160;services&#160;for&#160;initialization,&#160;changing the&#160;<br/>operation mode and&#160;triggering the&#160;Watchdog.&#160;<br/>
+&#160;<br/>&#160;<br/>
+The&#160;WDG&#160;Driver&#160;module comprises&#160;of&#160;two sections&#160;as&#160;Embedded&#160;Software&#160;<br/>and the Generation Tool&#160;to&#160;achieve scalability&#160;and&#160;configurability.&#160;<br/>
+&#160;<br/>&#160;<br/>
+The document&#160;describes&#160;the features&#160;of&#160;the&#160;WDG&#160;Driver&#160;Generation Tool.&#160;<br/>WDG&#160;Driver&#160;Generation Tool&#160;is&#160;a command line tool&#160;that&#160;extracts&#160;information&#160;<br/>from&#160;ECU&#160;Configuration Description File and&#160;BSWMDT&#160;File&#160;and generates&#160;<br/>WDG&#160;Driver&#160;C&#160;Source&#160;and C&#160;Header&#160;files&#160;(Wdg_59_Driver&lt;A&gt;_Cfg.h and&#160;<br/>Wdg_59_Driver&lt;A&gt;_PBcfg.c).&#160;<br/>
+&#160;<br/>&#160;<br/>
+This&#160;document&#160;contains&#160;information on the&#160;options,&#160;input&#160;and&#160;output&#160;files&#160;of&#160;the&#160;<br/>WDG&#160;Driver&#160;Generation Tool.&#160;In addition,&#160;this&#160;manual&#160;covers&#160;a step-by-step&#160;<br/>procedure for&#160;the usage&#160;of&#160;tool.&#160;ECU&#160;Configuration Description File contains&#160;<br/>information about&#160;WDG&#160;configuration.&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>
+<b>Remark&#160;&#160;</b>Based on the value for&#160;the parameter&#160;‘VendorApiInfix’,&#160;WDG&#160;Generation Tool&#160;<br/>
+generates&#160;&#160;Wdg_59_DriverA_Cfg.h&#160;and Wdg_59_DriverA_PBcfg.c&#160;files.&#160;<br/>Hence in&#160;this&#160;document&#160;‘Wdg_59_Driver&lt;A&gt;_Cfg.h&#160;and Wdg_59&#160;<br/>_Driver&lt;A&gt;_PBcfg.c’&#160;term&#160;is&#160;used.&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>
+<b>1.1&#160;</b><br/>
+<b>Document&#160;Overview&#160;</b><br/>
+&#160;<br/>&#160;<br/>
+This&#160;user&#160;manual&#160;is&#160;organized&#160;as given&#160;in&#160;the&#160;table&#160;below:&#160;<br/>&#160;<br/>&#160;<br/>
+<b>Section</b>&#160;<br/>
+<b>Contents</b>&#160;<br/>
+Section&#160;1&#160;(Introduction)&#160;<br/>
+Provides&#160;an&#160;introduction&#160;to&#160;the&#160;document&#160;and&#160;explains&#160;how&#160;information&#160;<br/>is&#160;organized in this&#160;manual.&#160;<br/>
+Section&#160;2 (Reference)&#160;<br/>
+Provides&#160;a list&#160;of documents&#160;referred&#160;while&#160;developing&#160;this&#160;document.&#160;<br/>
+Section&#160;3&#160;(WDG&#160;Driver&#160;<br/>
+Provides&#160;the&#160;WDG&#160;Driver&#160;Generation&#160;Tool&#160;Overview.&#160;<br/>
+Generation&#160;Tool&#160;Overview)&#160;<br/>
+Section&#160;4 (Input&#160;Files)&#160;<br/>
+Provides&#160;information&#160;about&#160;ECU&#160;Configuration Description&#160;File.&#160;<br/>
+Section 5&#160;(Output Files)&#160;<br/>
+Explains&#160;the output files&#160;that&#160;are generated by&#160;the&#160;WDG&#160;Driver&#160;<br/>Generation&#160;Tool.&#160;<br/>
+Section&#160;6&#160;(Precautions)&#160;<br/>
+Contains&#160;precautions&#160;to be&#160;taken during configuration&#160;of&#160;ECU&#160;<br/>Configuration Description&#160;File.&#160;<br/>
+Section&#160;7 (User&#160;Configuration&#160;<br/>
+Describes about&#160;user&#160;configuration&#160;validation&#160;done&#160;by&#160;the&#160;WDG&#160;Driver&#160;<br/>
+Validation)&#160;<br/>
+Generation&#160;Tool.&#160;<br/>
+Section&#160;8 (Messages)&#160;<br/>
+Describes&#160;all&#160;the&#160;Error/Warning/Information messages&#160;of&#160;R4.0.3&#160;which&#160;<br/>helps&#160;the user&#160;to&#160;understand the probable reason for&#160;the same.&#160;<br/>
+Section&#160;9 (Notes)&#160;<br/>
+Provides&#160;notes&#160;to&#160;help&#160;the&#160;user&#160;to&#160;understand&#160;this&#160;document&#160;better.&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+<b>9</b>&#160;<br/>
+<hr/>
+<a name=10></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-10_1.png"/><br/>
+<b>Chapter&#160;1&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Introduction&#160;<br/></b>&#160;<br/>
+<b>10</b>&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=11></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-11_1.png"/><br/>
+<b>Reference&#160;</b><br/>
+<b>Chapter&#160;2</b>&#160;<br/>
+&#160;<br/>&#160;<br/><b>Chapter&#160;2&#160;</b><br/>
+<b>Reference&#160;</b><br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+<b>2.1&#160;</b><br/>
+<b>Reference&#160;Documents&#160;</b><br/>
+&#160;<br/>&#160;<br/>
+The&#160;following&#160;table&#160;lists&#160;the&#160;documents&#160;referred&#160;to&#160;create&#160;this&#160;document:&#160;<br/>
+&#160;<br/>
+<b>Sl. No</b>&#160;&#160;<b>Title</b>&#160;<br/>
+<b>Version</b>&#160;<br/>
+1.&#160;<br/>
+<b>Autosar&#160;R4.0&#160;</b><br/>
+2.5.0&#160;<br/>
+&#160;<br/>AUTOSAR_SWS_WatchdogDriver.pdf&#160;<br/>
+2.&#160;<br/>
+<b>P1x Parameter&#160;Definition&#160;File&#160;</b><br/>
+1.0.3&#160;<br/>
+R403_WDG_P1M_04_05_10_to_15_18_to_23.arxml&#160;<br/>
+&#160;<br/>
+<b>&#160;</b><br/>
+&#160;<br/>&#160;<br/>&#160;<br/>
+<b>2.2&#160;</b><br/>
+<b>Trademark Notice&#160;</b><br/>
+&#160;<br/>&#160;<br/>
+Microsoft&#160;and&#160;Windows&#160;are&#160;trademarks/registered&#160;trademarks&#160;of&#160;Microsoft&#160;<br/>Corporation.&#160;<br/>
+&#160;<br/>
+<b>11</b>&#160;<br/>
+<hr/>
+<a name=12></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-12_1.png"/><br/>
+<b>Chapter&#160;2&#160;</b><br/>
+<b>Reference&#160;</b><br/>
+&#160;<br/>
+&#160;<br/>
+<b>12</b>&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=13></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-13_1.png"/><br/>
+<b>WDG&#160;Driver&#160;Generation&#160;Tool&#160;Overview&#160;</b><br/>
+<b>Chapter 3</b>&#160;<br/>
+&#160;<br/>&#160;<br/><b>Chapter&#160;3&#160;</b><br/>
+<b>WDG&#160;Driver Generation&#160;Tool&#160;Overview&#160;</b><br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+WDG&#160;Driver&#160;Generation&#160;Tool&#160;overview&#160;is&#160;shown&#160;below.&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+<b>ECU&#160;</b><br/>
+&#160;<br/>
+&#160;<br/>
+<b>Configuration&#160;</b><br/>
+&#160;<br/>
+<b>Wdg_59_Driver&lt;A</b><br/>
+<b>Description&#160;File,&#160;</b><br/>
+<b>WDG&#160;Driver&#160;</b><br/>
+<b>&gt;_Cfg.h&#160;and&#160;</b><br/>
+<b>BSWMDT&#160;File,</b>&#160;<br/>
+<b>Generation&#160;</b><br/>
+<b>Wdg_59_Driver&lt;A</b><br/>
+<b>Translation&#160;XML</b>&#160;<br/>
+<b>Tool</b>&#160;<br/>
+<b>&gt;_PBcfg.c</b>&#160;<br/>
+<b>File&#160;and&#160;</b><br/>
+<b>Configuration&#160;</b><br/>
+<b>XML&#160;File</b>&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+<b>Figure&#160;3-1&#160;&#160;Overview&#160;of&#160;WDG&#160;Driver&#160;Generation&#160;Tool&#160;</b><br/>
+&#160;<br/>
+WDG&#160;Driver&#160;Generation Tool&#160;is&#160;a command line tool&#160;that&#160;extracts,&#160;analyzes&#160;<br/>the configuration&#160;details&#160;provided in the input&#160;file&#160;and&#160;validates&#160;correctness&#160;of&#160;<br/>the data&#160;and&#160;provides&#160;scalability&#160;and configurability&#160;for&#160;WDG&#160;Driver&#160;module.&#160;It&#160;<br/>accepts&#160;ECU&#160;Configuration&#160;Description File(s),&#160;BSWMDT&#160;File,&#160;Translation&#160;<br/>XML File and Configuration&#160;XML File as&#160;input&#160;and&#160;displays&#160;appropriate&#160;<br/>context&#160;sensitive&#160;error&#160;messages&#160;for&#160;wrong&#160;input&#160;and&#160;exits.&#160;Tool&#160;creates&#160;the&#160;<br/>Log file (Wdg.log)&#160;that&#160;contains&#160;the&#160;list&#160;of&#160;Error/Warning/Information&#160;<br/>messages&#160;in the output&#160;directory.&#160;<br/>
+&#160;<br/>&#160;<br/>
+For&#160;the&#160;error&#160;free input&#160;file,&#160;the tool&#160;generates&#160;the following&#160;output&#160;files:&#160;<br/>Wdg_59_Driver&lt;A&gt;_Cfg.h&#160;and Wdg_59_Driver&lt;A&gt;_PBcfg.c&#160;<br/>
+&#160;<br/>&#160;<br/>
+Wdg_59_Driver&lt;A&gt;_Cfg.h&#160;will&#160;be compiled&#160;and&#160;linked&#160;with&#160;WDG&#160;Driver&#160;<br/>Component.&#160;Wdg_59_Driver&lt;A&gt;_PBcfg.c&#160;will&#160;be compiled&#160;and&#160;linked&#160;<br/>separately&#160;from&#160;the other&#160;C&#160;Source files&#160;and placed in&#160;flash.&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>
+<b>Remark</b>&#160;&#160;&#160;&#160;<br/>
+•&#160;<br/>
+In case of&#160;errors&#160;the&#160;generation tool&#160;returns&#160;a&#160;1,&#160;in case of&#160;no errors&#160;the&#160;<br/>generation tool&#160;returns&#160;a&#160;0.&#160;<br/>
+&#160;<br/>•&#160;<br/>
+WDG&#160;Driver&#160;Generation Tool&#160;uses&#160;“Common Published Information”&#160;from&#160;<br/>WDG&#160;module specific&#160;BSWMDT&#160;File.&#160;WDG&#160;module specific&#160;BSWMDT&#160;File&#160;<br/>should not&#160;be&#160;updated manually&#160;since&#160;it&#160;is&#160;“Static&#160;Configuration”&#160;file.&#160;<br/>
+&#160;<br/>
+<b>13</b>&#160;<br/>
+<hr/>
+<a name=14></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-14_1.png"/><br/>
+<b>Chapter&#160;3&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;WDG&#160;Driver&#160;Generation&#160;Tool&#160;Overview&#160;</b><br/>
+&#160;<br/>
+&#160;<br/>
+<b>14</b>&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=15></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-15_1.png"/><br/>
+<b>Input&#160;Files&#160;</b><br/>
+<b>Chapter&#160;4</b>&#160;<br/>
+&#160;<br/>&#160;<br/><b>Chapter&#160;4&#160;</b><br/>
+<b>Input&#160;Files&#160;</b><br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+WDG&#160;Driver&#160;Generation Tool&#160;accepts&#160;ECU&#160;Configuration Description File(s),&#160;<br/>BSWMDT&#160;File,&#160;Translation&#160;XML File and Configuration&#160;XML File as&#160;input.&#160;<br/>WDG&#160;Driver&#160;Generation Tool&#160;needs&#160;information about&#160;WDG&#160;Driver&#160;module.&#160;<br/>Hence&#160;ECU&#160;Configuration&#160;Description File should contain&#160;configuration of&#160;<br/>WDG&#160;Driver&#160;module.&#160;Generation Tool&#160;ignores&#160;any&#160;other&#160;AUTOSAR&#160;<br/>component&#160;configured in the ECU&#160;Configuration&#160;Description File.&#160;ECU&#160;<br/>Configuration Description File&#160;can be generated&#160;using&#160;configuration&#160;editor.&#160;<br/>
+&#160;<br/>&#160;<br/>
+ECU&#160;Configuration Description&#160;File must&#160;comply&#160;with&#160;AUTOSAR&#160;standard&#160;<br/>ECU&#160;Configuration Description&#160;File format.&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>
+<b>Remark&#160;&#160;</b>The detailed explanation&#160;about&#160;the&#160;parameters&#160;and containers&#160;are found in&#160;<br/>
+Parameter&#160;Definition File mentioned in the&#160;Reference&#160;Documents&#160;section.<br/>
+&#160;<br/>
+<b>15</b>&#160;<br/>
+<hr/>
+<a name=16></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-16_1.png"/><br/>
+<b>Chapter&#160;4&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;Input&#160;Files&#160;<br/></b>&#160;<br/>
+&#160;<br/>
+<b>16</b>&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=17></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-17_1.png"/><br/>
+<b>Output&#160;Files&#160;</b><br/>
+<b>Chapter&#160;5</b>&#160;<br/>
+&#160;<br/>
+<b>&#160;</b><br/>
+<b>Chapter&#160;5&#160;</b><br/>
+<b>Output&#160;Files&#160;</b><br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+WDG&#160;Driver&#160;Generation Tool&#160;generates&#160;configuration&#160;details&#160;in C&#160;Header&#160;and&#160;<br/>C&#160;Source files&#160;(Wdg_59_Driver&lt;A&gt;_Cfg.h,&#160;Wdg_59_Driver&lt;A&gt;_PBcfg.c).&#160;<br/>
+&#160;<br/>&#160;<br/>
+The&#160;content&#160;of&#160;each&#160;output&#160;file&#160;is&#160;given in the table below:&#160;<br/>
+&#160;<br/>&#160;<br/>
+<b>Table 5-1&#160;&#160;Output Files&#160;Description&#160;</b><br/>
+&#160;<br/>
+<b>Output&#160;File</b>&#160;<br/>
+<b>Details</b>&#160;<br/>
+Wdg_59_Driver&lt;A<br/>
+This&#160;file&#160;contains&#160;pre-compile&#160;time&#160;parameters.&#160;This&#160;file&#160;also contains&#160;the macro&#160;<br/>
+&gt;_Cfg.h&#160;<br/>
+definitions&#160;for&#160;development&#160;error detect,&#160;version&#160;info&#160;API,&#160;compile switch&#160;to allow/&#160;<br/>forbid&#160;disabling&#160;Watchdog&#160;Driver&#160;during&#160;runtime&#160;and&#160;Watchdog&#160;Driver&#160;Id.&#160;This&#160;file&#160;also&#160;<br/>contains&#160;information&#160;for&#160;maximum&#160;Watchdog&#160;Timer timeout,&#160;Minimum&#160;Watchdog&#160;<br/>Timer&#160;timeout, configuration set&#160;handles,&#160;resolution&#160;of&#160;Watchdog time out&#160;period and&#160;<br/>Watchdog trigger&#160;mode.&#160;<br/>
+Wdg_59_Driver&lt;A<br/>
+This&#160;file contains&#160;post-build&#160;configuration data.&#160;<br/>
+&gt;_PBcfg.c&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>
+<b>Remark&#160;&#160;</b>Output&#160;files&#160;generated&#160;by&#160;WDG&#160;Driver&#160;Generation&#160;Tool&#160;should&#160;not&#160;be&#160;modified&#160;<br/>
+or&#160;edited&#160;manually.&#160;<br/>
+&#160;<br/>
+<b>17</b>&#160;<br/>
+<hr/>
+<a name=18></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-18_1.png"/><br/>
+<b>Chapter&#160;5&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;Output&#160;Files&#160;<br/></b>&#160;<br/>
+&#160;<br/>
+<b>18</b>&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=19></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-19_1.png"/><br/>
+<b>Precautions&#160;</b><br/>
+<b>Chapter&#160;6&#160;</b><br/>
+&#160;<br/>
+&#160;<br/>
+<b>Chapter&#160;6&#160;</b><br/>
+<b>Precautions&#160;</b><br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+•&#160;&#160;ECU&#160;Configuration Description&#160;File and&#160;BSWMDT&#160;File must&#160;comply&#160;with&#160;<br/>
+AUTOSAR&#160;standard for&#160;R4.0.3&#160;ECU&#160;Configuration Description File and&#160;<br/>BSWMDT&#160;File respectively.&#160;<br/>
+&#160;<br/>•&#160;&#160;The input&#160;file must&#160;contain&#160;WDG&#160;Driver,&#160;MCU&#160;Driver&#160;and DEM component&#160;<br/>
+related configuration.&#160;<br/>
+&#160;<br/>
+•&#160;&#160;Default&#160;Translation&#160;XML File (Wdg_X1x.trxml)&#160;should&#160;be present&#160;in same&#160;<br/>
+location&#160;of&#160;Wdg_X1x.exe when the&#160;variant&#160;specific&#160;trxml&#160;file is&#160;not&#160;given&#160;as&#160;<br/>input&#160;in command line.&#160;<br/>&#160;<br/>
+•&#160;&#160;Default&#160;Configuration XML&#160;File (Wdg_X1x.cfgxml)&#160;must&#160;be&#160;present&#160;in same&#160;<br/>
+location&#160;of&#160;Wdg_X1x.exe.&#160;<br/>
+&#160;<br/>•&#160;&#160;If&#160;Translation XML File&#160;is&#160;not&#160;provided on the command line,&#160;<br/>
+Wdg_X1x.trxml&#160;&#160;which&#160;is&#160;present&#160;in&#160;same&#160;location&#160;of&#160;Wdg_X1x.exe&#160;is&#160;<br/>considered as&#160;‘default’&#160;Translation XML File.&#160;<br/>
+&#160;<br/>•&#160;&#160;If&#160;Configuration XML File&#160;is&#160;not&#160;provided on the command&#160;line,&#160;<br/>
+Wdg_X1x.cfgxml which&#160;is&#160;present&#160;in same location&#160;of&#160;Wdg_X1x.exe is&#160;<br/>considered as&#160;‘default’&#160;Configuration XML&#160;File.&#160;<br/>
+&#160;<br/>•&#160;&#160;Translation XML File should contain&#160;the file extension&#160;‘.trxml’.&#160;<br/>&#160;<br/>•&#160;&#160;Configuration XML File should contain the file extension ‘.cfgxml’.&#160;<br/>&#160;<br/>•&#160;&#160;All&#160;the function names&#160;and the string&#160;values&#160;configured&#160;should follow&#160;C&#160;<br/>
+syntax&#160;for&#160;variables.&#160;It&#160;can&#160;only&#160;contain alphanumeric&#160;characters&#160;and “_”.&#160;It&#160;<br/>should&#160;start&#160;with an alphabet.&#160;<br/>
+&#160;<br/>•&#160;&#160;If&#160;the&#160;output&#160;files&#160;generated&#160;by&#160;WDG&#160;Driver&#160;Generation&#160;Tool&#160;are&#160;modified&#160;<br/>
+externally,&#160;then&#160;they&#160;may&#160;not&#160;produce&#160;the&#160;expected&#160;results&#160;or&#160;may&#160;lead&#160;to&#160;<br/>error/warning/Information messages.&#160;<br/>
+&#160;<br/>•&#160;&#160;Short&#160;Name for&#160;a container&#160;should be unique&#160;within&#160;a&#160;name space.&#160;<br/>&#160;<br/>•&#160;&#160;C&#160;Source and C&#160;Header&#160;files&#160;will&#160;be&#160;generated by&#160;the&#160;Watchdog Driver&#160;<br/>
+Generation Tool&#160;based on the configuration&#160;of&#160;the parameters&#160;‘VENDOR-<br/>ID’&#160;and&#160;‘VENDOR-API-INFIX’&#160;in the&#160;WDG&#160;Driver&#160;specific&#160;BSWMDT&#160;File.&#160;<br/>
+&#160;<br/>•&#160;&#160;An error&#160;free&#160;ECU&#160;Configuration Description File&#160;generated from&#160;<br/>
+configuration&#160;editor&#160;has&#160;to&#160;be provided as&#160;input&#160;to&#160;the&#160;WDG&#160;Driver&#160;<br/>Generation Tool.&#160;Otherwise&#160;Tool&#160;may&#160;not&#160;produce&#160;the&#160;expected results&#160;or&#160;<br/>may&#160;lead to errors/warnings/information.&#160;<br/>
+&#160;<br/>
+•&#160;&#160;User&#160;has&#160;to make sure that&#160;the respective device specific&#160;configuration file&#160;<br/>
+is&#160;used,&#160;otherwise Tool&#160;may&#160;not&#160;produce the&#160;expected&#160;results&#160;or&#160;may&#160;lead&#160;<br/>to errors/warnings/information messages.&#160;&#160;<br/>&#160;<br/>
+•&#160;&#160;The description file&#160;should&#160;always&#160;be&#160;generated using&#160;AUTOSAR&#160;specified&#160;<br/>
+configuration&#160;editor&#160;and&#160;it&#160;should not&#160;be edited manually.&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>
+<b>Remark&#160;&#160;</b>Please&#160;refer&#160;the&#160;WDG&#160;Component&#160;User&#160;Manual&#160;for&#160;deviations&#160;from&#160;AUTOSAR&#160;<br/>
+specifications,&#160;if&#160;any.&#160;<br/>
+&#160;<br/>
+<b>19</b>&#160;<br/>
+<hr/>
+<a name=20></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-20_1.png"/><br/>
+<b>Chapter&#160;6&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Precautions</b>&#160;<br/>
+&#160;<br/>&#160;<br/>
+<b>20</b>&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=21></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-21_1.png"/><br/>
+<b>User&#160;Configuration&#160;Validation&#160;</b><br/>
+<b>Chapter&#160;7</b>&#160;<br/>
+&#160;<br/>
+<b>&#160;</b><br/>
+<b>Chapter&#160;7&#160;</b><br/>
+<b>User&#160;Configuration&#160;Validation&#160;</b><br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+This&#160;section provides&#160;help to analyze the error,&#160;warning and information&#160;<br/>messages&#160;displayed&#160;during&#160;the&#160;execution&#160;of&#160;WDG&#160;Driver&#160;Generation&#160;Tool.&#160;It&#160;<br/>ensures&#160;conformance of&#160;input&#160;files&#160;with syntax&#160;and semantics.&#160;It&#160;also&#160;<br/>performs&#160;validation&#160;on the&#160;input&#160;file for&#160;correctness&#160;of&#160;the data.&#160;<br/>
+&#160;<br/>&#160;<br/>
+For&#160;more&#160;details&#160;on&#160;list&#160;of&#160;Error/Warning/Information&#160;messages&#160;that&#160;are&#160;<br/>displayed&#160;as&#160;a result&#160;of&#160;input&#160;file&#160;validation,&#160;refer&#160;Chapter&#160;8 “<i>Messages</i>”.&#160;<br/>
+&#160;<br/>&#160;<br/>
+The Generation&#160;Tool&#160;displays&#160;errors&#160;or&#160;warning&#160;or&#160;information&#160;when the&#160;user&#160;<br/>has&#160;configured&#160;incorrect&#160;inputs.&#160;The format&#160;of&#160;Error/Warning/Information&#160;<br/>message is&#160;as&#160;shown below.&#160;<br/>
+&#160;<br/>&#160;<br/>
+•&#160;&#160;ERR/WRN/INF&lt;mid&gt;&lt;xxx&gt;:&#160;&lt;Error/Warning/Information Message&gt;.&#160;&#160;<br/>
+&#160;<br/>
+where,&#160;<br/>
+&lt;mid&gt;:&#160;102&#160;-&#160;WDG&#160;Driver&#160;Module&#160;Id (102)&#160;for&#160;user&#160;configuration checks.&#160;<br/>
+000&#160;-&#160;for&#160;command line checks.&#160;<br/>
+&lt;xxx&gt;:&#160;001-999&#160;-&#160;Message Id.&#160;<br/>
+&#160;<br/>
+•&#160;&#160;File&#160;Name:&#160;Name of&#160;the file&#160;in&#160;which&#160;the&#160;error&#160;has&#160;occurred.&#160;<br/>
+&#160;<br/>
+•&#160;&#160;Path:&#160;Absolute&#160;Path of&#160;the&#160;container&#160;in&#160;which the&#160;parameter&#160;is&#160;present.&#160;<br/>
+&#160;<br/>&#160;<br/>
+‘File Name’&#160;and&#160;‘Path’&#160;need&#160;not&#160;be present&#160;for&#160;all&#160;Error/Warning/Information&#160;<br/>messages.&#160;<br/>
+&#160;<br/>
+<b>21</b>&#160;<br/>
+<hr/>
+<a name=22></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-22_1.png"/><br/>
+<b>Chapter&#160;7&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;User&#160;Configuration&#160;Validation&#160;</b><br/>
+&#160;<br/>&#160;<br/>
+<b>22</b>&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=23></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-23_1.png"/><br/>
+<b>&#160;Messages&#160;</b><br/>
+<b>Chapter&#160;8&#160;</b><br/>
+&#160;<br/>
+&#160;<br/>
+&#160;<br/>&#160;<br/>
+&#160;<br/>
+<b>Chapter&#160;8&#160;</b><br/>
+<b>Messages&#160;</b><br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+The&#160;messages&#160;help to identify&#160;the syntax&#160;or&#160;semantic&#160;errors&#160;in the ECU&#160;<br/>Configuration Description&#160;File.&#160;Hence&#160;it&#160;ensures&#160;validity&#160;and correctness&#160;of&#160;<br/>the&#160;information available&#160;in&#160;the&#160;ECU&#160;Configuration Description File.&#160;<br/>
+&#160;<br/>&#160;<br/>
+The following section gives&#160;the list&#160;of&#160;error,&#160;warning and information&#160;<br/>messages&#160;displayed&#160;by&#160;the&#160;Generation&#160;Tool.&#160;<br/>&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>
+<b>8.1&#160;&#160;Error&#160;Messages&#160;</b><br/>
+&#160;<br/>
+<b>ERR102001: Number&#160;of fields&#160;is&#160;not same&#160;for&#160;the&#160;entity&#160;'Structure&#160;Name'.</b>&#160;<br/>
+&#160;<br/>
+This&#160;error&#160;occurs,&#160;if&#160;the number&#160;of&#160;fields&#160;is&#160;not&#160;same in the&#160;structure that&#160;is&#160;to&#160;<br/>be&#160;generated in the output&#160;file.&#160;<br/>
+&#160;<br/>&#160;<br/>
+<b>ERR102002:&#160;Field&#160;'Field&#160;Name'&#160;is&#160;empty&#160;in&#160;the&#160;entity&#160;'Structure&#160;Name'.</b>&#160;<br/>
+&#160;<br/>
+This&#160;error&#160;occurs,&#160;if&#160;the structure fields&#160;that&#160;are to&#160;be&#160;generated&#160;in the&#160;output&#160;<br/>file are&#160;empty.&#160;<br/>
+&#160;<br/>&#160;<br/>
+<b>ERR102003: 'WDG&#160;Driver'&#160;Component is&#160;not present in&#160;the&#160;input file(s).</b>&#160;<br/>
+&#160;<br/>
+This&#160;error&#160;occurs,&#160;if&#160;WDG&#160;Driver&#160;Component&#160;is&#160;not&#160;present&#160;in the input&#160;ECU&#160;<br/>Configuration Description File(s).<b>&#160;&#160;<br/>&#160;<br/>&#160;<br/>ERR102004:&#160;The parameter&#160;'parameter&#160;name'&#160;in&#160;the container&#160;'container&#160;<br/>name'&#160;should&#160;be&#160;configured.&#160;</b><br/>
+&#160;<br/>
+This&#160;error&#160;occurs,&#160;if&#160;any&#160;of&#160;the mandatory&#160;configuration&#160;parameter(s)&#160;<br/>mentioned below&#160;is&#160;(are)&#160;not&#160;configured&#160;in&#160;ECU&#160;Configuration&#160;Description File.&#160;<br/>
+The list&#160;of&#160;mandatory&#160;parameters&#160;with respect&#160;to container&#160;is&#160;listed&#160;below:&#160;<br/>
+&#160;<br/>
+<b>Parameter&#160;Name</b>&#160;<br/>
+<b>Container&#160;Name</b>&#160;<br/>
+WdgDevErrorDetect&#160;&#160;&#160;<br/>
+&#160;<br/>&#160;<br/>
+WdgDisableAllowed&#160;&#160;&#160;<br/>
+&#160;<br/>&#160;<br/>
+WdgIndex&#160;&#160;&#160;<br/>
+&#160;<br/>
+WdgVersionInfoApi&#160;&#160;&#160;<br/>
+WdgGeneral&#160;<br/>&#160;<br/>
+WdgVaryingActivationCodeMode&#160;&#160;&#160;<br/>
+&#160;<br/>
+WdgTriggerLocation&#160;<br/>
+&#160;<br/>&#160;<br/>
+WdgDeviceName&#160; &#160;&#160;<br/>
+&#160;<br/>
+WdgInitialTimeout&#160; &#160;&#160;<br/>
+&#160;<br/>&#160;<br/>
+WdgRunArea&#160;&#160;&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+<b>23</b>&#160;<br/>
+<hr/>
+<a name=24></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-24_1.png"/><br/>
+<b>Chapter&#160;8&#160;</b><br/>
+<b>Messages&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>Parameter&#160;Name</b>&#160;<br/>
+<b>Container&#160;Name</b>&#160;<br/>
+WdgMaxTimeout&#160;&#160;&#160;&#160;<br/>
+&#160;<br/>WdgGeneral&#160;<br/>
+WdgCriticalSectionProtection&#160;&#160;&#160;<br/>
+&#160;<br/>
+WdgVersionCheckExternalModules&#160;&#160;&#160;&#160;<br/>
+&#160;<br/>
+WdgClockRef&#160; &#160;&#160;<br/>
+&#160;<br/>
+WdgRegReadBackEnable&#160;<br/>
+WdgTriggerMode&#160;<br/>
+WdgPublishedInformation&#160;<br/>
+WdgClkSettingsFast&#160;<br/>
+WdgSettingsFast&#160;<br/>
+WdgClkSettingsSlow&#160;<br/>
+WdgSettingsSlow&#160;<br/>
+-&#160;<br/>
+WdgSettingsOff&#160;<br/>
+WdgDefaultMode&#160;<br/>
+WdgSettingsConfig&#160;<br/>
+<b>&#160;<br/>&#160;<br/>ERR102005: The&#160;reference&#160;path&#160;&lt;path&gt;&#160;provided&#160;for&#160;the&#160;parameter</b>&#160;<br/><b>‘Parameter&#160;Name’&#160;within&#160;the&#160;container&#160;‘Container&#160;Name’&#160;is&#160;incorrect.</b>&#160;<br/>
+&#160;<br/>
+This&#160;error&#160;occurs,&#160;if&#160;path provided for&#160;the reference&#160;parameters&#160;mentioned&#160;in&#160;<br/>the below&#160;table are&#160;incorrect:&#160;<br/>
+&#160;<br/>
+<b>Parameter&#160;Name</b>&#160;<br/>
+<b>Container&#160;Name</b>&#160;<br/>
+WdgClockRef&#160;<br/>
+WdgGeneral&#160;<br/>
+WDG_E_DISABLE_REJECTED&#160;<br/>
+WdgDemEventParameterRefs&#160;<br/>
+WDG_E_MODE_FAILED&#160;<br/>
+WDG_E_TRIGGER_TIMEOUT&#160;<br/>
+WDG_E_READBACK_FAILURE&#160;<br/>
+&#160;<br/>&#160;<br/>
+<b>&#160;<br/>ERR102006: The&#160;value&#160;configured&#160;for&#160;the&#160;parameter</b>&#160;<br/><b>‘WdgClkSettingsFast’&#160;in&#160;the&#160;container&#160;‘WdgSettingsFast’&#160;and&#160;value&#160;of&#160;<br/>the parameter&#160;‘WdgClkSettingsSlow’&#160;in&#160;the&#160;container&#160;‘WdgSettingsSlow’&#160;<br/>are same.</b>&#160;<br/>
+&#160;<br/>
+This&#160;error&#160;occurs,&#160;if&#160;the value configured for&#160;the&#160;parameter&#160;<br/>WdgClkSettingsFast&#160;in the&#160;container&#160;WdgSettingsFast&#160;and&#160;value of&#160;the&#160;<br/>parameter&#160;WdgClkSettingsSlow&#160;in the container&#160;WdgSettingsSlow&#160;are&#160;same.&#160;<br/>
+&#160;<br/>&#160;<br/>
+<b>ERR102007: The&#160;value&#160;configured&#160;for&#160;the&#160;parameter</b>&#160;<br/><b>‘WdgClkSettingsSlow’&#160;in&#160;the&#160;container&#160;‘WdgSettingsSlow’&#160;is&#160;faster&#160;<br/>(valid&#160;configuration&#160;should&#160;be&#160;WdgClkSettingsSlow&#160;&gt;&#160;WdgSettingsFast)&#160;<br/>than&#160;the&#160;value&#160;of the&#160;parameter&#160;‘WdgClkSettingsFast’&#160;in&#160;the&#160;container</b>&#160;<br/><b>‘WdgSettingsFast’.</b>&#160;<br/>
+&#160;<br/>
+This&#160;error&#160;occurs,&#160;if&#160;the value configured for&#160;the&#160;parameter&#160;<br/>WdgClkSettingsSlow&#160;in the&#160;container&#160;WdgSettingsSlow&#160;is&#160;faster&#160;than&#160;the&#160;<br/>value&#160;of&#160;the parameter&#160;WdgClkSettingsFast&#160;in the container&#160;<br/>WdgSettingsFast.&#160;<br/>&#160;<br/>&#160;<br/><b>ERR102008:&#160;The&#160;value&#160;of the&#160;parameter&#160;‘WdgInitialTimeout’&#160;is&#160;greater&#160;<br/>than&#160;the&#160;value&#160;of the&#160;parameter&#160;‘WdgMaxTimeout’.</b>&#160;<br/>
+&#160;<br/>
+This&#160;error&#160;occurs,&#160;if&#160;the value of&#160;the&#160;parameter&#160;WdgInitialTimeout&#160;is&#160;greater&#160;<br/>than the value&#160;of&#160;the parameter&#160;WdgMaxTimeout.&#160;<br/>
+&#160;<br/>&#160;<br/>
+&#160;<br/>
+<b>24</b>&#160;<br/>
+<hr/>
+<a name=25></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-25_1.png"/><br/>
+<b>&#160;Messages&#160;</b><br/>
+<b>Chapter&#160;8&#160;</b><br/>
+&#160;<br/>
+&#160;<br/>
+&#160;<br/>&#160;<br/>
+<b>ERR102009: The&#160;value&#160;of the&#160;parameter&#160;‘WdgDisableAllowed’&#160;should&#160;&#160;<br/>not be&#160;&lt;false&gt;&#160;since&#160;the&#160;value&#160;of the&#160;parameter&#160;‘WdgDefaultMode’&#160;is&#160;<br/>configured&#160;as&#160;&lt;WDGIF_OFF_MODE&gt;.</b>&#160;<br/>
+&#160;<br/>
+This&#160;error&#160;occurs,&#160;if&#160;the value of&#160;the&#160;parameter&#160;WdgDisableAllowed&#160;is&#160;false&#160;<br/>and the&#160;value&#160;of&#160;the&#160;parameter&#160;WdgDefaultMode is&#160;configured&#160;as&#160;<br/>WDGIF_OFF_MODE.&#160;<br/>
+&#160;<br/>
+<b>ERR102010: The&#160;total&#160;instances&#160;of ‘WdgSettingsConfig’&#160;container&#160;per</b>&#160;<br/><b>WDTA&#160;instance&#160;is more than&#160;&lt;1&gt;.</b>&#160;<br/>
+&#160;<br/>
+This&#160;error&#160;occurs,&#160;if&#160;the total&#160;instance&#160;of&#160;WdgSettingsConfig container&#160;per&#160;<br/>WDTA&#160;instance&#160;is&#160;more than 1.&#160;<br/>&#160;<br/>&#160;<br/><b>ERR102011: The&#160;macro&#160;definition&#160;&lt;Macro&#160;name&gt;&#160;is&#160;not found&#160;in</b>&#160;<br/><b>&lt;Translation&#160;Header&#160;File&#160;name&gt;&#160;translation&#160;C&#160;Header&#160;File.&#160;The macro&#160;<br/>label&#160;format should&#160;be&#160;'Macro&#160;format'.</b>&#160;<br/>
+&#160;<br/>
+This&#160;error&#160;occurs,&#160;if&#160;the macro definitions&#160;“RENESAS_ICWDTA&lt;WDG&#160;<br/>instance&gt;NMI_IMR”&#160;and “RENESAS_ICWDTA&lt;WDG&#160;instance&gt;_IMR”&#160;are&#160;not&#160;<br/>present&#160;in Translation&#160;Header&#160;File.&#160;<br/>&#160;<br/>&#160;<br/><b>ERR102012:&#160;&#34;DriverA&#34;&#160;or&#160;&#34;DriverB&#34;&#160;WDG&#160;instance&#160;is&#160;not&#160;present&#160;in&#160;<br/>input ECU&#160;Configuration&#160;Description&#160;File(s).&#160;&#34;DEFINITION-REF&#34;&#160;tags&#160;in&#160;<br/>WDG&#160;specific ECU&#160;Configuration&#160;Description&#160;File&#160;should&#160;contain&#160;<br/>&#34;DriverA/&#160;Wdg&#34; or&#160;&#34;DriverB/Wdg&#34;.</b>&#160;<br/>
+&#160;<br/>
+This&#160;error&#160;occurs,&#160;if&#160;“DriverA”&#160;or&#160;“DriverB”&#160;WDG&#160;instance&#160;is&#160;not&#160;present&#160;in&#160;<br/>description file.&#160;<br/>
+&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160;&#160;&#160;<br/>&#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160; &#160;&#160; &#160; &#160;&#160;&#160; &#160; &#160;Note:&#160;P1x&#160;device supports&#160;only&#160;one instance&#160;i.e.&#160;DriverA.&#160;<br/>&#160;<br/>
+<b>ERR102014:&#160;The&#160;reference&#160;to&#160;BSWMDT&#160;file&#160;'MODULE-DESCRIPTION-&#160;<br/>REF'&#160;should&#160;not refer&#160;to&#160;the&#160;same&#160;'VendorApiInfix'&#160;for&#160;two&#160;different WDG&#160;<br/>drivers.&#160;'VendorApiInfix'&#160;should&#160;be&#160;unique&#160;for&#160;each&#160;hardware&#160;driver.&#160;<br/></b>&#160;<br/>This&#160;error&#160;occurs,&#160;if&#160;the value of&#160;‘VendorApiInfix’&#160;is&#160;not&#160;unique for&#160;each&#160;<br/>hardware&#160;driver.&#160;<br/>
+&#160;<br/>&#160;<br/>
+<b>ERR102015:&#160;The value configured&#160;for&#160;the parameter&#160;'WdgIndex'&#160;is&#160;same&#160;<br/>for&#160;&#160;all&#160;the&#160;configured&#160;&#160;WDG&#160;drivers.&#160;The value&#160;of&#160;WdgIndex&#160;should&#160;be&#160;<br/>unique&#160;for&#160;each&#160;hardware&#160;driver.</b>&#160;<br/>
+&#160;<br/>
+This&#160;error&#160;occurs,&#160;if&#160;the&#160;value&#160;configured&#160;for&#160;the&#160;parameter&#160;WdgIndex&#160;is&#160;same&#160;<br/>for&#160;all&#160;the configured&#160;WDG&#160;drivers.&#160;<br/>&#160;<br/>&#160;<br/><b>ERR102016: The&#160;short name&#160;of the&#160;container&#160;‘WdgSettingsConfig’</b>&#160;<br/><b>should&#160;be&#160;unique&#160;across&#160;the&#160;Drivers.</b>&#160;<br/>
+&#160;<br/>
+This&#160;error&#160;occurs,&#160;if&#160;the&#160;short&#160;name&#160;of&#160;WdgSettingsConfig&#160;container&#160;is&#160;&#160;not&#160;<br/>same&#160;across&#160;the Drivers.&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+<b>25</b>&#160;<br/>
+<hr/>
+<a name=26></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-26_1.png"/><br/>
+<b>Chapter&#160;8&#160;</b><br/>
+<b>Messages&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>ERR102017:&#160;The parameter&#160;'WDG_E_READBACK_FAILURE'&#160;in&#160;the&#160;<br/>container&#160;‘WdgDemEventParameterRefs’&#160;should&#160;be&#160;should&#160;be&#160;configured&#160;<br/>since&#160;&#160;parameter&#160;'WdgRegReadBackEnable'&#160;in&#160;container&#160;'WdgGeneral'&#160;is&#160;<br/>not configured&#160;as&#160;'DISABLED'.&#160;<br/>&#160;<br/></b>This&#160;error&#160;will&#160;occur,&#160;if&#160;the&#160;parameter&#160;'WDG_E_READBACK_FAILURE'&#160;in&#160;<br/>the container&#160;WdgDemEventParameterRefs’&#160;is&#160;not&#160;configured&#160;when&#160;<br/>parameter&#160;'WdgRegReadBackEnable'&#160;&#160;in container&#160;'WdgGeneral'&#160;is&#160;not&#160;<br/>configured&#160;as&#160;'DISABLED'.&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+<b>8.2&#160;&#160;Warning&#160;Messages&#160;</b><br/>
+&#160;<br/>&#160;<br/>
+<b>WRN102001:&#160;The value of&#160;the parameter&#160;'WdgInitialTimeout'&#160;is&#160;<br/>configured&#160;as&#160;&lt;0&gt;&#160;and&#160;'WdgDefaultMode'&#160;is&#160;not configured&#160;as</b>&#160;<br/><b>&lt;WDGIF_OFF_MODE&gt;.&#160;Hence,&#160;Watchdog&#160;hardware&#160;will&#160;be enabled&#160;<br/>directly&#160;after&#160;Wdg&#160;Module&#160;initialization&#160;and&#160;WDG&#160;counter&#160;will&#160;expire&#160;<br/>after</b>&#160;<b>&lt;calculated_value in&#160;msec&gt;.</b>&#160;<br/>
+&#160;<br/>
+This&#160;warning&#160;occurs,&#160;if&#160;WdgInitialTimeout&#160;parameter&#160;is&#160;configured&#160;as&#160;0 and&#160;<br/>WdgDefaultMode&#160;is&#160;not&#160;configured&#160;as&#160;WDGIF_OFF_MODE.&#160;<br/>
+&#160;<br/>&#160;<br/>
+<b>8.3&#160;&#160;Information&#160;Messages&#160;</b><br/>
+&#160;<br/><b>&#160;</b><br/>
+<b>INF102001: The&#160;duration&#160;of 75%&#160;of one&#160;WDG&#160;trigger&#160;cycle&#160;for&#160;slow&#160;mode&#160;<br/>is &lt;slow_time_value msec&gt;.&#160;</b><br/>
+&#160;<br/>
+This&#160;information occurs&#160;to&#160;provide&#160;75%&#160;interrupt&#160;time for&#160;slow&#160;mode.&#160;In&#160;this&#160;<br/>information message ‘slow_time_value’&#160;will&#160;be evaluated as&#160;follows:&#160;<br/>&#160;<br/>slow_value&#160;=&#160;Power&#160;factor&#160;from&#160;WdgClkSettingsSlow&#160;slow_time_value&#160;=&#160;<br/>integer&#160;((0.75((2slow_value)/clock))/1000)&#160;<br/>&#160;<br/>
+&#160;<br/>
+<b>INF102002: The&#160;duration&#160;of 75%&#160;of one&#160;WDG&#160;trigger&#160;cycle&#160;for&#160;fast mode&#160;<br/>is &lt;fast_time_value msec&gt;.&#160;</b><br/>
+&#160;<br/>
+This&#160;information occurs&#160;to&#160;provide&#160;75%&#160;interrupt&#160;time for&#160;fast&#160;mode.&#160;In this&#160;<br/>information message ‘fast_time_value’&#160;will&#160;be&#160;evaluated as&#160;follows:&#160;<br/>&#160;<br/>fast_value&#160;=&#160;Power&#160;factor&#160;from&#160;WdgClkSettingsFast&#160;fast_time_value&#160;=&#160;integer&#160;<br/>((0.75((2fast_value)/clock))/1000)&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+<b>26</b>&#160;<br/>
+<hr/>
+<a name=27></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-27_1.png"/><br/>
+&#160;&#160;<b>Notes&#160;&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160; &#160; &#160;&#160;</b><br/>
+<b>&#160; &#160;&#160;Chapter&#160;9&#160;&#160;</b><br/>
+&#160;<br/>&#160;<br/><b>Chapter&#160;9&#160;</b><br/>
+<b>Notes&#160;</b><br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+“Generation Tool”&#160;and “Tool”&#160;terminologies&#160;are used interchangeably&#160;to refer&#160;<br/>WDG&#160;Driver&#160;Generation Tool.&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+&#160;<br/>
+<b>27</b>&#160;<br/>
+<hr/>
+<a name=28></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-28_1.png"/><br/>
+&#160;&#160;<b>Chapter&#160;9&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>&#160;</b><br/>
+<b>Notes&#160;</b><br/>
+&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+<b>28</b>&#160;<br/>
+<hr/>
+<a name=29></a>&#160;<br/>
+&#160;<br/><b>&#160;</b><br/>
+<b>Revision&#160;History&#160;</b><br/>
+<b>&#160;<br/></b>&#160;<br/>&#160;<br/>
+<b>Sl.No.</b>&#160;&#160;<b>Description</b>&#160;<br/>
+<b>Version</b>&#160;<br/>
+<b>Date</b>&#160;<br/>
+1.&#160;<br/>
+Initial&#160;Version&#160;<br/>
+1.0.0&#160;<br/>
+18-Oct-2013&#160;<br/>
+2.&#160;&#160;<br/>
+Following&#160;changes&#160;are made:&#160;<br/>
+1.0.1&#160;<br/>
+26-Sep-2014&#160;<br/>
+1.&#160;Chapter&#160;2&#160;is&#160;updated&#160;for&#160;addition of&#160;PDF&#160;reference.&#160;<br/>2.&#160;WdgRegReadBackEnable&#160;parameter&#160;is&#160;added&#160;in ERR102004 error&#160;<br/>message&#160;table.&#160;<br/>3.&#160;A&#160;note is&#160;added&#160;for&#160;ERR102012 error&#160;message.&#160;<br/>4.&#160;WdgDemEventParameterRefs&#160;container&#160;and its&#160;parameters&#160;are&#160;added in&#160;<br/>the table&#160;of&#160;error&#160;message&#160;ERR102005.&#160;<br/>5.&#160;Error&#160;message&#160;ERR102017&#160;is&#160;added newly.&#160;<br/>6.&#160;Error&#160;messages&#160;ERR102015 and ERR102016 are rephrased.&#160;<br/>7.&#160;Chapter&#160;6 Precautions&#160;is&#160;updated.&#160;<br/>
+3.&#160;<br/>
+Following change is&#160;made:&#160;<br/>
+1.0.2&#160;<br/>
+28-Apr-2015&#160;<br/>
+1.&#160;Updated Chapter&#160;2 to&#160;add&#160;PDF&#160;reference.&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+29&#160;<br/>
+<hr/>
+<a name=30></a>&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/><b>&#160;<br/></b>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+<b>AUTOSAR&#160;MCAL&#160;R4.0.3 User's&#160;Manual</b>&#160;<br/><b>WDG&#160;Driver&#160;Component&#160;Ver.1.0.2</b>&#160;<br/><b>Generation Tool&#160;User's&#160;Manual</b>&#160;<br/>
+&#160;<br/>
+Publication&#160;Date:&#160;Rev.0.01,&#160;April&#160;28,&#160;2015&#160;<br/>
+&#160;<br/>
+Published&#160;by:&#160;Renesas&#160;Electronics&#160;Corporation&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=31></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-31_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-31_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-31_3.jpg"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-31_4.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-31_5.jpg"/><br/>
+&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;&#160;&#160;<br/>
+<b>SALES&#160;&#160;OFFICES&#160;&#160;</b><br/>
+<a href="http://www.renesas.com/">&#160;</a><br/>
+&#160;<br/>
+&#160;<br/>
+Refer&#160;&#160;t<a href="http://www.renesas.com/">o&#160;</a><br/>
+<a href="http://www.renesas.com/">f</a>or&#160;the&#160;latest&#160;&#160;and&#160;&#160;detailed&#160;<br/>
+&#160;<br/>
+<b>SALES&#160;OFFICES</b>&#160;<br/>
+<a href="http://www.renesas.com/">http://www.renesas.com&#160;</a><br/>
+<b>Ren<a href="http://www.renesas.com/">esas&#160;&#160;Electronics&#160;America&#160;</a></b><br/>
+<a href="http://www.renesas.com/">&#160;</a><br/>
+&#160;<br/>
+&#160;<br/>
+2880<br/>
+Ref&#160;&#160;&#160;Sc<br/>
+er&#160;&#160;t<a href="http://www.renesas.com/">ot&#160;t&#160;</a><br/>
+<a href="http://www.renesas.com/">&#34;&#160;B</a><br/>
+<a href="http://www.renesas.com/">htou</a><br/>
+<a href="http://www.renesas.com/">tp&#160;l</a><br/>
+<a href="http://www.renesas.com/">:&#160;e</a><br/>
+<a href="http://www.renesas.com/">//&#160;var</a><br/>
+<a href="http://www.renesas.com/">wwd&#160;</a><br/>
+<a href="http://www.renesas.com/">w&#160;S</a><br/>
+<a href="http://www.renesas.com/">.r&#160;ant</a><br/>
+<a href="http://www.renesas.com/">en&#160;a</a><br/>
+<a href="http://www.renesas.com/">e&#160;&#160;</a><br/>
+<a href="http://www.renesas.com/">s&#160;C</a><br/>
+<a href="http://www.renesas.com/">a&#160;lar</a><br/>
+<a href="http://www.renesas.com/">s.ca,</a><br/>
+<a href="http://www.renesas.com/">o&#160;&#160;&#160;CA</a><br/>
+<a href="http://www.renesas.com/">m/&#34;&#160;&#160;</a>&#160;<br/>
+<a href="http://www.renesas.com/">f</a>or&#160;&#160;the&#160;&#160;latest&#160;&#160;and&#160;&#160;&#160;<br/>
+detailed&#160;information.&#160;<br/>
+Tel:&#160;&#160;<br/>
+Fax:&#160;<br/>
+&#160;<br/>
+<b>Ren</b><br/>
+<b>R&#160;esas</b><br/>
+<b>en</b><br/>
+<b>&#160;&#160;E</b><br/>
+<b>esas&#160;&#160;le</b><br/>
+<b>El&#160;ctr</b><br/>
+<b>ec&#160;o</b><br/>
+<b>t&#160;n</b><br/>
+<b>r&#160;i</b><br/>
+<b>o&#160;c</b><br/>
+<b>ns&#160;</b><br/>
+<b>i&#160;Ca</b><br/>
+<b>cs&#160;&#160;n</b><br/>
+<b>A&#160;ad</b><br/>
+<b>mea</b><br/>
+<b>ri&#160;ca&#160;Inc.</b>&#160;&#160;&#160;<br/>
+1101&#160;&#160;N<br/>
+2880&#160;&#160;ic<br/>
+S&#160;h<br/>
+c&#160;ol<br/>
+ot&#160;s<br/>
+t&#160;&#160;on<br/>
+B&#160;&#160;Road<br/>
+oulev&#160;,&#160;<br/>
+ar&#160;N<br/>
+d&#160;ew<br/>
+Sam<br/>
+nt&#160;ar<br/>
+a&#160;&#160;ket<br/>
+Cl&#160;,a&#160;O<br/>
+ra&#160;nt<br/>
+,&#160;&#160;ar<br/>
+CAi&#160;o&#160;&#160;L3Y<br/>
+9505&#160;&#160;<br/>
+0&#160;9C<br/>
+-253,<br/>
+5&#160;&#160;4,&#160;U.S.A.&#160;&#160;<br/>
+Tel<br/>
+T&#160;:&#160;<br/>
+el:&#160;&#160;&#160;+1-408-588-60&#160;Fa<br/>
+00,&#160;&#160;x:<br/>
+F&#160;&#160;ax:&#160;&#160;+1-408-588-&#160;&#160;<br/>
+6130&#160;<br/>
+<b>Ren</b><br/>
+<b>R&#160;esas</b><br/>
+<b>en</b><br/>
+<b>&#160;&#160;E</b><br/>
+<b>esas&#160;&#160;le</b><br/>
+<b>El&#160;ctr</b><br/>
+<b>ec&#160;o</b><br/>
+<b>t&#160;n</b><br/>
+<b>r&#160;i</b><br/>
+<b>o&#160;c</b><br/>
+<b>ns&#160;</b><br/>
+<b>i&#160;Eur</b><br/>
+<b>cs&#160;&#160;ope</b><br/>
+<b>Cana&#160;&#160;da&#160;Limit&#160;</b>&#160;<br/>
+<b>ed</b>&#160;<br/>
+Dukes<br/>
+1101&#160;&#160;&#160;M<br/>
+N&#160;e<br/>
+i&#160;adow<br/>
+chols&#160;,&#160;<br/>
+o&#160;M<br/>
+n&#160;&#160;il<br/>
+R&#160;lboar<br/>
+oad,&#160;&#160;d&#160;<br/>
+N&#160;R<br/>
+e&#160;oad<br/>
+wm&#160;,<br/>
+a&#160;r&#160;B<br/>
+k&#160;ou<br/>
+et,&#160;r&#160;ne<br/>
+O&#160;&#160;<br/>
+nt&#160;E<br/>
+a&#160;nd,<br/>
+rio&#160;&#160;&#160;<br/>
+L3Y&#160;&#160;9C3,&#160;&#160;Canada&#160;&#160;SL8&#160;&#160;5FH,&#160;<br/>
+Tel<br/>
+T&#160;:&#160;<br/>
+el:&#160;&#160;+1-905-898-5441,&#160;F<br/>
+&#160;&#160;a<br/>
+F&#160;x:<br/>
+a&#160;&#160;<br/>
+x:&#160;&#160;+1-905-898-3220&#160;&#160;&#160;<br/>
+<b>Ren</b><br/>
+<b>R&#160;esas</b><br/>
+<b>en</b><br/>
+<b>&#160;&#160;E</b><br/>
+<b>esas&#160;&#160;le</b><br/>
+<b>El&#160;ctr</b><br/>
+<b>ec&#160;o</b><br/>
+<b>t&#160;n</b><br/>
+<b>r&#160;i</b><br/>
+<b>o&#160;c</b><br/>
+<b>ns&#160;</b><br/>
+<b>i&#160;E</b><br/>
+<b>c&#160;ur</b><br/>
+<b>s&#160;Eope</b><br/>
+<b>ur</b><br/>
+<b>&#160;</b><br/>
+<b>ope&#160;Limited</b>&#160;<br/>
+Dukes&#160;&#160;Me<br/>
+1<br/>
+adow&#160;0,<br/>
+,&#160;&#160;&#160;<br/>
+M4047<br/>
+illbo&#160;2<br/>
+a&#160;r&#160;D<br/>
+d&#160;üs<br/>
+&#160;R&#160;seldor<br/>
+oad,&#160;&#160;f,<br/>
+B&#160;G<br/>
+ouer<br/>
+r&#160;m<br/>
+ne&#160;&#160;any<br/>
+End,&#160;&#160;Buckinghamshire,&#160;SL8&#160;&#160;5FH,&#160;&#160;U.K&#160;<br/>
+Tel<br/>
+T&#160;:&#160;<br/>
+el:&#160;&#160;+44-1628-585-&#160;Fa<br/>
+10&#160;x:&#160;<br/>
+0,&#160;Fax:&#160;&#160;+44-1628-585&#160;&#160;-900&#160;<br/>
+<b>Ren</b><br/>
+<b>R&#160;esas</b><br/>
+<b>en</b><br/>
+<b>&#160;&#160;E</b><br/>
+<b>esas&#160;&#160;le</b><br/>
+<b>El&#160;ctr</b><br/>
+<b>ec&#160;o</b><br/>
+<b>t&#160;n</b><br/>
+<b>r&#160;i</b><br/>
+<b>o&#160;cns&#160;</b><br/>
+<b>i&#160;(</b><br/>
+<b>c&#160;C</b><br/>
+<b>s&#160;h</b><br/>
+<b>&#160;&#160;i</b><br/>
+<b>E&#160;na</b><br/>
+<b>ur&#160;)&#160;&#160;C</b><br/>
+<b>ope&#160;o</b><br/>
+<b>&#160;&#160;.,</b><br/>
+<b>G&#160;&#160;mbH</b>&#160;&#160;<br/>
+7th<br/>
+A&#160;&#160;r&#160;F<br/>
+c&#160;loor<br/>
+adi&#160;,&#160;<br/>
+asQ<br/>
+tr&#160;ua<br/>
+as&#160;nt<br/>
+s&#160;um<br/>
+e&#160;1&#160;&#160;<br/>
+0,P<br/>
+&#160;&#160;laza,&#160;<br/>
+40472&#160;N<br/>
+&#160;&#160;o.<br/>
+D&#160;27<br/>
+üs&#160;&#160;<br/>
+s&#160;Z<br/>
+elhi<br/>
+d&#160;Chun<br/>
+orf,&#160;&#160;Lu&#160;<br/>
+Ger&#160;H<br/>
+m&#160;aidi<br/>
+any&#160;an<br/>
+&#160;<br/>
+&#160;&#160;District,&#160;&#160;Beijing&#160;&#160;100083,&#160;<br/>
+&#160;<br/>
+Tel<br/>
+T&#160;:&#160;<br/>
+el:&#160;&#160;+49-211-65030,&#160;F&#160;F<br/>
+a&#160;a<br/>
+x:x:<br/>
+&#160;&#160;&#160;<br/>
++49-211-6503-13<br/>
+&#160;<br/>
+27<br/>
+<b>Ren</b><br/>
+<b>R&#160;esas</b><br/>
+<b>en</b><br/>
+<b>&#160;&#160;E</b><br/>
+<b>esas&#160;&#160;le</b><br/>
+<b>El&#160;ctr</b><br/>
+<b>ec&#160;o</b><br/>
+<b>t&#160;n</b><br/>
+<b>r&#160;i</b><br/>
+<b>o&#160;c</b><br/>
+<b>ns&#160;</b><br/>
+<b>i&#160;(S</b><br/>
+<b>cs&#160;ha</b><br/>
+<b>&#160;(Cngha</b><br/>
+<b>hina&#160;i</b><br/>
+<b>)&#160;)&#160;Co</b><br/>
+<b>Co.,&#160;.,</b><br/>
+<b>&#160;&#160;&#160;Ltd.</b>&#160;&#160;&#160;<br/>
+Uni<br/>
+7t&#160;t&#160;<br/>
+h&#160;204<br/>
+&#160;&#160;Flo&#160;,&#160;&#160;205,<br/>
+or,&#160;&#160;Q&#160;&#160;<br/>
+u&#160;A<br/>
+a&#160;ZI<br/>
+nt&#160;A&#160;<br/>
+umC<br/>
+&#160;&#160;en<br/>
+Pl&#160;t<br/>
+a&#160;er<br/>
+z&#160;,<br/>
+a&#160;&#160;,&#160;&#160;No.<br/>
+N&#160;1<br/>
+o.&#160;233<br/>
+27&#160;&#160;&#160;<br/>
+Z&#160;L<br/>
+hiuj<br/>
+Ciaz<br/>
+h&#160;ui<br/>
+un&#160;&#160;&#160;Ri<br/>
+Lu&#160;&#160;n<br/>
+Hg&#160;<br/>
+ai&#160;Rd<br/>
+dia&#160;.,&#160;<br/>
+n&#160;&#160;P<br/>
+Diudong<br/>
+strict,&#160;&#160;&#160;D<br/>
+Be&#160;istr<br/>
+ijin&#160;ict<br/>
+g&#160;&#160;,&#160;&#160;Shangh<br/>
+100083,&#160;&#160;ai<br/>
+P.&#160;&#160;&#160;200120<br/>
+R.China&#160;,&#160;&#160;<br/>
+&#160;<br/>
+Tel<br/>
+T&#160;:&#160;<br/>
+el:&#160;&#160;+86-10-8235-11<br/>
+F<br/>
+55,&#160;a<br/>
+&#160;&#160;x:<br/>
+Fa&#160;x:&#160;&#160;+86-10-8235-76&#160;/&#160;<br/>
+79&#160;<br/>
+&#160;<br/>
+<b>Ren</b><br/>
+<b>R&#160;esas</b><br/>
+<b>en</b><br/>
+<b>&#160;&#160;E</b><br/>
+<b>esas&#160;&#160;le</b><br/>
+<b>El&#160;ctr</b><br/>
+<b>ec&#160;o</b><br/>
+<b>t&#160;n</b><br/>
+<b>r&#160;i</b><br/>
+<b>o&#160;c</b><br/>
+<b>ns&#160;</b><br/>
+<b>i&#160;Ho</b><br/>
+<b>cs&#160;&#160;n</b><br/>
+<b>(&#160;g</b><br/>
+<b>S&#160;&#160;&#160;K</b><br/>
+<b>ha&#160;ong</b><br/>
+<b>n</b><br/>
+<b>&#160;</b><br/>
+<b>ghai)&#160;Co.,&#160;&#160;</b>&#160;<br/>
+<b>Ltd.</b>&#160;<br/>
+Unit&#160;<br/>
+Uni&#160;1601<br/>
+t&#160;<br/>
+-<br/>
+204,161<br/>
+&#160;<br/>
+3,<br/>
+205,&#160;&#160;&#160;16/<br/>
+AZ&#160;F<br/>
+I&#160;.<br/>
+A&#160;,&#160;&#160;&#160;To<br/>
+C&#160;w<br/>
+ent&#160;er<br/>
+er&#160;&#160;,&#160;2,<br/>
+&#160;&#160;&#160;<br/>
+N&#160;G<br/>
+o.&#160;rand&#160;<br/>
+1233&#160;C<br/>
+&#160;&#160;ent<br/>
+Luji&#160;ur<br/>
+az&#160;y&#160;<br/>
+ui&#160;Pl<br/>
+&#160;&#160;a<br/>
+Ri&#160;c<br/>
+n&#160;e<br/>
+g&#160;,&#160;&#160;193<br/>
+Rd.,&#160;&#160;&#160;&#160;P<br/>
+P&#160;rince&#160;&#160;E<br/>
+udong&#160;&#160;&#160;dw<br/>
+Dis&#160;ar<br/>
+tri&#160;d<br/>
+c&#160;&#160;&#160;R<br/>
+t,&#160;&#160;&#160;o<br/>
+S&#160;ad<br/>
+ha&#160;&#160;&#160;W<br/>
+ng&#160;es<br/>
+ha&#160;ti,&#160;&#160;&#160;Mongk<br/>
+200120,ok<br/>
+&#160;&#160;&#160;,&#160;<br/>
+C&#160;K<br/>
+hiow<br/>
+na&#160;l&#160;oon,&#160;&#160;Hong&#160;<br/>
+&#160;<br/>
+Tel<br/>
+T&#160;:&#160;<br/>
+el:&#160;&#160;+86-21-5877-18&#160;Fa<br/>
+18&#160;x:<br/>
+,&#160;&#160;&#160;<br/>
+F+<br/>
+a&#160;85<br/>
+x:&#160;&#160;2&#160;<br/>
++86-21-6887-78<br/>
+&#160;<br/>
+58&#160;/&#160;-7898&#160;<br/>
+<b>Ren</b><br/>
+<b>R&#160;esas</b><br/>
+<b>en</b><br/>
+<b>&#160;&#160;E</b><br/>
+<b>esas&#160;&#160;le</b><br/>
+<b>El&#160;ctr</b><br/>
+<b>ec&#160;o</b><br/>
+<b>t&#160;n</b><br/>
+<b>r&#160;i</b><br/>
+<b>o&#160;c</b><br/>
+<b>ns&#160;</b><br/>
+<b>i&#160;Tai</b><br/>
+<b>cs&#160;&#160;w</b><br/>
+<b>H&#160;an</b><br/>
+<b>ong&#160;&#160;C</b><br/>
+<b>Ko.,&#160;</b><br/>
+<b>ong&#160;&#160;L&#160;</b>&#160;<br/>
+<b>imited</b>&#160;<br/>
+7F,&#160;<br/>
+UnN<br/>
+it&#160;o.<br/>
+&#160;&#160;&#160;&#160;36<br/>
+16<br/>
+3<br/>
+01&#160;&#160;<br/>
+-&#160;Fu&#160;<br/>
+161Shi<br/>
+3,&#160;&#160;ng<br/>
+16/&#160;&#160;N<br/>
+F.,or<br/>
+&#160;&#160;t<br/>
+T&#160;h<br/>
+o&#160;&#160;R<br/>
+w&#160;oad<br/>
+er&#160;<br/>
+&#160;<br/>
+2,&#160;Tai<br/>
+Gr&#160;pei,<br/>
+and&#160;&#160;<br/>
+&#160;&#160;Century&#160;&#160;Place,&#160;&#160;193&#160;&#160;Prince&#160;&#160;Edward&#160;Road&#160;&#160;West,&#160;&#160;Mongkok,&#160;Kowloon,&#160;Hong&#160;&#160;Kong&#160;<br/>
+Tel<br/>
+T&#160;:&#160;<br/>
+el:&#160;&#160;+852-2886-9318,&#160;&#160;F<br/>
+F&#160;a<br/>
+a&#160;x:<br/>
+x:&#160;&#160;<br/>
+&#160;&#160;+<br/>
++&#160;886<br/>
+852&#160;&#160;<br/>
+&#160;&#160;2886-9022/&#160;&#160;<br/>
+9044&#160;<br/>
+<b>Ren</b><br/>
+<b>R&#160;esas</b><br/>
+<b>en</b><br/>
+<b>&#160;&#160;E</b><br/>
+<b>esas&#160;&#160;le</b><br/>
+<b>El&#160;ctr</b><br/>
+<b>ec&#160;o</b><br/>
+<b>t&#160;n</b><br/>
+<b>r&#160;i</b><br/>
+<b>o&#160;c</b><br/>
+<b>ns&#160;</b><br/>
+<b>i&#160;S</b><br/>
+<b>c&#160;i</b><br/>
+<b>s&#160;n</b><br/>
+<b>&#160;&#160;ga</b><br/>
+<b>Tai&#160;p</b><br/>
+<b>w&#160;or</b><br/>
+<b>an&#160;e&#160;Pt</b><br/>
+<b>Co.,&#160;e</b><br/>
+<b>&#160;&#160;.&#160;</b><br/>
+<b>Ltd.</b>&#160;&#160;&#160;<br/>
+1&#160;7F,&#160;&#160;No.&#160;&#160;363&#160;<br/>
+A<br/>
+Fu&#160;ven<br/>
+Shi&#160;u<br/>
+n&#160;e,<br/>
+g&#160;&#160;&#160;#06<br/>
+Nort&#160;-10,<br/>
+h&#160;&#160;R&#160;&#160;&#160;Kep<br/>
+oad&#160;&#160;p<br/>
+T&#160;el<br/>
+ai&#160;&#160;<br/>
+p&#160;Ba<br/>
+ei,&#160;y&#160;<br/>
+TTo<br/>
+ai&#160;w<br/>
+w&#160;er,<br/>
+an&#160;&#160;<br/>
+&#160;&#160;Singapore&#160;098632&#160;<br/>
+Tel<br/>
+T&#160;:&#160;<br/>
+el:&#160;&#160;+886-2-8175-&#160;F<br/>
+96&#160;ax:<br/>
+00&#160;&#160;<br/>
+,&#160;Fax:&#160;&#160;+886&#160;&#160;2-<br/>
+&#160;<br/>
+8175-9670&#160;<br/>
+<b>Ren</b><br/>
+<b>R&#160;esas</b><br/>
+<b>en</b><br/>
+<b>&#160;&#160;E</b><br/>
+<b>esas&#160;&#160;le</b><br/>
+<b>El&#160;ct</b><br/>
+<b>e&#160;r</b><br/>
+<b>c&#160;o</b><br/>
+<b>t&#160;n</b><br/>
+<b>r&#160;i</b><br/>
+<b>o&#160;c</b><br/>
+<b>ns&#160;</b><br/>
+<b>i&#160;M</b><br/>
+<b>cs&#160;al</b><br/>
+<b>&#160;Sa</b><br/>
+<b>i&#160;ysi</b><br/>
+<b>ngaa&#160;</b><br/>
+<b>pore&#160;Pte.&#160;&#160;L&#160;</b>&#160;<br/>
+<b>td.</b>&#160;<br/>
+Un<br/>
+1&#160;i&#160;t&#160;&#160;906<br/>
+harb&#160;,&#160;&#160;Bl<br/>
+our&#160;o<br/>
+F&#160;c<br/>
+r&#160;k&#160;&#160;B,<br/>
+ont&#160;&#160;&#160;<br/>
+A&#160;M<br/>
+v&#160;e<br/>
+e&#160;nar<br/>
+nue&#160;a<br/>
+,&#160;&#160;&#160;<br/>
+#&#160;Amc<br/>
+06-&#160;o<br/>
+10&#160;rp<br/>
+,&#160;&#160;,<br/>
+K&#160;&#160;A<br/>
+ep&#160;mc<br/>
+pel&#160;o<br/>
+&#160;&#160;rp&#160;<br/>
+Ba&#160;T<br/>
+y&#160;&#160;rade<br/>
+Tow&#160;&#160;C<br/>
+er,en<br/>
+&#160;&#160;t<br/>
+S&#160;r<br/>
+i&#160;e,<br/>
+n&#160;&#160;<br/>
+g&#160;No.<br/>
+apo&#160;&#160;r&#160;18<br/>
+e&#160;&#160;,&#160;&#160;Jl<br/>
+09&#160;n&#160;<br/>
+86&#160;Per<br/>
+32&#160;&#160;siaran &#160;Barat,&#160;&#160;46050&#160;&#160;Petaling&#160;&#160;Jaya,&#160;&#160;Selangor&#160;&#160;Darul&#160;&#160;Ehsan,&#160;<br/>
+&#160;<br/>
+Tel<br/>
+T&#160;:&#160;<br/>
+el:&#160;&#160;+65-6213-0200,&#160;&#160;Fa<br/>
+Fa&#160;x:<br/>
+x:&#160;&#160;<br/>
+&#160;&#160;+65-6278-8001&#160;&#160;&#160;<br/>
+<b>Ren</b><br/>
+<b>R&#160;esas</b><br/>
+<b>en</b><br/>
+<b>&#160;&#160;E</b><br/>
+<b>esas&#160;&#160;le</b><br/>
+<b>El&#160;ctr</b><br/>
+<b>ec&#160;o</b><br/>
+<b>t&#160;n</b><br/>
+<b>r&#160;i</b><br/>
+<b>o&#160;c</b><br/>
+<b>ns&#160;</b><br/>
+<b>i&#160;Ko</b><br/>
+<b>cs&#160;&#160;re</b><br/>
+<b>M&#160;a</b><br/>
+<b>al&#160;&#160;</b><br/>
+<b>a&#160;Co.</b><br/>
+<b>ysi&#160;,&#160;</b><br/>
+<b>a Sd&#160;</b>&#160;<br/>
+<b>n.Bhd.</b>&#160;<br/>
+11F.<br/>
+Un&#160;,<br/>
+i&#160;&#160;<br/>
+t&#160;Sam<br/>
+906,i&#160;k&#160;<br/>
+B&#160;Lav<br/>
+loc&#160;i<br/>
+k&#160;e<br/>
+&#160;&#160;d'<br/>
+B,&#160;&#160;or<br/>
+M&#160;&#160;B<br/>
+en&#160;ldg.<br/>
+ar&#160;,<br/>
+a&#160;&#160;&#160;<br/>
+&#160;&#160;720<br/>
+Amc&#160;-2<br/>
+o&#160;&#160;<br/>
+rp,&#160;&#160;Amcorp&#160;&#160;Trade&#160;&#160;Centre,&#160;&#160;No.&#160;<br/>
+S<br/>
+18,&#160;e<br/>
+&#160;&#160;oul<br/>
+Jln&#160;&#160;&#160;135<br/>
+Per&#160;-<br/>
+s&#160;080<br/>
+iara,&#160;<br/>
+n&#160;Barat,&#160;&#160;46050&#160;&#160;Petaling&#160;&#160;Jaya,&#160;&#160;Selangor&#160;&#160;Darul&#160;&#160;Ehsan,&#160;&#160;Malaysia&#160;<br/>
+Tel<br/>
+T&#160;:&#160;<br/>
+el:&#160;&#160;+60-3-7955-93&#160;Fa<br/>
+90,&#160;x:<br/>
+&#160;&#160;&#160;<br/>
+Fax:&#160;&#160;+60-3-7955-&#160;&#160;<br/>
+9510&#160;<br/>
+&#160;<br/>
+<b>Renesas&#160;Electronics&#160;Korea&#160;&#160;Co.,&#160;&#160;Ltd.</b>&#160;<br/>11F.&#160;&#160;Samik&#160;&#160;Lavied'&#160;&#160;or&#160;Bldg.,&#160;&#160;720-2&#160;&#160;Yeoksam-Dong,&#160;Kangnam-Ku,&#160;Seoul&#160;&#160;135-080,&#160;Korea&#160;<br/>
+&#160;<br/>
+Tel:&#160;&#160;+82-2-558-3737,&#160;Fax:&#160;&#160;+82-2-558-5141&#160;<br/>&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+&#160;&#160;&#160;<br/>
+&#160;<br/>
+©&#160;2010&#160;Renesas&#160;&#160;Electronics&#160;&#160;Corporation.&#160;&#160;All&#160;rights&#160;<br/>
+&#160;<br/>
+Colophon&#160;<br/>
+&#160;<br/>
+&#160;<br/>&#160;<br/>
+©&#160;2015&#160;&#160;Renesas&#160;&#160;Electronics&#160;&#160;Corporation.&#160;&#160;All&#160;rights&#160;&#160;reserved.&#160;<br/>
+Colophon&#160;&#160;1.0&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name=32></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-32_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-32_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-32_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/Wdg/doc/AUTOSAR_WDG_Tool_UserManual-32_4.jpg"/><br/>
+&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+AUTOSAR&#160;MCAL&#160;R4.0.3&#160;<br/>
+&#160;<br/>
+User’s Manual&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+&#160;<br/>
+<hr/>
+<a name="outline"></a><h1>Document Outline</h1>
+<ul>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#9">Chapter 1 Introduction</a>
+<ul>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#9">1.1 Document Overview</a></li>
+</ul>
+</li>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#11">Chapter 2 Reference</a>
+<ul>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#11">2.1 Reference Documents</a></li>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#11">2.2 Trademark Notice</a></li>
+</ul>
+</li>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#13">Chapter 3 WDG Driver Generation Tool Overview</a></li>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#15">Chapter 4 Input Files</a></li>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#17">Chapter 5 Output Files</a></li>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#19">Chapter 6 Precautions</a></li>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#21">Chapter 7 User Configuration Validation</a></li>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#23">Chapter 8 Messages</a>
+<ul>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#23">8.1 Error Messages</a></li>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#26">8.2 Warning Messages</a></li>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#26">8.3 Information Messages</a></li>
+</ul>
+</li>
+<li><a href="AUTOSAR_WDG_Tool_UserManuals.html#27">Chapter 9 Notes</a></li>
+</ul>
+<hr/>
+</body>
+</html>

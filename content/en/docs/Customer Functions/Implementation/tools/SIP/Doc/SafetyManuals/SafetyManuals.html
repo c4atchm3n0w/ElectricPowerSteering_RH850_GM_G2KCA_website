@@ -1,0 +1,664 @@
+---
+title: SafetyManuals
+linkTitle: SafetyManuals
+weight: 64
+---
+
+<!DOCTYPE html><html>
+<head>
+<title></title>
+<style type="text/css">
+<!--
+.xflip {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: fliph;
+}
+.yflip {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: flipv;
+}
+.xyflip {
+    -moz-transform: scaleX(-1) scaleY(-1);
+    -webkit-transform: scaleX(-1) scaleY(-1);
+    -o-transform: scaleX(-1) scaleY(-1);
+    transform: scaleX(-1) scaleY(-1);
+    filter: fliph + flipv;
+}
+-->
+</style>
+</head>
+<body>
+<a name=1></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-1_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-1_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-1_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-1_4.png"/><br/>
+Draft<br/>
+<b>MICROSAR Safe<br/></b>Safety Manual<br/>
+<hr/>
+<a name=2></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-2_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-2_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-2_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-2_4.png"/><br/>
+Safety Manual<br/>
+<b>1 &#160;General Part</b><br/>
+<b>1.1 &#160;Introduction</b><br/>
+<b>1.1.1 &#160;Purpose</b><br/>
+This&#160;document&#160;describes&#160;the&#160;assumptions&#160;made&#160;by&#160;Vector&#160;during&#160;the&#160;development&#160;of<br/>
+Draft<br/>
+MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;<a href="file:///D:/usr/development/Products/BSW/MICROSAR4/ProductFeatures/PF4_SafeBSW/trunk/90_ProjectManagement/40_Projekt_3_Production/SafetyManual/[2">[2</a>].&#160;&#160;&#160;This&#160;&#160;&#160;document&#160;&#160;&#160;provides&#160;&#160;&#160;information&#160;&#160;&#160;on&#160;&#160;&#160;how&#160;&#160;&#160;to&#160;&#160;&#160;integrate<br/>MICROSAR Safe into your safety-related project.&#160;<br/>
+This&#160;document&#160;is&#160;intended&#160;for&#160;the&#160;use&#160;by&#160;the&#160;user&#160;of&#160;MICROSAR&#160;Safe.&#160;It&#160;should&#160;be<br/>read&#160;by&#160;project&#160;managers,&#160;safety&#160;managers,&#160;and&#160;engineers&#160;to&#160;allow&#160;proper&#160;integration<br/>of MICROSAR Safe.<br/>
+<b>1.1.2 &#160;Scope</b><br/>
+This&#160;document&#160;covers&#160;aspects&#160;of&#160;components&#160;that&#160;are&#160;marked&#160;with&#160;an&#160;ASIL&#160;in&#160;the<br/>delivery&#160;&#160;&#160;description&#160;&#160;&#160;provided&#160;&#160;&#160;by&#160;&#160;&#160;Vector.&#160;&#160;&#160;Neither&#160;&#160;&#160;QM&#160;&#160;&#160;Vector&#160;&#160;&#160;components,&#160;&#160;&#160;nor<br/>components by other venders are in the scope of this document.<br/>
+<b>1.1.3 &#160;Definitions</b><br/>
+<b>Term</b><br/>
+<b>Definition</b><br/>
+User of<br/>
+Integrator of components provided by Vector.<br/>
+MICROSAR Safe<br/>MICROSAR Safe&#160;MICROSAR Safe comprises MICROSAR SafeBSW and<br/>
+MICROSAR SafeRTE as Safety Element out of Context.<br/>MICROSAR SafeBSW is a set of components, that are developed<br/><a href="file:///D:/usr/development/Products/BSW/MICROSAR4/ProductFeatures/PF4_SafeBSW/trunk/90_ProjectManagement/40_Projekt_3_Production/SafetyManual/[1">according to ISO 26262 [1], and are provided by Vector in the<br/></a>context of this delivery. The list of MICROSAR Safe components in<br/>this delivery can be taken from the documentation of the delivery.&#160;<br/>
+Critical section<br/>
+A section of code that needs<br/>
+Configuration<br/>
+TBD<br/>
+data<br/>Generated code&#160;Source code that is generated as a result of the configuration in<br/>
+DaVinci Configurator Pro<br/>
+Partition<br/>
+A set of memory regions that is accessible by tasks and ISRs.<br/>Synonym to OSApplication.<br/>
+The&#160;&#160;&#160;words&#160;&#160;&#160;<i>shall</i>,&#160;&#160;&#160;<i>shall&#160;&#160;&#160;not</i>,&#160;&#160;&#160;<i>should</i>,&#160;&#160;&#160;<i>can</i>&#160;&#160;in&#160;&#160;&#160;this&#160;&#160;&#160;document&#160;&#160;&#160;are&#160;&#160;&#160;to&#160;&#160;&#160;be&#160;&#160;&#160;interpreted&#160;&#160;&#160;as<br/>described here:&#160;<br/>
+1.&#160;<i>Shall</i>&#160;means that the definition is an absolute requirement of the specification.<br/>2.&#160;<i>Shall not</i>&#160;means that the definition is an absolute prohibition of the specification.<br/>3.&#160;<i>Should</i>&#160;means&#160;that&#160;there&#160;may&#160;exist&#160;valid&#160;reasons&#160;in&#160;particular&#160;circumstances&#160;to<br/>
+ignore&#160;a&#160;particular&#160;definition,&#160;but&#160;the&#160;full&#160;implications&#160;must&#160;be&#160;understood&#160;and<br/>carefully weighed before choosing a different course.<br/>
+4.&#160;<i>Can</i>&#160;means that a definition is truly optional.<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+2 / 19<br/>
+<hr/>
+<a name=3></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-3_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-3_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-3_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-3_4.png"/><br/>
+Safety Manual<br/>
+The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;can&#160;deviate&#160;from&#160;all&#160;constraints&#160;and&#160;requirements&#160;in&#160;this<br/>Safety&#160;&#160;&#160;Manual&#160;&#160;&#160;in&#160;&#160;&#160;the&#160;&#160;&#160;responsibility&#160;&#160;&#160;of&#160;&#160;&#160;the&#160;&#160;&#160;user&#160;&#160;&#160;of&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe,&#160;&#160;&#160;if&#160;&#160;&#160;equivalent<br/>measures are used.<br/>If&#160;&#160;&#160;a&#160;&#160;&#160;measure&#160;&#160;&#160;is&#160;&#160;&#160;equivalent&#160;&#160;&#160;can&#160;&#160;&#160;be&#160;&#160;&#160;decided&#160;&#160;&#160;in&#160;&#160;&#160;the&#160;&#160;&#160;responsibility&#160;&#160;&#160;of&#160;&#160;&#160;the&#160;&#160;&#160;user&#160;&#160;&#160;of<br/>MICROSAR Safe.&#160;<br/>
+<b>1.1.4 &#160;References&#160;</b>Draft<br/>
+<b>No.&#160;Source&#160;Title</b><br/>
+<b>Version</b><br/>
+<a href="file:///D:/usr/development/Products/BSW/MICROSAR4/ProductFeatures/PF4_SafeBSW/trunk/90_ProjectManagement/40_Projekt_3_Production/SafetyManual/[1">[1</a>]<br/>
+ISO<br/>
+ISO 26262 Road vehicles — Functional safety (all parts)&#160;2011/2012<br/>
+<a href="file:///D:/usr/development/Products/BSW/MICROSAR4/ProductFeatures/PF4_SafeBSW/trunk/90_ProjectManagement/40_Projekt_3_Production/SafetyManual/[2">[2</a>]<br/>
+Vector<br/>
+ISO 26262 Compliance Documentation<br/>
+TBD<br/>
+<a href="file:///D:/usr/development/Products/BSW/MICROSAR4/ProductFeatures/PF4_SafeBSW/trunk/90_ProjectManagement/40_Projekt_3_Production/SafetyManual/[3">[3</a>]<br/>
+Vector<br/>
+Product Information MICROSAR Safe<br/>
+TBD<br/>
+<a href="file:///D:/usr/development/Products/BSW/MICROSAR4/ProductFeatures/PF4_SafeBSW/trunk/90_ProjectManagement/40_Projekt_3_Production/SafetyManual/[4">[4</a>]<br/>
+Vector<br/>
+Technical Reference MICROSAR Safe Silence Verifier<br/>
+1.4<br/>
+<b>1.1.5 &#160;Overview</b><br/>
+This&#160;document&#160;is&#160;automatically&#160;generated.&#160;The&#160;content&#160;of&#160;this&#160;document&#160;depends&#160;on<br/>the components and micro-controller of your delivery.<br/>
+The structure of this document comprises:<br/>
+<b>&gt;&#160;</b>▪&#160;a&#160;general&#160;section&#160;that&#160;covers&#160;all&#160;assumptions&#160;and&#160;constraints&#160;that&#160;are&#160;always<br/>
+applicable, and<br/>
+<b>&gt;&#160;</b>▪&#160;a&#160;micro-controller&#160;specific&#160;section&#160;that&#160;covers&#160;all&#160;aspects&#160;of&#160;the&#160;selected&#160;micro-<br/>
+controller&#160;(only&#160;if&#160;micro-controller&#160;specific&#160;components&#160;are&#160;part&#160;of&#160;the&#160;delivery),<br/>and<br/>
+<b>&gt;&#160;</b>▪<br/>
+a&#160;section&#160;for&#160;each&#160;component&#160;that&#160;covers&#160;its&#160;constraints&#160;and&#160;necessary&#160;verification<br/>steps.<br/>
+Vector's&#160;assumptions&#160;on&#160;the&#160;environment&#160;of&#160;the&#160;MICROSAR&#160;Safe&#160;components&#160;as&#160;well<br/>as the integration process are described.<br/>
+<b>1.2 &#160;Concept</b><br/>
+MICROSAR&#160;Safe&#160;comprises&#160;a&#160;set&#160;of&#160;components&#160;developed&#160;according&#160;to&#160;ISO&#160;26262.<br/>These&#160;components&#160;can&#160;be&#160;combined&#160;-&#160;together&#160;with&#160;other&#160;measures&#160;-&#160;to&#160;build&#160;a&#160;safe<br/>system according to ISO 26262.<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+3 / 19<br/>
+<hr/>
+<a name=4></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-4_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-4_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-4_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-4_4.png"/><br/>
+Safety Manual<br/>
+<b>1.2.1 &#160;Assumed technical safety requirements</b><br/>
+<b>1.2.2 &#160;Assumed environment</b><br/>
+ID: SMI-1&#160;<br/>
+<b>Vector&#160;assumes&#160;that&#160;hardware&#160;faults&#160;are&#160;adequately&#160;addressed&#160;by&#160;the&#160;user<br/>of MICROSAR Safe.&#160;</b><br/>
+Draft<br/>
+The&#160;components&#160;of&#160;MICROSAR&#160;Safe&#160;can&#160;support&#160;in&#160;the&#160;detection&#160;and&#160;handling<br/>of some hardware faults.<br/>MICROSAR Safe does not provide redundant data storage.<br/>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;especially&#160;has&#160;to&#160;address&#160;faults&#160;in&#160;volatile&#160;random<br/>access memory, non-volatile memory, e.g. flash or EEPROM, and the CPU.<br/>See also SMI-14.&#160;<br/>
+ID: SMI-17&#160;<br/>
+<b>Vector&#160;&#160;&#160;assumes&#160;&#160;&#160;that&#160;&#160;&#160;hardware&#160;&#160;&#160;and&#160;&#160;&#160;compiler&#160;&#160;&#160;manuals&#160;&#160;&#160;are&#160;&#160;&#160;correct&#160;&#160;&#160;and<br/>complete.&#160;<br/></b>Vector&#160;&#160;&#160;uses&#160;&#160;&#160;the&#160;&#160;&#160;hardware&#160;&#160;&#160;reference&#160;&#160;&#160;manuals&#160;&#160;&#160;and&#160;&#160;&#160;compiler&#160;&#160;&#160;manuals&#160;&#160;&#160;for&#160;&#160;&#160;the<br/>development&#160;of&#160;MICROSAR&#160;Safe.&#160;Vector&#160;has&#160;no&#160;means&#160;to&#160;verify&#160;correctness&#160;or<br/>completeness of the hardware and compiler manuals.<br/>Example&#160;&#160;&#160;information&#160;&#160;&#160;that&#160;&#160;&#160;may&#160;&#160;&#160;be&#160;&#160;critical&#160;&#160;&#160;from&#160;&#160;&#160;these&#160;&#160;&#160;manuals&#160;&#160;&#160;is&#160;&#160;&#160;the&#160;&#160;&#160;register<br/>assignment&#160;by&#160;compiler.&#160;This&#160;information&#160;is&#160;used&#160;to&#160;built&#160;up&#160;the&#160;context&#160;that&#160;is<br/>saved and restored by the operating system.&#160;<br/>
+ID: SMI-2&#160;<br/>
+<b>Vector&#160;assumes&#160;that&#160;the&#160;platform&#160;types&#160;selected&#160;by&#160;the&#160;user&#160;of&#160;MICROSAR<br/>Safe adequately reflect the hardware and compiler environment.&#160;<br/></b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;is&#160;responsible&#160;for&#160;selecting&#160;the&#160;correct&#160;platform<br/>types&#160;(PlatformTypes.h).&#160;Especially&#160;the&#160;size&#160;of&#160;the&#160;predefined&#160;types&#160;must&#160;match<br/>the target environment.<br/>Example:&#160;A&#160;uint32&#160;must&#160;be&#160;mapped&#160;to&#160;an&#160;unsigned&#160;integer&#160;type&#160;with&#160;a&#160;size&#160;of&#160;32<br/>bits.<br/>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;can&#160;use&#160;the&#160;platform&#160;types&#160;provided&#160;by&#160;Vector.<br/>Vector&#160;has&#160;created&#160;and&#160;verified&#160;the&#160;platform&#160;types&#160;mapping&#160;according&#160;to&#160;the<br/>information provided by the user of MICROSAR Safe.&#160;<br/>
+ID: SMI-10&#160;<br/>
+<b>Vector&#160;assumes&#160;that&#160;the&#160;reset&#160;or&#160;powerless&#160;state&#160;is&#160;a&#160;safe&#160;state&#160;of&#160;the<br/>system.&#160;<br/></b>This&#160;assumption&#160;is&#160;added&#160;to&#160;this&#160;Safety&#160;Manual,&#160;because&#160;it&#160;is&#160;used&#160;in&#160;Vector's<br/>safety analyses and development process.<br/>
+ID: SMI-12&#160;<br/>
+<b>Vector&#160;assumes&#160;that&#160;the&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;initializes&#160;all&#160;components<br/>of MICROSAR Safe prior to using them.&#160;<br/></b>This&#160;&#160;&#160;constraint&#160;&#160;&#160;is&#160;&#160;&#160;required&#160;&#160;&#160;by&#160;&#160;&#160;AUTOSAR&#160;&#160;&#160;anyway.&#160;&#160;&#160;It&#160;&#160;&#160;is&#160;&#160;&#160;added&#160;&#160;&#160;to&#160;&#160;&#160;this&#160;&#160;&#160;Safety<br/>Manual,&#160;because&#160;Vector&#160;assumes&#160;initialized&#160;components&#160;in&#160;its&#160;safety&#160;analyses<br/>and development process.<br/>Correct initialization can be verified, e.g. during integration testing.&#160;<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+4 / 19<br/>
+<hr/>
+<a name=5></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-5_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-5_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-5_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-5_4.png"/><br/>
+Safety Manual<br/>
+ID: SMI-16&#160;<br/>
+<b>Vector&#160;&#160;&#160;assumes&#160;&#160;&#160;that&#160;&#160;&#160;the&#160;&#160;&#160;user&#160;&#160;&#160;of&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;only&#160;&#160;&#160;passes&#160;&#160;&#160;valid<br/>pointers at all interfaces to MICROSAR Safe components.&#160;<br/></b>Plausibility&#160;checks&#160;on&#160;pointers&#160;are&#160;performed&#160;by&#160;MICROSAR&#160;Safe&#160;(see&#160;also<br/>SMI-18), but they are limited.<br/>Also&#160;&#160;&#160;the&#160;&#160;&#160;length&#160;&#160;&#160;and&#160;&#160;&#160;pointer&#160;&#160;&#160;of&#160;&#160;&#160;a&#160;&#160;&#160;buffer&#160;&#160;&#160;provided&#160;&#160;&#160;to&#160;&#160;&#160;a&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe<br/>component need to be consistent.<br/>
+Draft<br/>
+This assumption also applies to QM as well as ASIL components.<br/>This&#160;can&#160;e.g.&#160;be&#160;verified&#160;using&#160;static&#160;code&#160;analysis&#160;tools,&#160;reviews&#160;and&#160;integration<br/>testing.&#160;<br/>
+ID: SMI-20&#160;<br/>
+<b>Vector&#160;&#160;&#160;assumes&#160;&#160;&#160;that&#160;&#160;&#160;the&#160;&#160;&#160;user&#160;&#160;&#160;of&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;implements&#160;&#160;&#160;a&#160;&#160;&#160;timing<br/>monitoring using e.g. a watchdog.&#160;<br/></b>The&#160;components&#160;of&#160;MICROSAR&#160;Safe&#160;do&#160;not&#160;provide&#160;mechanisms&#160;to&#160;monitor<br/>their own timing behavior.<br/>Vector's MICROSAR Safe.Watchdog can be used to fulfill this assumption.<br/>If&#160;&#160;&#160;the&#160;&#160;&#160;functional&#160;&#160;&#160;safety&#160;&#160;&#160;concept&#160;&#160;&#160;also&#160;&#160;&#160;requires&#160;&#160;&#160;a&#160;&#160;&#160;logic&#160;&#160;&#160;monitoring,&#160;&#160;&#160;Vector's<br/>MICROSAR Safe.Watchdog can be used to implement it.<br/>See also SMI-14.&#160;<br/>
+ID: SMI-33&#160;<br/>
+<b>Vector&#160;&#160;&#160;assumes&#160;&#160;&#160;that&#160;&#160;&#160;the&#160;&#160;&#160;user&#160;&#160;&#160;of&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;provides&#160;&#160;&#160;sufficient<br/>resources in RAM, ROM, stack and CPU runtime for MICROSAR Safe.&#160;<br/></b>Selection&#160;of&#160;the&#160;micro-controller&#160;and&#160;memory&#160;capacities&#160;as&#160;well&#160;as&#160;dimensioning<br/>of the stacks is in the responsibility of the user of MICROSAR Safe.<br/>If&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;components&#160;&#160;&#160;have&#160;&#160;&#160;specific&#160;&#160;&#160;requirements,&#160;&#160;&#160;these&#160;&#160;&#160;are<br/>documented in the respective Technical Reference document.&#160;<br/>
+ID: SMI-9&#160;<br/>
+<b>Vector&#160;&#160;&#160;assumes&#160;&#160;&#160;that&#160;&#160;&#160;for&#160;&#160;&#160;one&#160;&#160;&#160;AUTOSAR&#160;&#160;&#160;functional&#160;&#160;&#160;cluster&#160;&#160;&#160;(e.g.&#160;&#160;&#160;System<br/>Services,&#160;&#160;&#160;Operating&#160;&#160;&#160;System,&#160;&#160;&#160;CAN,&#160;&#160;&#160;COM,&#160;&#160;&#160;etc.)&#160;&#160;&#160;only&#160;&#160;&#160;components&#160;&#160;&#160;from<br/>Vector are used.&#160;<br/></b>This&#160;assumption&#160;is&#160;required&#160;because&#160;of&#160;dependencies&#160;within&#160;the&#160;development<br/>process of Vector.<br/>This assumption does not apply to the MCAL or the EXT cluster.<br/>Vector&#160;may&#160;have&#160;requirements&#160;on&#160;MCAL&#160;or&#160;EXT&#160;components&#160;depending&#160;on&#160;the<br/>upper&#160;layers&#160;that&#160;are&#160;used&#160;and&#160;provided&#160;by&#160;Vector.&#160;For&#160;example,&#160;the&#160;watchdog<br/>driver&#160;is&#160;considered&#160;to&#160;have&#160;safety&#160;requirements&#160;allocated&#160;to&#160;its&#160;initialization&#160;and<br/>triggering&#160;services.&#160;Details&#160;are&#160;described&#160;in&#160;the&#160;component&#160;specific&#160;parts&#160;of&#160;this<br/>safety manual.<br/>The&#160;only&#160;exception&#160;to&#160;this&#160;assumption&#160;is&#160;the&#160;Flash&#160;EEPROM&#160;Emulation&#160;(FEE)<br/>for&#160;Infineon&#160;micro-controllers.&#160;Vector&#160;does&#160;not&#160;provide&#160;a&#160;FEE&#160;for&#160;Infineon&#160;micro-<br/>controllers.&#160;<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+5 / 19<br/>
+<hr/>
+<a name=6></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-6_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-6_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-6_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-6_4.png"/><br/>
+Safety Manual<br/>
+ID: SMI-32&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;provide&#160;an&#160;argument&#160;for&#160;coexistence&#160;for<br/>software&#160;&#160;&#160;that&#160;&#160;&#160;resides&#160;&#160;&#160;in&#160;&#160;&#160;the&#160;&#160;&#160;same&#160;&#160;&#160;partition&#160;&#160;&#160;as&#160;&#160;&#160;components&#160;&#160;&#160;from<br/>MICROSAR Safe.&#160;<br/></b>Vector&#160;considers&#160;an&#160;ISO 26262-compliant&#160;development&#160;process&#160;for&#160;the&#160;software<br/><a href="file:///D:/usr/development/Products/BSW/MICROSAR4/ProductFeatures/PF4_SafeBSW/trunk/90_ProjectManagement/40_Projekt_3_Production/SafetyManual/[1">as an argument for coexistence (see [1] Part 9 Clause 6).&#160;<br/></a>Redundant&#160;&#160;&#160;data&#160;&#160;&#160;storage&#160;&#160;&#160;as&#160;&#160;&#160;the&#160;&#160;&#160;only&#160;&#160;&#160;measure&#160;&#160;&#160;by&#160;&#160;&#160;the&#160;&#160;&#160;other&#160;&#160;&#160;software&#160;&#160;&#160;is&#160;&#160;&#160;not<br/>
+Draft<br/>
+considered a sufficient measure.<br/>If ASIL components provided by Vector are used, this requirement is fulfilled.&#160;<br/>
+<b>1.2.3 &#160;Assumed process</b><br/>
+ID: SMI-14&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;be&#160;responsible&#160;for&#160;the&#160;functional&#160;safety<br/>concept.&#160;<br/></b>The&#160;&#160;&#160;overall&#160;&#160;&#160;functional&#160;&#160;&#160;safety&#160;&#160;&#160;concept&#160;&#160;&#160;is&#160;&#160;&#160;in&#160;&#160;&#160;the&#160;&#160;&#160;responsibility&#160;&#160;&#160;of&#160;&#160;&#160;the&#160;&#160;&#160;user&#160;&#160;&#160;of<br/>MICROSAR&#160;Safe.&#160;MICROSAR&#160;Safe&#160;can&#160;only&#160;provide&#160;parts&#160;that&#160;can&#160;be&#160;used&#160;to<br/>implement the functional safety concept of the item.<br/>
+ID: SMI-3&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;evaluate&#160;all&#160;tools&#160;(incl.&#160;compiler)&#160;that&#160;are<br/>used by the user of MICROSAR Safe according to ISO 26262:8-11.&#160;<br/></b>Evaluation&#160;especially&#160;has&#160;to&#160;be&#160;performed&#160;for&#160;the&#160;compiler,&#160;linker,&#160;debugging<br/>and test tools.<br/>Vector&#160;&#160;&#160;provides&#160;&#160;&#160;a&#160;&#160;&#160;guideline&#160;&#160;&#160;for&#160;&#160;&#160;the&#160;&#160;&#160;evaluation&#160;&#160;&#160;of&#160;&#160;&#160;the&#160;&#160;&#160;Tool&#160;&#160;&#160;Confidence&#160;&#160;&#160;Level<br/>(TCL) for the tools provided by Vector (e.g. DaVinci Configurator).<br/>Vector&#160;&#160;&#160;has&#160;&#160;&#160;evaluated&#160;&#160;&#160;the&#160;&#160;&#160;tools&#160;&#160;&#160;exclusively&#160;&#160;&#160;used&#160;&#160;&#160;by&#160;&#160;&#160;Vector&#160;&#160;&#160;during&#160;&#160;&#160;the<br/>development of MICROSAR Safe.&#160;<br/>
+ID: SMI-4&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;perform&#160;the&#160;integration&#160;(ISO&#160;26262:6-10)<br/>and verification (ISO 26262:6-11) processes as required by ISO 26262.&#160;<br/></b>Especially the safety mechanisms must be verified in the final target ECU.<br/>Vector&#160;assumes&#160;that&#160;by&#160;performing&#160;the&#160;integration&#160;and&#160;verification&#160;processes&#160;as<br/>required&#160;by&#160;ISO&#160;26262&#160;the&#160;generated&#160;configuration&#160;data,&#160;e.g.&#160;data&#160;tables,&#160;task<br/>priorities&#160;or&#160;PDU&#160;handles,&#160;are&#160;sufficiently&#160;checked.&#160;An&#160;additional&#160;review&#160;of&#160;the<br/>configuration data is then considered not necessary.<br/>Integration&#160;does&#160;not&#160;apply&#160;to&#160;a&#160;MICROSAR&#160;Safe&#160;component&#160;that&#160;consists&#160;of<br/>several&#160;&#160;&#160;subcomponents.&#160;&#160;&#160;This&#160;&#160;&#160;integration&#160;&#160;&#160;is&#160;&#160;&#160;already&#160;&#160;&#160;performed&#160;&#160;&#160;by&#160;&#160;&#160;Vector.<br/>However,&#160;integration&#160;of&#160;all&#160;MICROSAR&#160;Safe&#160;components&#160;in&#160;the&#160;specific&#160;use-<br/>case&#160;&#160;&#160;of&#160;&#160;&#160;the&#160;&#160;&#160;user&#160;&#160;&#160;of&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;is&#160;&#160;&#160;the&#160;&#160;&#160;responsiblity&#160;&#160;&#160;of&#160;&#160;&#160;the&#160;&#160;&#160;user&#160;&#160;&#160;of<br/>MICROSAR Safe.<br/>Support by Vector can be requested on a per-project basis.&#160;<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+6 / 19<br/>
+<hr/>
+<a name=7></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-7_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-7_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-7_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-7_4.png"/><br/>
+Safety Manual<br/>
+ID: SMI-5&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;verify&#160;all&#160;code&#160;that&#160;is&#160;changed&#160;during<br/>integration of MICROSAR Safe.&#160;<br/></b>Code&#160;that&#160;is&#160;typically&#160;changed&#160;by&#160;the&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;during&#160;integration<br/>comprises generated templates, hooks, callouts, or similar.<br/>This&#160;&#160;&#160;assumption&#160;&#160;&#160;also&#160;&#160;&#160;applies&#160;&#160;&#160;if&#160;&#160;&#160;interfaces&#160;&#160;&#160;between&#160;&#160;&#160;components&#160;&#160;&#160;are&#160;&#160;&#160;looped<br/>through user-defined functions.<br/>
+Draft<br/>
+Vector assumes that this verification also covers ISO 26262:6-9.<br/>Support by Vector can be requested on a per-project basis.&#160;<br/>
+ID: SMI-30&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;only&#160;modify&#160;source&#160;code&#160;of&#160;MICRSAR<br/>Safe that is explicitly allowed to be changed.&#160;<br/></b>Usually&#160;no&#160;source&#160;code&#160;of&#160;MICROSAR&#160;Safe&#160;is&#160;allowed&#160;to&#160;be&#160;changed&#160;by&#160;the<br/>user of MICROSAR Safe.<br/>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;can&#160;check&#160;if&#160;the&#160;source&#160;code&#160;was&#160;modified&#160;by&#160;e.g,<br/>comparing it to the original delivery.&#160;<br/>
+ID: SMI-8&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;verify&#160;generated&#160;functions&#160;according&#160;to<br/>ISO 26262:6-9.&#160;<br/></b>Generated&#160;functions&#160;can&#160;be&#160;identified&#160;when&#160;searching&#160;through&#160;the&#160;generated<br/>code.<br/>Support by Vector can be requested on a per-project basis.<br/>An&#160;&#160;&#160;example&#160;&#160;&#160;of&#160;&#160;&#160;generated&#160;&#160;&#160;functions&#160;&#160;&#160;are&#160;&#160;&#160;the&#160;&#160;&#160;configured&#160;&#160;&#160;rules&#160;&#160;&#160;of&#160;&#160;&#160;the&#160;&#160;&#160;Basic<br/>Software&#160;Manager&#160;(BSWM).&#160;Their&#160;correctness&#160;can&#160;only&#160;be&#160;verified&#160;by&#160;the&#160;user<br/>of&#160;MICROSAR&#160;Safe.&#160;Please&#160;note,&#160;however,&#160;that&#160;BSWM&#160;does&#160;not&#160;provide&#160;safety<br/>features.&#160;<br/>
+ID: SMI-11&#160;<br/>
+<b>The&#160;&#160;&#160;user&#160;&#160;&#160;of&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;shall&#160;&#160;&#160;ensure&#160;&#160;&#160;data&#160;&#160;&#160;consistency&#160;&#160;&#160;for&#160;&#160;&#160;its<br/>application.&#160;<br/></b>Data&#160;consistency&#160;is&#160;not&#160;automatically&#160;provided&#160;when&#160;using&#160;MICROSAR&#160;Safe.<br/>MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;only&#160;&#160;&#160;provides&#160;&#160;&#160;services&#160;&#160;&#160;to&#160;&#160;&#160;support&#160;&#160;&#160;enforcement&#160;&#160;&#160;of&#160;&#160;&#160;data<br/>consistency.&#160;Their&#160;application&#160;is&#160;in&#160;the&#160;responsibility&#160;of&#160;the&#160;user&#160;of&#160;MICROSAR<br/>Safe.<br/>To&#160;&#160;&#160;ensure&#160;&#160;&#160;data&#160;&#160;&#160;consistency&#160;&#160;&#160;in&#160;&#160;&#160;an&#160;&#160;&#160;application,&#160;&#160;&#160;critical&#160;&#160;&#160;section&#160;&#160;&#160;need&#160;&#160;&#160;to&#160;&#160;&#160;be<br/>identified and protected.<br/>To&#160;identify&#160;critical&#160;sections&#160;in&#160;the&#160;code,&#160;e.g.&#160;review&#160;or&#160;static&#160;code&#160;analysis&#160;can&#160;be<br/>used.<br/>To&#160;protect&#160;critical&#160;sections,&#160;e.g.&#160;the&#160;services&#160;to&#160;disable&#160;and&#160;enable&#160;interrupts<br/>provided by the MICROSAR Safe operating system can be used.<br/>To&#160;verify&#160;correctly&#160;implemented&#160;protection,&#160;e.g.&#160;stress&#160;testing&#160;or&#160;review&#160;can&#160;be<br/>used.<br/>Note&#160;the&#160;AUTOSAR&#160;specification&#160;with&#160;respect&#160;to&#160;nesting&#160;and&#160;sequence&#160;of&#160;calls<br/>to interrupt enabling and disabling functions.&#160;<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+7 / 19<br/>
+<hr/>
+<a name=8></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-8_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-8_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-8_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-8_4.png"/><br/>
+Safety Manual<br/>
+ID: SMI-15&#160;<br/>
+<b>The&#160;&#160;&#160;user&#160;&#160;&#160;of&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;shall&#160;&#160;&#160;follow&#160;&#160;&#160;the&#160;&#160;&#160;instructions&#160;&#160;&#160;of&#160;&#160;&#160;the<br/>corresponding Technical Reference of the components.&#160;<br/></b>Especially&#160;&#160;&#160;deviations&#160;&#160;&#160;from&#160;&#160;&#160;AUTOSAR&#160;&#160;&#160;specifications&#160;&#160;&#160;are&#160;&#160;&#160;described&#160;&#160;&#160;in&#160;&#160;&#160;the<br/>Technical References.<br/>The&#160;possible&#160;implementations&#160;of&#160;exclusive&#160;areas&#160;are&#160;described&#160;in&#160;the&#160;Technical<br/>References.&#160;<br/>
+Draft<br/>
+ID: SMI-19&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;execute&#160;the&#160;MICROSAR&#160;Safe&#160;Silence<br/>Verifier (MSSV).&#160;<br/></b>Details&#160;on&#160;the&#160;required&#160;command&#160;line&#160;arguments&#160;and&#160;integration&#160;into&#160;the&#160;tool<br/><a href="file:///D:/usr/development/Products/BSW/MICROSAR4/ProductFeatures/PF4_SafeBSW/trunk/90_ProjectManagement/40_Projekt_3_Production/SafetyManual/[4">chain can be found in [4].<br/></a>If&#160;&#160;&#160;the&#160;&#160;&#160;report&#160;&#160;&#160;shows&#160;&#160;&#160;“Overall&#160;&#160;&#160;Check&#160;&#160;&#160;Result:&#160;&#160;&#160;Fail&#34;,&#160;&#160;&#160;please&#160;&#160;&#160;contact&#160;&#160;&#160;the&#160;&#160;&#160;Safety<br/>Manager&#160;at&#160;Vector.&#160;See&#160;the&#160;Product&#160;Information&#160;MICROSAR&#160;Safe&#160;<a href="file:///D:/usr/development/Products/BSW/MICROSAR4/ProductFeatures/PF4_SafeBSW/trunk/90_ProjectManagement/40_Projekt_3_Production/SafetyManual/[3">[3</a>]&#160;for&#160;more<br/>the contact details.&#160;<br/>
+ID: SMI-31&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;verify&#160;the&#160;consistency&#160;of&#160;the&#160;binary<br/>downloaded into the ECU's flash memory.&#160;<br/></b>This&#160;also&#160;includes&#160;re-programming&#160;of&#160;flash&#160;memory&#160;via&#160;a&#160;diagnostics&#160;service.<br/>The&#160;consistency&#160;of&#160;the&#160;downloaded&#160;binary&#160;can&#160;be&#160;checked&#160;by&#160;the&#160;bootloader&#160;or<br/>the application. MICROSAR Safe assumes a correct program image.<br/>
+ID: SMI-18&#160;<br/>
+<b>The&#160;&#160;&#160;user&#160;&#160;&#160;of&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;shall&#160;&#160;&#160;enable&#160;&#160;&#160;plausibility&#160;&#160;&#160;checks&#160;&#160;&#160;for&#160;&#160;&#160;the<br/>MICROSAR Safe components.&#160;<br/></b>This&#160;&#160;&#160;setting&#160;&#160;&#160;is&#160;&#160;&#160;necessary&#160;&#160;&#160;to&#160;&#160;&#160;increase&#160;&#160;&#160;fault&#160;&#160;&#160;detection&#160;&#160;&#160;and&#160;&#160;&#160;prevent&#160;&#160;&#160;fault<br/>propagation.<br/>This&#160;&#160;&#160;setting&#160;&#160;&#160;can&#160;&#160;&#160;be&#160;&#160;&#160;found&#160;&#160;&#160;at&#160;&#160;&#160;/MICROSAR/EcuC/EcucGeneral/<br/>EcuCSafeBswChecks in the DaVinci Configurator.<br/>This setting does not enable error reporting to the DET component.<br/>This setting is enforced by an MSSV plug-in.&#160;<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+8 / 19<br/>
+<hr/>
+<a name=9></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-9_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-9_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-9_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-9_4.png"/><br/>
+Safety Manual<br/>
+<b>2 &#160;Derivative-specific Part</b><br/>
+Draft<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+9 / 19<br/>
+<hr/>
+<a name=10></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-10_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-10_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-10_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-10_4.png"/><br/>
+Safety Manual<br/>
+<b>3 &#160;Component-specific Part</b><br/>
+<b>3.1 &#160;Safety Manual Crc</b><br/>
+<b>3.1.1 &#160;Safety features</b><br/>
+Crc provides the following safety features:<br/>
+Draft<br/>
+ID<br/>
+Safety feature<br/>
+CREQ-858&#160;Crc shall provide a service to calculate 8-bit SAE-J1850 CRC.<br/>CREQ-859&#160;Crc shall provide a service to calculate 8-bit 0x2F CRC.<br/>CREQ-860&#160;Crc shall provide a service to calculate 16-bit CCITT CRC.<br/>CREQ-861&#160;Crc shall provide a service to calculate 32-bit IEEE-802.3 CRC.<br/>CREQ-862&#160;Crc shall provide a service to calculate 32-bit E2E Profile 4 CRC.<br/>
+<b>3.1.2 &#160;Configuration constraints</b><br/>
+This component has no configuration constraints.<br/>
+<b>3.1.3 &#160;Additional verification measurse</b><br/>
+ID: SMI-49&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;verify&#160;that&#160;the&#160;CRC&#160;is&#160;calculated&#160;for&#160;the<br/>intended data.<br/></b>This&#160;includes&#160;the&#160;intended&#160;buffer&#160;and&#160;its&#160;size&#160;(see&#160;also&#160;SMI-16),&#160;start&#160;value&#160;and<br/>if it is the first call to the service.<br/>Verification can be performed by the &#34;magic check&#34; (see AUTOSAR SWS Crc).&#160;<br/>If&#160;&#160;&#160;Crc&#160;&#160;&#160;is&#160;&#160;&#160;used&#160;&#160;&#160;by&#160;&#160;&#160;a&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;component&#160;&#160;&#160;(e.g.&#160;&#160;&#160;E2E,&#160;&#160;&#160;NvM),&#160;&#160;&#160;this<br/>requirement is fulfilled for the MICROSAR Safe component.<br/>
+<b>3.1.4 &#160;Dependencies to other components</b><br/>
+<b>3.1.4.1 &#160;Safety features required from other components</b><br/>
+This component does not require safety features from other components.<br/>
+<b>3.1.4.2 &#160;Coexistence with other components</b><br/>
+This component does not require coexistence with other components.<br/>
+It is assumed that the user of Crc has the adequate ASIL.<br/>
+<b>3.1.5 &#160;Dependencies to hardware</b><br/>
+This component does not use a direct hardware interface.<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+10 / 19<br/>
+<hr/>
+<a name=11></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-11_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-11_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-11_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-11_4.png"/><br/>
+Safety Manual<br/>
+<b>3.2 &#160;Safety Manual NvM</b><br/>
+<b>3.2.1 &#160;Safety features</b><br/>
+ID: SMI-21&#160;<br/>
+<b>NvM provides the following safety features:</b><br/>
+ID<br/>
+Safety feature<br/>
+Draft<br/>
+CREQ-724<br/>
+NvM shall provide a service to read a single NvM block from<br/>NVRAM.<br/>
+CREQ-725<br/>
+NvM shall provide a service to write a single NvM block to<br/>NVRAM.<br/>
+CREQ-730<br/>
+NvM shall provide a service to read all possbile NvM blocks<br/>from NVRAM.<br/>
+CREQ-731<br/>
+NvM shall provide a service to write all possible NvM blocks<br/>to NVRAM.<br/>
+CREQ-746<br/>
+NvM shall provide configurable callbacks to synchronize<br/>block data.<br/>
+NvM&#160;can&#160;detect&#160;missing,&#160;corruption&#160;and&#160;masquerading&#160;(lower&#160;layers&#160;provide&#160;the<br/>wrong block) of NvM blocks.<br/>
+ID: SMI-29&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;must&#160;design&#160;the&#160;system&#160;in&#160;a&#160;way&#160;that&#160;in&#160;case<br/>of&#160;&#160;&#160;the&#160;&#160;&#160;absence&#160;&#160;&#160;of&#160;&#160;</b><br/>
+<b>20</b><br/>
+<b>non11volatile&#160;&#160;&#160;data&#160;&#160;&#160;it&#160;&#160;&#160;is&#160;&#160;&#160;still&#160;&#160;&#160;safe&#160;&#160;&#160;(e.g.&#160;&#160;&#160;safe&#160;&#160;&#160;state&#160;&#160;&#160;or</b><br/>
+<b>degradation).&#160;It&#160;cannot&#160;be&#160;assured&#160;by&#160;the&#160;memory&#160;stack&#160;that&#160;data&#160;is&#160;saved<br/>completely&#160;or&#160;at&#160;all&#160;because&#160;a&#160;reset&#160;or&#160;loss&#160;of&#160;energy&#160;might&#160;happen&#160;at&#160;any<br/>time, e.g. brown-out, black-out.<br/>This&#160;also&#160;implies&#160;that&#160;it&#160;is&#160;in&#160;general&#160;impossible&#160;to&#160;guarantee&#160;that&#160;the&#160;latest<br/>information&#160;is&#160;available&#160;in&#160;the&#160;non-volatile&#160;memory,&#160;e.g.&#160;the&#160;system&#160;is&#160;reset<br/>before memory stack is even notified to write data to non-volatile memory.<br/>Thus,&#160;safety-related&#160;functionality&#160;may&#160;not&#160;rely&#160;on&#160;the&#160;availability&#160;of&#160;data&#160;in<br/>non-volatile memory.<br/>Since&#160;the&#160;availability&#160;of&#160;data&#160;in&#160;non-volatile&#160;memory&#160;cannot&#160;be&#160;guaranteed<br/>in&#160;&#160;&#160;any&#160;&#160;&#160;case,&#160;&#160;&#160;the&#160;&#160;&#160;only&#160;&#160;&#160;sensible&#160;&#160;&#160;use-case&#160;&#160;&#160;is&#160;&#160;&#160;reading&#160;&#160;&#160;safety-related<br/>calibration data.<br/>Writing&#160;of&#160;data&#160;into&#160;non-volatile&#160;memory&#160;must&#160;be&#160;verified&#160;to&#160;assure&#160;that&#160;the<br/>information&#160;is&#160;available&#160;in&#160;non-volatile&#160;memory.&#160;Verification&#160;can&#160;only&#160;be<br/>done&#160;&#160;&#160;manually&#160;&#160;&#160;in&#160;&#160;&#160;a&#160;&#160;&#160;protected&#160;&#160;&#160;environment,&#160;&#160;&#160;e.g.&#160;&#160;&#160;at&#160;&#160;&#160;end&#160;&#160;&#160;of&#160;&#160;&#160;line,&#160;&#160;&#160;in&#160;&#160;&#160;a<br/>workshop, etc.<br/>ECU&#160;software&#160;cannot&#160;verify&#160;if&#160;data&#160;was&#160;written,&#160;since&#160;at&#160;any&#160;time&#160;a&#160;reset<br/>could occur and the information that had to be written is lost immediately.<br/>Reading&#160;of&#160;data&#160;does&#160;not&#160;modify&#160;data&#160;stored&#160;in&#160;non-volatile&#160;memory.&#160;Thus,<br/>reading&#160;&#160;&#160;can&#160;&#160;&#160;be&#160;&#160;&#160;used&#160;&#160;&#160;by&#160;&#160;&#160;safety-related&#160;&#160;&#160;functionality.&#160;&#160;&#160;The&#160;&#160;&#160;memory&#160;&#160;&#160;stack<br/>assures&#160;that&#160;the&#160;read&#160;data&#160;is&#160;identical&#160;to&#160;the&#160;data&#160;stored&#160;in&#160;non-volatile<br/>memory.<br/>The availability may be increased by e.g. redundant storage.&#160;</b><br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+11 / 19<br/>
+<hr/>
+<a name=12></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-12_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-12_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-12_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-12_4.png"/><br/>
+Safety Manual<br/>
+<b>3.2.2 &#160;Configuration constraints</b><br/>
+ID: SMI-25&#160;<br/>
+<b>The&#160;&#160;&#160;user&#160;&#160;&#160;of&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;shall&#160;&#160;&#160;configure&#160;&#160;&#160;and&#160;&#160;&#160;verify&#160;&#160;&#160;the&#160;&#160;&#160;following<br/>attributes for each NvM block that contains safety-related data:&#160;</b><br/>
+<b>&gt;&#160;</b>▪&#160;Set /MICROSAR/NvM/NvMBlockDescriptor/NvMBlockUseCrc to TRUE.<br/><b>&gt;&#160;</b>▪&#160;Set<br/>
+&#160;<br/>
+/MICROSAR/NvM/NvMBlockDescriptor/NvMBlockCrcType<br/>
+&#160;<br/>
+to<br/>
+Draft<br/>
+NVM_CRC32.<br/>
+ID: SMI-26&#160;<br/>
+<b>The&#160;&#160;&#160;user&#160;&#160;&#160;of&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;shall&#160;&#160;&#160;configure&#160;&#160;&#160;and&#160;&#160;&#160;verify&#160;&#160;&#160;the&#160;&#160;&#160;following<br/>attribute:</b><br/>
+<b>&gt;&#160;</b>▪&#160;Set /MICROSAR/NvM/NvMCommon/NvMUseBlockIdCheck to TRUE.<br/>
+ID: SMI-24&#160;<br/>
+<b>The&#160;&#160;&#160;user&#160;&#160;&#160;of&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;shall&#160;&#160;&#160;enable&#160;&#160;&#160;and&#160;&#160;&#160;verify&#160;&#160;&#160;the&#160;&#160;&#160;following<br/>configuration parameters:</b><br/>
+<b>&gt;&#160;</b>▪&#160;/MICROSAR/NvM/NvMCommonVendorParams/NvMDevErrorChecks/<br/>
+NvMCfgChkStatusUninit<br/>
+<b>&gt;&#160;</b>▪&#160;/MICROSAR/NvM/NvMCommonVendorParams/NvMDevErrorChecks/<br/>
+NvMCfgChkParamPointer<br/>
+<b>&gt;&#160;</b>▪&#160;/MICROSAR/NvM/NvMCommonVendorParams/NvMDevErrorChecks/<br/>
+NvMCfgChkParamDataIndex<br/>
+<b>&gt;&#160;</b>▪&#160;/MICROSAR/NvM/NvMCommonVendorParams/NvMDevErrorChecks/<br/>
+NvMCfgChkDoParamChk<br/>
+<b>&gt;&#160;</b>▪&#160;/MICROSAR/NvM/NvMCommonVendorParams/NvMDevErrorChecks/<br/>
+NvMCfgChkParamBlockid<br/>
+<b>&gt;&#160;</b>▪&#160;/MICROSAR/NvM/NvMCommonVendorParams/NvMDevErrorChecks/<br/>
+NvMCfgChkMngmtType<br/>
+<b>&gt;&#160;</b>▪&#160;/MICROSAR/NvM/NvMCommonVendorParams/NvMDevErrorChecks/<br/>
+NvMCfgChkBlockProtection<br/>
+<b>&gt;&#160;</b>▪&#160;/MICROSAR/NvM/NvMCommonVendorParams/NvMDevErrorChecks/<br/>
+NvMCfgChkBlockPending<br/>
+<b>&gt;&#160;</b>▪&#160;/MICROSAR/NvM/NvMCommonVendorParams/NvMDevErrorChecks/<br/>
+NvMCfgChkRamBlockLengths<br/>
+<b>&gt;&#160;</b>▪&#160;/MICROSAR/NvM/NvMCommonVendorParams/NvMDevErrorChecks/<br/>
+NvMCfgChkRomBlockLengths<br/>
+<b>&gt;&#160;</b>▪&#160;/MICROSAR/NvM/NvMCommonVendorParams/NvMDevErrorChecks/<br/>
+NvMCfgChkBlockLengthStrict<br/>
+Note: These parameters are enabled by default.<br/>
+<b>3.2.3 &#160;Additional verification measures</b><br/>
+ID: SMI-22&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;pass&#160;the&#160;intended&#160;block&#160;ID&#160;for&#160;reading<br/>and&#160;writing&#160;of&#160;a&#160;single&#160;NvM&#160;block.&#160;NvM&#160;cannot&#160;detect&#160;if&#160;an&#160;unintended,&#160;but<br/>configured block is provided by the user.&#160;<br/>Verification can be performed during integration testing.&#160;</b><br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+12 / 19<br/>
+<hr/>
+<a name=13></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-13_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-13_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-13_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-13_4.png"/><br/>
+Safety Manual<br/>
+ID: SMI-23&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;verify&#160;that&#160;the&#160;buffer&#160;passed&#160;for&#160;reading<br/>and&#160;writing&#160;of&#160;a&#160;single&#160;NvM&#160;block&#160;has&#160;to&#160;be&#160;valid&#160;and&#160;sufficiently&#160;large&#160;for<br/>the passed block ID.<br/>Verification&#160;can&#160;be&#160;performed&#160;by&#160;a&#160;review&#160;of&#160;the&#160;generated&#160;configuration<br/>and the code passing the pointer and block ID to the NvM.&#160;</b><br/>
+Draft<br/>
+ID: SMI-48&#160;<br/>
+<b>The user of MICROSAR Safe shall verify the size of the internal NvM buffer.<br/></b>The buffer has the symbol name NvM_InternalBuffer_au8.<br/>The buffer is generated when at least one of the following features is used:&#160;<br/>
+<b>&gt;&#160;</b>▪&#160;explicit synchronization<br/><b>&gt;&#160;</b>▪&#160;repair of redundant blocks<br/><b>&gt;&#160;</b>▪&#160;blocks with CRC protection<br/>
+The&#160;buffer&#160;size&#160;shall&#160;be&#160;at&#160;least&#160;the&#160;size&#160;of&#160;the&#160;largest&#160;NVM&#160;block&#160;plus&#160;the&#160;size&#160;of<br/>the configured CRC value.<br/>Verification can be performed e.g. by review.<br/>
+<b>3.2.4 &#160;Dependencies to other components</b><br/>
+<b>3.2.4.1 &#160;Safety features required from other components</b><br/>
+ID: SMI-28&#160;<br/>
+<b>The&#160;used&#160;Crc&#160;library&#160;shall&#160;provide&#160;the&#160;CRC&#160;calculation&#160;routines&#160;as&#160;safety<br/>feature.<br/>If&#160;the&#160;Crc&#160;library&#160;from&#160;MICROSAR&#160;Safe&#160;is&#160;used,&#160;this&#160;dependency&#160;is&#160;fulfilled.</b><br/>
+<b>3.2.4.2 &#160;Coexistence with other components</b><br/>
+ID: SMI-27&#160;<br/>
+<b>This&#160;component&#160;requires&#160;coexistence&#160;with&#160;Dem,&#160;MemIf,&#160;RTE,&#160;BswM,&#160;and<br/>Det components if the interface for those components is configured.</b><br/>
+<b>3.2.5 &#160;Dependencies to hardware</b><br/>
+This component does not use a direct hardware interface.<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+13 / 19<br/>
+<hr/>
+<a name=14></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-14_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-14_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-14_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-14_4.png"/><br/>
+Safety Manual<br/>
+<b>3.3 &#160;Safety Manual EcuM</b><br/>
+<b>3.3.1 &#160;Safety features</b><br/>
+ID: SMI-34&#160;<br/>
+<b>EcuM provides the following safety features:</b><br/>
+ID<br/>
+Safety feature<br/>
+Draft<br/>
+CREQ-543<br/>
+EcuM shall perform validation of all postbuild configurable<br/>BSW module configuration parameters.<br/>
+CREQ-375<br/>
+EcuM shall provide a callout to set programmable interrupts<br/>during the startup phase.<br/>
+CREQ-525<br/>
+EcuM shall provide a callout to initialize driver prior the start of<br/>the OS.<br/>
+CREQ-488<br/>
+EcuM shall provide a callout to determine the Postbuild<br/>configuration data.<br/>
+CREQ-505<br/>
+EcuM shall provide a callout to initialize drivers prior Postbuild<br/>data is available.<br/>
+CREQ-391<br/>
+EcuM shall provide a callout to reset the ECU.<br/>
+CREQ-381<br/>
+EcuM shall provide a callout to generate a RAM Hash.<br/>
+CREQ-440<br/>
+EcuM shall provide a callout to check the RAM Hash.<br/>
+CREQ-509<br/>
+EcuM shall provide a callout to re-initialize drivers during a<br/>restart.<br/>
+CREQ-445<br/>
+EcuM shall provide a service to set the current shutdown<br/>target of the ECU.<br/>
+CREQ-372<br/>
+EcuM shall provide a service to initiate the ECU shutdown<br/>depending on the shutdown target.<br/>
+CREQ-431<br/>
+EcuM shall provide a callout to notify Errors from the ECU<br/>management.<br/>
+CREQ-421<br/>
+EcuM shall provide a service to complete the ECU shutdown<br/>process.<br/>
+Note:&#160;&#160;&#160;RAM&#160;&#160;&#160;Hash&#160;&#160;&#160;generation&#160;&#160;&#160;and&#160;&#160;&#160;checking&#160;&#160;&#160;callouts&#160;&#160;&#160;are&#160;&#160;&#160;only&#160;&#160;&#160;available&#160;&#160;&#160;when<br/>sleep modes are configured.<br/>
+ID: SMI-38&#160;<br/>
+<b>If&#160;EcuM&#160;service&#160;to&#160;complete&#160;the&#160;shutdown&#160;process&#160;is&#160;called&#160;prior&#160;to&#160;initiate<br/>the shutdown process, no shutdown will be performed.</b><br/>
+<b>3.3.2 &#160;Configuration constraints</b><br/>
+ID: SMI-37&#160;<br/>
+<b>The user of MICROSAR Safe shall configure the following attribute:</b><br/>
+<b>&gt;&#160;</b>▪&#160;Set /MICROSAR/EcuM/EcuMGeneral/EcuMEnableFixBehavior to FALSE.<br/>
+This setting is enforced by a MSSV plugin.<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+14 / 19<br/>
+<hr/>
+<a name=15></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-15_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-15_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-15_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-15_4.png"/><br/>
+Safety Manual<br/>
+ID: SMI-36&#160;<br/>
+<b>The user of MICROSAR Safe shall configure the following attribute:</b><br/>
+<b>&gt;&#160;</b>▪&#160;Set&#160;&#160;&#160;/MICROSAR/EcuM/EcuMFlexGeneral/EcuMEnableDefBehaviour&#160;&#160;&#160;to<br/>
+FALSE.<br/>
+This setting is enforced by a MSSV plugin.<br/>
+<b>3.3.3 &#160;Additional verification measurse</b><br/>
+Draft<br/>
+ID: SMI-39&#160;<br/>
+<b>The&#160;&#160;&#160;user&#160;&#160;&#160;of&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;shall&#160;&#160;&#160;verify&#160;&#160;&#160;the&#160;&#160;&#160;intended&#160;&#160;&#160;initialization<br/>procedure during integration testing.<br/></b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;can&#160;verify&#160;the&#160;intended&#160;initialization&#160;procedure&#160;by<br/>performing the following tests:<br/>
+<b>&gt;&#160;</b>▪&#160;Start&#160;the&#160;ECU&#160;and&#160;verify&#160;that&#160;the&#160;intended&#160;initalization&#160;routines&#160;are&#160;called.<br/>
+This needs to be verified for each Postbuild-selectable configuration.<br/>
+<b>&gt;&#160;</b>▪&#160;Corrupt&#160;&#160;&#160;the&#160;&#160;&#160;Postbuild&#160;&#160;&#160;data&#160;&#160;&#160;(but&#160;&#160;&#160;not&#160;&#160;&#160;corresponding&#160;&#160;&#160;CRC)&#160;&#160;&#160;in&#160;&#160;&#160;non-volatile<br/>
+memory&#160;and&#160;start&#160;the&#160;ECU.&#160;Then&#160;verify&#160;that&#160;the&#160;corruption&#160;is&#160;detected&#160;by<br/>EcuM.<br/>
+<b>&gt;&#160;</b>▪&#160;Start&#160;the&#160;ECU&#160;and&#160;verify&#160;that&#160;the&#160;intended&#160;Postbuild-selectable&#160;configuration<br/>
+is&#160;used&#160;by&#160;the&#160;EcuM.&#160;This&#160;needs&#160;to&#160;be&#160;verified&#160;for&#160;each&#160;Postbuild-selectable<br/>configuration.<br/>
+A&#160;start&#160;of&#160;the&#160;ECU&#160;includes&#160;a&#160;&#34;cold-start&#34;,&#160;reset&#160;as&#160;well&#160;as&#160;wake-up&#160;from&#160;sleep&#160;if<br/>applicable.<br/>This requirement only applies if TSR-1 is considered a safety requirement.<br/>
+ID: SMI-35&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;verify&#160;the&#160;intended&#160;shutdown&#160;procedure<br/>during integration testing.<br/></b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;can&#160;verify&#160;the&#160;intended&#160;shutdown&#160;procedure&#160;by<br/>shutting&#160;down&#160;the&#160;ECU&#160;with&#160;all&#160;configured&#160;shutdown&#160;paths.&#160;A&#160;shutdown&#160;path&#160;is<br/>considered&#160;a&#160;call&#160;to&#160;the&#160;service&#160;that&#160;sets&#160;the&#160;current&#160;shutdown&#160;target&#160;with&#160;a<br/>relevant&#160;&#160;&#160;(e.g.&#160;&#160;&#160;combination&#160;&#160;&#160;used&#160;&#160;&#160;to&#160;&#160;&#160;achieve&#160;&#160;&#160;safe&#160;&#160;&#160;state)&#160;&#160;&#160;combination&#160;&#160;&#160;of&#160;&#160;&#160;its<br/>parameters.&#160;For&#160;each&#160;shutdown&#160;path&#160;the&#160;intended&#160;final&#160;state&#160;of&#160;the&#160;ECU&#160;(e.g.<br/>sleep,&#160;shutdown,&#160;reset)&#160;and&#160;the&#160;method&#160;of&#160;reset&#160;(e.g.&#160;using&#160;MCU&#160;or&#160;Watchdog)<br/>is used.<br/>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;also&#160;consider&#160;the&#160;service&#160;to&#160;initiate&#160;the&#160;ECU<br/>shutdown depending on the shutdown target as a possible shutdown path.<br/>The user of MICROSAR Safe shall also verify the default shutdown target.<br/>This requirement only applies if TSR-3 is considered a safety requirement.<br/>
+ID: SMI-40&#160;<br/>
+<b>The&#160;user&#160;of&#160;MICROSAR&#160;Safe&#160;shall&#160;verify&#160;that&#160;the&#160;memory&#160;region&#160;used&#160;for<br/>RAM hash generation and verification is as intended.<br/></b>Verification can be e.g. performed by review.<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+15 / 19<br/>
+<hr/>
+<a name=16></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-16_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-16_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-16_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-16_4.png"/><br/>
+Safety Manual<br/>
+<b>3.3.4 &#160;Dependencies to other components</b><br/>
+<b>3.3.4.1 &#160;Safety features required from other components</b><br/>
+ID: SMI-42&#160;<br/>
+<b>The&#160;used&#160;operating&#160;system&#160;shall&#160;provide&#160;the&#160;service&#160;to&#160;get&#160;the&#160;core&#160;ID&#160;as</b><br/>
+Draft<br/>
+<b>safety feature.<br/></b>If&#160;&#160;&#160;the&#160;&#160;&#160;operating&#160;&#160;&#160;system&#160;&#160;&#160;from&#160;&#160;&#160;MICROSAR&#160;&#160;&#160;Safe&#160;&#160;&#160;is&#160;&#160;&#160;used,&#160;&#160;&#160;this&#160;&#160;&#160;dependency&#160;&#160;&#160;is<br/>fulfilled.<br/>This requirement only applies if TSR-1 is considered a safety requirement.<br/>
+<b>3.3.4.2 &#160;Coexistence with other components</b><br/>
+ID: SMI-41&#160;<br/>
+<b>This&#160;component&#160;requires&#160;coexistence&#160;with&#160;RTE,&#160;BswM,&#160;ComM,&#160;Dem,&#160;Gpt,<br/>MCU&#160;&#160;&#160;and&#160;&#160;&#160;Det&#160;&#160;&#160;components&#160;&#160;&#160;if&#160;&#160;&#160;the&#160;&#160;&#160;interface&#160;&#160;&#160;for&#160;&#160;&#160;those&#160;&#160;&#160;components&#160;&#160;&#160;is<br/>configured.</b><br/>
+<b>3.3.5 &#160;Dependencies to hardware</b><br/>
+This component does not use a direct hardware interface.<br/>
+<b>3.4 &#160;Safety Manual Det</b><br/>
+<b>3.4.1 &#160;Safety features</b><br/>
+This component does not provide safety features.<br/>
+<b>3.4.2 &#160;Configuration constraints</b><br/>
+This component does not have configuration constraints.<br/>
+ID: SMI-60&#160;<br/>
+<b>The&#160;Det&#160;should&#160;not&#160;be&#160;used&#160;in&#160;series&#160;production.&#160;If&#160;it&#160;is&#160;used&#160;in&#160;series<br/>production&#160;the&#160;extended&#160;debug&#160;features&#160;shall&#160;be&#160;switched&#160;off,&#160;because<br/>they are only relevant if a debugger is attached.<br/></b>The user of MICROSAR Safe shall configure and verify the following attribute:<br/>
+<b>&gt;&#160;</b>▪&#160;/MICROSAR/Det/DetGeneral/DetExtDebugSupport = False<br/>
+<b>3.4.3 &#160;Additional Verification measures</b><br/>
+This component does not require additional verification measures.<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+16 / 19<br/>
+<hr/>
+<a name=17></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-17_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-17_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-17_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-17_4.png"/><br/>
+Safety Manual<br/>
+<b>3.4.4 &#160;Dependencies to other components</b><br/>
+<b>3.4.4.1 &#160;Safety features required from other components</b><br/>
+This component does not require safety features from other components.<br/>
+Draft<br/>
+<b>3.4.4.2 &#160;Coexistence with other components</b><br/>
+ID: SMI-54&#160;<br/>
+<b>This&#160;component&#160;requires&#160;coexistence&#160;with&#160;Dlt&#160;component&#160;if&#160;the&#160;interface<br/>for&#160;this&#160;component&#160;is&#160;configured.&#160;Callouts&#160;used&#160;during&#160;series&#160;production<br/>must also provide an argument for coexistence.</b><br/>
+<b>3.4.5 &#160;Dependencies to hardware</b><br/>
+This component does not use a direct hardware interface.<br/>
+<b>3.5 &#160;Safety Manual BswM</b><br/>
+<b>3.5.1 &#160;Safety features</b><br/>
+This component does not provide safety features.<br/>
+<b>3.5.2 &#160;Configuration constraints</b><br/>
+This component does not have configuration constraints.<br/>
+<b>3.5.3 &#160;Additional Verification measures</b><br/>
+This component does not require additional verification measures.<br/>
+<b>3.5.4 &#160;Dependencies to other components</b><br/>
+<b>3.5.4.1 &#160;Safety features required from other components</b><br/>
+This component does not require safety features from other components.<br/>
+<b>3.5.4.2 &#160;Coexistence with other components</b><br/>
+ID: SMI-55&#160;<br/>
+<b>This&#160;component&#160;requires&#160;coexistence&#160;with&#160;Com,&#160;Det,&#160;Dem,&#160;Nm,&#160;RTE,&#160;NvM,<br/>PduR,&#160;FrSm,&#160;Dcm,&#160;LinIf,&#160;LinSm,&#160;EcuM,&#160;CanSM,&#160;and&#160;ComM&#160;components&#160;if<br/>the interface for those components is configured.</b><br/>
+<b>3.5.5 &#160;Dependencies to hardware</b><br/>
+This component does not use a direct hardware interface.<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+17 / 19<br/>
+<hr/>
+<a name=18></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-18_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-18_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-18_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-18_4.png"/><br/>
+Safety Manual<br/>
+<b>3.6 &#160;Safety Manual MemIf</b><br/>
+<b>3.6.1 &#160;Safety features</b><br/>
+This component does not provide safety features.<br/>
+<b>3.6.2 &#160;Configuration constraints</b><br/>
+Draft<br/>
+This component does not have configuration constraints.<br/>
+<b>3.6.3 &#160;Additional Verification measures</b><br/>
+This component does not require additional verification measures.<br/>
+<b>3.6.4 &#160;Dependencies to other components</b><br/>
+<b>3.6.4.1 &#160;Safety features required from other components</b><br/>
+This component does not require safety features from other components.<br/>
+<b>3.6.4.2 &#160;Coexistence with other components</b><br/>
+ID: SMI-56&#160;<br/>
+<b>This&#160;component&#160;requires&#160;coexistence&#160;with&#160;Det,&#160;Fee,&#160;and&#160;Ea&#160;components&#160;if<br/>the interface for those components is configured.</b><br/>
+<b>3.6.5 &#160;Dependencies to hardware</b><br/>
+This component does not use a direct hardware interface.<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+18 / 19<br/>
+<hr/>
+<a name=19></a><img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-19_1.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-19_2.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-19_3.png"/><br/>
+<img src="ElectricPowerSteering_RH850_GM_G2KCA_website/content/en/docs/GM_G2KCA_EPS_RH850/tools/SIP/Doc/SafetyManuals/SafetyManual-19_4.png"/><br/>
+Safety Manual<br/>
+<b>4 &#160;Contact</b><br/>
+Visit our website for more information on<br/>
+<b>&gt;&#160;</b>▪&#160;News<br/><b>&gt;&#160;</b>▪&#160;Products<br/><b>&gt;&#160;</b>▪&#160;Demo softwareDraft<br/>
+<b>&gt;&#160;</b>▪&#160;Support<br/><b>&gt;&#160;</b>▪&#160;Training data<br/><b>&gt;&#160;</b>▪&#160;Addresses<br/>
+www.vector.com<br/>
+© 2015, Vector Informatik GmbH<br/>
+Version: Draft<br/>
+19 / 19<br/>
+<hr/>
+<a name="outline"></a><h1>Document Outline</h1>
+<ul>
+<li><a href="SafetyManuals.html#2">General Part</a>
+<ul>
+<li><a href="SafetyManuals.html#2">Introduction</a>
+<ul>
+<li><a href="SafetyManuals.html#2">Purpose</a></li>
+<li><a href="SafetyManuals.html#2">Scope</a></li>
+<li><a href="SafetyManuals.html#2">Definitions</a></li>
+<li><a href="SafetyManuals.html#3">References</a></li>
+<li><a href="SafetyManuals.html#3">Overview</a></li>
+</ul>
+</li>
+<li><a href="SafetyManuals.html#3">Concept</a>
+<ul>
+<li><a href="SafetyManuals.html#4">Assumed technical safety requirements</a></li>
+<li><a href="SafetyManuals.html#4">Assumed environment</a></li>
+<li><a href="SafetyManuals.html#6">Assumed process</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="SafetyManuals.html#9">Derivative-specific Part</a></li>
+<li><a href="SafetyManuals.html#10">Component-specific Part</a>
+<ul>
+<li><a href="SafetyManuals.html#10">Safety Manual Crc</a>
+<ul>
+<li><a href="SafetyManuals.html#10">Safety features</a></li>
+<li><a href="SafetyManuals.html#10">Configuration constraints</a></li>
+<li><a href="SafetyManuals.html#10">Additional verification measurse</a></li>
+<li><a href="SafetyManuals.html#10">Dependencies to other components</a>
+<ul>
+<li><a href="SafetyManuals.html#10">Safety features required from other components</a></li>
+<li><a href="SafetyManuals.html#10">Coexistence with other components</a></li>
+</ul>
+</li>
+<li><a href="SafetyManuals.html#10">Dependencies to hardware</a></li>
+</ul>
+</li>
+<li><a href="SafetyManuals.html#11">Safety Manual NvM</a>
+<ul>
+<li><a href="SafetyManuals.html#11">Safety features</a></li>
+<li><a href="SafetyManuals.html#12">Configuration constraints</a></li>
+<li><a href="SafetyManuals.html#12">Additional verification measures</a></li>
+<li><a href="SafetyManuals.html#13">Dependencies to other components</a>
+<ul>
+<li><a href="SafetyManuals.html#13">Safety features required from other components</a></li>
+<li><a href="SafetyManuals.html#13">Coexistence with other components</a></li>
+</ul>
+</li>
+<li><a href="SafetyManuals.html#13">Dependencies to hardware</a></li>
+</ul>
+</li>
+<li><a href="SafetyManuals.html#14">Safety Manual EcuM</a>
+<ul>
+<li><a href="SafetyManuals.html#14">Safety features</a></li>
+<li><a href="SafetyManuals.html#14">Configuration constraints</a></li>
+<li><a href="SafetyManuals.html#15">Additional verification measurse</a></li>
+<li><a href="SafetyManuals.html#16">Dependencies to other components</a>
+<ul>
+<li><a href="SafetyManuals.html#16">Safety features required from other components</a></li>
+<li><a href="SafetyManuals.html#16">Coexistence with other components</a></li>
+</ul>
+</li>
+<li><a href="SafetyManuals.html#16">Dependencies to hardware</a></li>
+</ul>
+</li>
+<li><a href="SafetyManuals.html#16">Safety Manual Det</a>
+<ul>
+<li><a href="SafetyManuals.html#16">Safety features</a></li>
+<li><a href="SafetyManuals.html#16">Configuration constraints</a></li>
+<li><a href="SafetyManuals.html#16">Additional Verification measures</a></li>
+<li><a href="SafetyManuals.html#17">Dependencies to other components</a>
+<ul>
+<li><a href="SafetyManuals.html#17">Safety features required from other components</a></li>
+<li><a href="SafetyManuals.html#17">Coexistence with other components</a></li>
+</ul>
+</li>
+<li><a href="SafetyManuals.html#17">Dependencies to hardware</a></li>
+</ul>
+</li>
+<li><a href="SafetyManuals.html#17">Safety Manual BswM</a>
+<ul>
+<li><a href="SafetyManuals.html#17">Safety features</a></li>
+<li><a href="SafetyManuals.html#17">Configuration constraints</a></li>
+<li><a href="SafetyManuals.html#17">Additional Verification measures</a></li>
+<li><a href="SafetyManuals.html#17">Dependencies to other components</a>
+<ul>
+<li><a href="SafetyManuals.html#17">Safety features required from other components</a></li>
+<li><a href="SafetyManuals.html#17">Coexistence with other components</a></li>
+</ul>
+</li>
+<li><a href="SafetyManuals.html#17">Dependencies to hardware</a></li>
+</ul>
+</li>
+<li><a href="SafetyManuals.html#18">Safety Manual MemIf</a>
+<ul>
+<li><a href="SafetyManuals.html#18">Safety features</a></li>
+<li><a href="SafetyManuals.html#18">Configuration constraints</a></li>
+<li><a href="SafetyManuals.html#18">Additional Verification measures</a></li>
+<li><a href="SafetyManuals.html#18">Dependencies to other components</a>
+<ul>
+<li><a href="SafetyManuals.html#18">Safety features required from other components</a></li>
+<li><a href="SafetyManuals.html#18">Coexistence with other components</a></li>
+</ul>
+</li>
+<li><a href="SafetyManuals.html#18">Dependencies to hardware</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="SafetyManuals.html#19">Contact</a></li>
+</ul>
+<hr/>
+</body>
+</html>
